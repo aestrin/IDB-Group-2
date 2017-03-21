@@ -45,6 +45,10 @@ def planet(planet_id):
 def planets():
     return render_template('planets.html', planets=enumerate(db.get_planets()))
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
