@@ -13,35 +13,6 @@
 
 
 <body>
-    <script type="text/jsx">
-        dir = 1;
-
-        function setDir(newdir)
-        {
-            dir = newdir;
-        }
-
-        function sortBy(attr)
-        {
-            // sort
-            var cmp = function(a, b) {
-                return dir * (a[attr] - b[attr]);
-            };
-            
-            character_list.sort(cmp);
-
-            // update element
-            document.getElementById("char_list").innerHTML="";
-
-            var chars = [];
-            for(i = 0; i < character_list.length; i++)
-            {
-                chars.push(<Character character={character_list[i]} />);
-            }
-
-            renderTable(chars, document.getElementById("char_list"), 2);
-        }
-    </script>
 
     <!-- Page Content -->
     <div class="container">
@@ -52,11 +23,26 @@
                 <h1 class="page-header">Characters</h1>
             </div>
         </div>
+
+        <!-- Sort Bar -->
+
+        <div class="row">
+            <script src="static/sorting.jsx" type="text/jsx"> </script>
+
+            <h3>Sort:
+                <a href="#" onclick="sortBy('name', character_list)">Name</a> 
+                <a href="#" onclick="sortBy('birth_year', character_list)">Birth Year</a> 
+                <a href="#" onclick="sortBy('height', character_list)">Height</a> 
+                <a href="#" onclick="sortBy('mass', character_list)">Weight</a>
+            </h3>
+            <hr />
+        </div>
+
+
         <!-- /.row -->
         <div class = "row">
             <div class ="col-lg-12">
-                    <div id="char_list"> </div>
-                    <button onclick="sortBy('height', 1)"> Click ME! </button>
+                    <div id="grid_location"> </div>
             </div>
         </div>
 
@@ -76,6 +62,20 @@
     <script src="static/table_builder.jsx" type="text/jsx"> </script>
 
     <script type="text/jsx">
+        function buildModels(list, init)
+        {
+            var chars = [];
+            for(i = 0; i < list.length; i++)
+            {
+                if(init)
+                {
+                    list[i].id = i;
+                }
+                chars.push(<Character character={list[i]} />);
+            }
+            return chars
+        }
+
         function Character(props){
             return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
                     
@@ -104,14 +104,7 @@
         
         console.log(character_list);
 
-        var chars = [];
-        for(i = 0; i < character_list.length; i++)
-        {
-            character_list[i].id = i;
-            chars.push(<Character character={character_list[i]} />);
-        }
-
-        renderTable(chars, document.getElementById("char_list"), 2);
+        renderTable(buildModels(character_list, true), document.getElementById("grid_location"), 2);
 
 
 
