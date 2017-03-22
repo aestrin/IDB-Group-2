@@ -23,58 +23,83 @@
         </div>
         <!-- /.row -->
 
-        {% for index, planet in planets %}
-            <!-- Project One -->
-            <div class="row">
-                <div class="col-md-7">
-                    <a href="#">
-                        <img class="img-responsive" src="{{ planet.img_url }}" alt="" style="width: 700px; height: 300px;">
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <h2>{{ planet.name }}</h2>
-    {#                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>#}
-                    <ul>
-                      <li>Climate: {{ planet.climate }}</li>
-                      <li>Population: {{ planet.population }}</li>
-                      <li>Gravity: {{ planet.gravity }}</li>
-                      <li>Terrain: {{ planet.terrain }}</li>
-                      <li>Residents: 
-                        <ul>
-                            {% for l in planet.characters %}
-                                <li><a href="{{ url_for('character', character_id=l.index) }}">{{ l.description }}</a></li>
-                            {% endfor %}
-                        </ul>
-                      </li>
-                      <li>Films:
-                        <ul>
-                            {% for l in planet.films %}
-                                <li><a href="{{ url_for('film', film_id=l.index) }}">{{ l.description }}</a></li>
-                            {% endfor %}
-                        </ul>
-                      </li>
-                    </ul>
-                    <a class="btn btn-primary" href="{{ url_for('planet', planet_id=index) }}">View<span class="glyphicon glyphicon-chevron-right"></span></a>
-                </div>
-            </div>
-            <!-- /.row -->
-            <hr>
-        {% endfor %}
+        <!-- Sort Bar -->
+
+        <div class="row">
+            <script src="static/sorting.jsx" type="text/jsx"> </script>
+
+            <h3>Sort:
+                <a href="#" onclick="sortBy('name', planet_list)">Name</a>
+                <a href="#" onclick="sortBy('climate', planet_list)">Climate</a>
+                <a href="#" onclick="sortBy('population', planet_list)">Population</a>
+                <a href="#" onclick="sortBy('gravity', planet_list)">Gravity</a>
+                <a href="#" onclick="sortBy('terrain', planet_list)">Terrain</a>
+            </h3>
+            <hr />
+        </div>
+
+        <div id="grid_location"> </div>
 
         {#TODO: create common stylesheet for img style width and height#}
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
+        {% include 'footer.html' %}
 
     </div>
     <!-- /.container -->
+
+
+    <script src="static/table_builder.jsx" type="text/jsx"> </script>
+
+    <script type="text/jsx">
+
+        function buildModels(list, init)
+        {
+            var planets = [];
+            for(i = 0; i < list.length; i++)
+            {
+                if(init)
+                {
+                    list[i].id = i;
+                }
+                planets.push(<Planet planet={list[i]} />);
+            }
+            return planets
+        }
+
+        function Planet(props){
+        return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
+
+                    <a href={"#"}>
+                        <img className={"img-responsive"} src={props.planet.img_url} alt={""} style={panelPicStyle} />
+                    </a>
+
+                    <a href={"/planets/"+props.planet.id}><h2 className={"text-center"}>{props.planet.name}</h2></a>
+                    <hr />
+                    <ul>
+                      <li>Climate: {props.planet.climate} </li>
+                      <li>Population: {props.planet.population}</li>
+                      <li>Gravity: {props.planet.gravity}</li>
+                      <li>Terrain: {props.planet.terrain}</li>
+                      <li>Residents:
+                        <RefList list={props.planet.characters} reftype={"characters"} />
+                      </li>
+                      <li>Films:
+                        <RefList list={props.planet.films} reftype={"films"} />
+                      </li>
+                    </ul>
+
+
+            </div></div></div>)
+        }
+
+        var planet_list = JSON.parse({{planets | tojson}});
+
+        console.log(planet_list);
+
+        renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 2);
+
+
+    </script>
 
 </body>
 

@@ -1,4 +1,4 @@
-from models import Film, Character, Planet
+from mock_models import Film, Character, Planet
 import json
 import os
 

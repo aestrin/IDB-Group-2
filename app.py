@@ -1,5 +1,7 @@
 from flask import Flask, render_template
 from db_mock import MockDB
+import jsonpickle
+
 
 app = Flask(__name__)
 
@@ -21,7 +23,8 @@ def film(film_id):
 
 @app.route('/films')
 def films():
-    return render_template('films.html', films=enumerate(db.get_films()))
+    data = jsonpickle.encode(db.get_films())
+    return render_template('films.html', films=data)
 
 
 @app.route('/characters/<character_id>')
@@ -32,7 +35,8 @@ def character(character_id):
 
 @app.route('/characters')
 def characters():
-    return render_template('characters.html', characters=enumerate(db.get_characters()))
+    data = jsonpickle.encode(db.get_characters())
+    return render_template('characters.html', characters=data)
 
 
 @app.route('/planets/<planet_id>')
@@ -43,7 +47,8 @@ def planet(planet_id):
 
 @app.route('/planets')
 def planets():
-    return render_template('planets.html', planets=enumerate(db.get_planets()))
+    data = jsonpickle.encode(db.get_planets())
+    return render_template('planets.html', planets=data)
 
 @app.route('/about')
 def about():
