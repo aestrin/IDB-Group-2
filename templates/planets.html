@@ -25,61 +25,6 @@
 
 
         <div id="planet_list"> </div>
-        <script type="text/jsx">
-            var planet_list = JSON.parse({{planets | tojson}});
-            
-            console.log(planet_list);
-            
-            function GenericList(props) {
-                var list = props.list;
-                var listItems = list.map((ele) => <li>{ele}</li>);
-                return (<ul>{listItems}</ul>);
-            }
-
-            function RefList(props) {
-                var list = props.list;
-
-                var listItems = list.map((ele) => <li><a href={"/"+props.reftype+"/"+ele.index}>{ele.description}</a></li>);
-                return (<ul>{listItems}</ul>);
-            }
-
-            function Planet(props){
-                return (<div><div className={"row"}>
-                            <div className={"col-md-7"}>
-                                <a href={"#"}>
-                                    <img className={"img-responsive"} src={props.planet.img_url} alt={""} style={s = {width: '700px', height: '300px',}} />
-                                </a>
-                            </div>
-                            <div className={"col-md-5"}>
-                                <h2>{props.planet.name}</h2>
-                                <ul>
-                                  <li>Climate: {props.planet.climate} </li>
-                                  <li>Population: {props.planet.population}</li>
-                                  <li>Gravity: {props.planet.gravity}</li>
-                                  <li>Terrain: {props.planet.terrain}</li>
-                                  <li>Residents:
-                                    <RefList list={props.planet.characters} reftype={"characters"} />
-                                  </li>
-                                  <li>Films:
-                                    <RefList list={props.planet.films} reftype={"films"} />
-                                  </li>
-                                </ul>
-                                <a className={"btn btn-primary"} href={"/planets/"+props.id}>View<span className={"glyphicon glyphicon-chevron-right"}></span></a>
-                            </div>
-                        </div>
-                        <hr /></div>)
-            }
-
-            var planets = [];
-            for(i = 0; i < planet_list.length; i++)
-            {
-                planets.push(<Planet planet={planet_list[i]} id={i}/>);
-            }
-
-            ReactDOM.render(<div>{planets}</div>, document.getElementById("planet_list"));
-            
-
-        </script>
 
         {#TODO: create common stylesheet for img style width and height#}
 
@@ -95,6 +40,52 @@
 
     </div>
     <!-- /.container -->
+
+
+    <script src="static/table_builder.jsx" type="text/jsx"> </script>
+    
+    <script type="text/jsx">
+
+        function Planet(props){
+        return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
+                
+                    <a href={"#"}>
+                        <img className={"img-responsive"} src={props.planet.img_url} alt={""} style={panelPicStyle} />
+                    </a>
+
+                    <a href={"/planets/"+props.id}><h2 className={"text-center"}>{props.planet.name}</h2></a>
+                    <hr />
+                    <ul>
+                      <li>Climate: {props.planet.climate} </li>
+                      <li>Population: {props.planet.population}</li>
+                      <li>Gravity: {props.planet.gravity}</li>
+                      <li>Terrain: {props.planet.terrain}</li>
+                      <li>Residents:
+                        <RefList list={props.planet.characters} reftype={"characters"} />
+                      </li>
+                      <li>Films:
+                        <RefList list={props.planet.films} reftype={"films"} />
+                      </li>
+                    </ul>
+
+
+            </div></div></div>)
+        }
+
+        var planet_list = JSON.parse({{planets | tojson}});
+        
+        console.log(planet_list);
+
+        var planets = [];
+        for(i = 0; i < planet_list.length; i++)
+        {
+            planets.push(<Planet planet={planet_list[i]} id={i}/>);
+        }
+
+        renderTable(planets, document.getElementById("planet_list"), 2);
+        
+
+    </script>
 
 </body>
 

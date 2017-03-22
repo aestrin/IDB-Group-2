@@ -10,7 +10,38 @@
 
 </head>
 
+
+
 <body>
+    <script type="text/jsx">
+        dir = 1;
+
+        function setDir(newdir)
+        {
+            dir = newdir;
+        }
+
+        function sortBy(attr)
+        {
+            // sort
+            var cmp = function(a, b) {
+                return dir * (a[attr] - b[attr]);
+            };
+            
+            character_list.sort(cmp);
+
+            // update element
+            document.getElementById("char_list").innerHTML="";
+
+            var chars = [];
+            for(i = 0; i < character_list.length; i++)
+            {
+                chars.push(<Character character={character_list[i]} />);
+            }
+
+            renderTable(chars, document.getElementById("char_list"), 2);
+        }
+    </script>
 
     <!-- Page Content -->
     <div class="container">
@@ -22,62 +53,12 @@
             </div>
         </div>
         <!-- /.row -->
-
-        <div id="char_list"> </div>
-
-        <script type="text/jsx">
-            var character_list = JSON.parse({{characters | tojson}});
-            
-            console.log(character_list);
-            
-            function GenericList(props) {
-                var list = props.list;
-                var listItems = list.map((ele) => <li>{ele}</li>);
-                return (<ul>{listItems}</ul>);
-            }
-
-            function RefList(props) {
-                var list = props.list;
-
-                var listItems = list.map((ele) => <li><a href={"/"+props.reftype+"/"+ele.index}>{ele.description}</a></li>);
-                return (<ul>{listItems}</ul>);
-            }
-
-            function Character(props){
-                return (<div><div className={"row"}>
-                            <div className={"col-md-7"}>
-                                <a href={"#"}>
-                                    <img className={"img-responsive"} src={props.character.img_url} alt={""} style={s = {width: '700px', height: '300px',}} />
-                                </a>
-                            </div>
-                            <div className={"col-md-5"}>
-                                <h2>{props.character.name}</h2>
-                                <ul>
-                                    <li>Birth year: {props.character.birth_year}</li>
-                                    <li>Height: {props.character.height}</li>
-                                    <li>Weight: {props.character.mass}</li>
-                                    <li>Planets:
-                                        <RefList list = {props.character.planets} reftype="planets" />
-                                    </li>
-                                    <li>Films:
-                                        <RefList list = {props.character.films} reftype="films" />
-                                    </li>
-                                </ul>
-                                <a className={"btn btn-primary"} href={"/characters/"+props.id}>View<span className={"glyphicon glyphicon-chevron-right"}></span></a>
-                            </div>
-                        </div>
-
-                        <hr /></div>)
-            }
-
-            var chars = [];
-            for(i = 0; i < character_list.length; i++)
-            {
-                chars.push(<Character character={character_list[i]} id={i}/>);
-            }
-
-            ReactDOM.render(<div>{chars}</div>, document.getElementById("char_list"));
-        </script>
+        <div class = "row">
+            <div class ="col-lg-12">
+                    <div id="char_list"> </div>
+                    <button onclick="sortBy('height', 1)"> Click ME! </button>
+            </div>
+        </div>
 
         {#TODO: create common stylesheet for img style width and height#}
 
@@ -90,9 +71,57 @@
             </div>
             <!-- /.row -->
         </footer>
-
     </div>
-    <!-- /.container -->
+
+    <script src="static/table_builder.jsx" type="text/jsx"> </script>
+
+    <script type="text/jsx">
+        function Character(props){
+            return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
+                    
+                        <a href={"#"}>
+                            <img className={"img-responsive"} src={props.character.img_url} alt={""} style={panelPicStyle} />
+                        </a>
+                    
+                        <a href={"/characters/"+props.character.id}><h2 className={"text-center"}>{props.character.name}</h2></a>
+                        <hr />
+                        <ul>
+                            <li>Birth year: {props.character.birth_year}</li>
+                            <li>Height: {props.character.height}</li>
+                            <li>Weight: {props.character.mass}</li>
+                            <li>Planets:
+                                <RefList list = {props.character.planets} reftype="planets" />
+                            </li>
+                            <li>Films:
+                                <RefList list = {props.character.films} reftype="films" />
+                            </li>
+                        </ul>
+                            
+                </div></div></div>)
+        }
+
+        var character_list = JSON.parse({{characters | tojson}});
+        
+        console.log(character_list);
+
+        var chars = [];
+        for(i = 0; i < character_list.length; i++)
+        {
+            character_list[i].id = i;
+            chars.push(<Character character={character_list[i]} />);
+        }
+
+        renderTable(chars, document.getElementById("char_list"), 2);
+
+
+
+    </script>
+
+    
+
+    
+
+    
 
 </body>
 
