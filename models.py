@@ -1,9 +1,9 @@
 from flask_sqlalchemy import SQLAlchemy
-from app import app
+from application import application
 
-app.config['SQLALCHEMY_DATABASE_URI'] = ".....TBD....."
+application.config['SQLALCHEMY_DATABASE_URI'] = ".....TBD....."
 
-db = SQLAlchemy(app)
+db = SQLAlchemy(application)
 
 
 film_character_table = db.Table('film_character_table',
