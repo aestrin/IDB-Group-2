@@ -2,7 +2,8 @@ from mock_models import Film, Character, Planet
 import json
 import os
 
-# TODO: Phase 2: instead of using self.xxx, need to use DB for persistence. Use queries to retrieve model instances.
+# TODO: Phase 2: instead of using self.xxx, need to use DB for
+# persistence. Use queries to retrieve model instances.
 
 
 # TODO: In phase 2, Link object is not required. The retreived film/character/planet objects from the DB should have
@@ -19,9 +20,10 @@ class MockDB:
 
     def __init__(self, static_folder):
         # Phase 2: Remove self.p, self.c, self.f
-        self.p = ["Tatooine","Naboo","Bespin"]
-        self.c = ["Luke Skywalker","Lobot","R2-D2"]
-        self.f = ["A New Hope","Return of the Jedi", "The Empire Strikes Back"]
+        self.p = ["Tatooine", "Naboo", "Bespin"]
+        self.c = ["Luke Skywalker", "Lobot", "R2-D2"]
+        self.f = ["A New Hope", "Return of the Jedi",
+                  "The Empire Strikes Back"]
         self.static_folder = static_folder
         self.films = self.init_films()
         self.characters = self.init_characters()

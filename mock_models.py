@@ -37,4 +37,3 @@ class Planet:
         self.img_url = img_url
         self.films = films
         self.characters = characters
-
