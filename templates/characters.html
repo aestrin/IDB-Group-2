@@ -27,50 +27,44 @@
         <!-- Sort Bar -->
 
         <div class="row">
-
-            <h3>Sort:
+          <div class="col-lg-12">
+            <h4>Sort:
                 <a href="#" onclick="sortBy('name', character_list)">Name</a>
                 <a href="#" onclick="sortBy('birth_year', character_list)">Birth Year</a>
                 <a href="#" onclick="sortBy('height', character_list)">Height</a>
                 <a href="#" onclick="sortBy('mass', character_list)">Weight</a>
                 <a><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
                 <a><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-            </h3>
-            <hr />
+            </h4>
+            <hr/>
+          </div>
         </div>
 
 
         <!-- /.row -->
         <div class="row">
           <div class="col-lg-2 col-sm-2">
-            <br>
-            <h5> Planets</h5>
-            <div class="funkyradio">
-              <div class="funkyradio-default">
-                  <input type="radio" name="radio" id="radio1" />
-                  <label for="radio1">Filter 1</label>
-              </div>
-              <div class="funkyradio-primary">
-                  <input type="radio" name="radio" id="radio2" checked/>
-                  <label for="radio2">Filter 2</label>
-              </div>
-              <div class="funkyradio-success">
-                  <input type="radio" name="radio" id="radio3" />
-                  <label for="radio3">Filter 3</label>
-              </div>
-              <div class="funkyradio-danger">
-                  <input type="radio" name="radio" id="radio4" />
-                  <label for="radio4">Filter 4</label>
-              </div>
-              <div class="funkyradio-warning">
-                  <input type="radio" name="radio" id="radio5" />
-                  <label for="radio5">Filter 5</label>
-              </div>
-              <div class="funkyradio-info">
-                  <input type="radio" name="radio" id="radio6" />
-                  <label for="radio6">Filter 6</label>
-              </div>
-          </div>
+            <h3>Planets</h3>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Tatooine</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Naboo</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Bespin</label>
+            </div>
+
+            <h3>Films</h3>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">A New Hope</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">Return of the Jedi</label>
+            </div>
+            <div class="checkbox">
+             <label><input type="checkbox" value="">The Empire Strikes Bac</label>
+            </div>
           </div>
           <div class="col-lg-10 col-sm-10">
             <div id="grid_location"> </div>
