@@ -109,16 +109,15 @@
                     </a>
 
                     <a href={"/planets/"+props.planet.id}><h2 className={"text-center"}>{props.planet.name}</h2></a>
-                    <hr />
-                    <ul>
-                      <li>Climate: {props.planet.climate} </li>
-                      <li>Population: {props.planet.population}</li>
-                      <li>Gravity: {props.planet.gravity}</li>
-                      <li>Terrain: {props.planet.terrain}</li>
-                      <li>Residents:
+                    <ul className={"list-group"}>
+                      <li className={"list-group-item"}>Climate: {props.planet.climate} </li>
+                      <li className={"list-group-item"}>Population: {props.planet.population}</li>
+                      <li className={"list-group-item"}>Gravity: {props.planet.gravity}</li>
+                      <li className={"list-group-item"}>Terrain: {props.planet.terrain}</li>
+                      <li className={"list-group-item"}>Residents:
                         <RefList list={props.planet.characters} reftype={"characters"} />
                       </li>
-                      <li>Films:
+                      <li className={"list-group-item"}>Films:
                         <RefList list={props.planet.films} reftype={"films"} />
                       </li>
                     </ul>

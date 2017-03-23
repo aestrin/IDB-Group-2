@@ -109,15 +109,15 @@
                         </a>
 
                         <a href={"/characters/"+props.character.id}><h2 className={"text-center"}>{props.character.name}</h2></a>
-                        <hr />
-                        <ul>
-                            <li>Birth year: {props.character.birth_year}</li>
-                            <li>Height: {props.character.height}</li>
-                            <li>Weight: {props.character.mass}</li>
-                            <li>Planets:
+
+                        <ul className={"list-group"}>
+                            <li className={"list-group-item"}>Birth year: {props.character.birth_year}</li>
+                            <li className={"list-group-item"}>Height: {props.character.height}</li>
+                            <li className={"list-group-item"}>Weight: {props.character.mass}</li>
+                            <li className={"list-group-item"}>Planets:
                                 <RefList list = {props.character.planets} reftype="planets" />
                             </li>
-                            <li>Films:
+                            <li className={"list-group-item"}>Films:
                                 <RefList list = {props.character.films} reftype="films" />
                             </li>
                         </ul>
