@@ -1,5 +1,5 @@
 
-dir = 1;
+var dir = 1;
 
 function setDir(newdir)
 {
@@ -9,8 +9,8 @@ function setDir(newdir)
         sortBy(lastAttr, lastList)
 }
 
-lastAttr = null
-lastList = null
+var lastAttr = null;
+var lastList = null;
 
 function sortBy(attr, list)
 {
