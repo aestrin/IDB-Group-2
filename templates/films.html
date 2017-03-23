@@ -114,15 +114,16 @@
                         <a href={"films/"+props.film.id}><h2 className={"text-center"}>{props.film.title}</h2></a>
                         <h4 className={"text-center"}>Episode {props.film.episode_no}</h4>
                         <hr />
-                        <ul>
-                            <li>Director: {props.film.director}</li>
-                            <li>Producers: {props.film.producer}</li>
-                            <li>Release Date: {props.film.release_date}</li>
-                            <li>Characters:
+                        <ul className={"list-group"}>
+                            <li className={"list-group-item"}>Director: {props.film.director}</li>
+                            <li className={"list-group-item"}>Producers: {props.film.producer}</li>
+                            <li className={"list-group-item"}>Release Date: {props.film.release_date}</li>
+                            <li className={"list-group-item"}>Characters:
                                 <RefList list={props.film.characters} reftype={"characters"} />
                             </li>
-                                <li>Planets:
+                                <li className={"list-group-item"} >Planets:
                                 <RefList list={props.film.planets} reftype={"planets"} />
+                                </li>
                             </li>
                         </ul>
 
