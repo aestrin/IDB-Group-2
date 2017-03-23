@@ -26,7 +26,6 @@
         <!-- Sort Bar -->
 
         <div class="row">
-            <script src="static/sorting.jsx" type="text/jsx"> </script>
 
             <h3>Sort:
                 <a href="#" onclick="sortBy('name', planet_list)">Name</a>
@@ -72,9 +71,14 @@
     <!-- /.container -->
 
 
-    <script src="static/table_builder.jsx" type="text/jsx"> </script>
+    <script type="text/babel">
 
-    <script type="text/jsx">
+        var i;
+        var x;
+        var s;
+
+        {% include 'sorting.jsx' %}
+        {% include 'table_builder.jsx' %}
 
         function buildModels(list, init)
         {

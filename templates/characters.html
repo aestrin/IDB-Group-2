@@ -27,7 +27,6 @@
         <!-- Sort Bar -->
 
         <div class="row">
-            <script src="static/sorting.jsx" type="text/jsx"> </script>
 
             <h3>Sort:
                 <a href="#" onclick="sortBy('name', character_list)">Name</a>
@@ -83,9 +82,16 @@
         {% include 'footer.html' %}
     </div>
 
-    <script src="static/table_builder.jsx" type="text/jsx"> </script>
 
-    <script type="text/jsx">
+    <script type="text/babel">
+
+        var i;
+        var x;
+        var s;
+
+        {% include 'sorting.jsx' %}
+        {% include 'table_builder.jsx' %}
+
         function buildModels(list, init)
         {
             var chars = [];
