@@ -54,7 +54,7 @@ def planets():
 def about():
     return render_template('about.html')
 
-@app.route('/report')
+@application.route('/report')
 def report():
     return render_template('report.html')
 
