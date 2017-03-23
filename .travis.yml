@@ -1,0 +1,25 @@
+sudo: false
+
+language: python
+
+python:
+   - "3.6.0"
+
+before_install:
+    - pip install --upgrade pip
+    - pip install -r requirements.txt
+
+install:
+    - pip install autopep8
+    - pip install coverage
+    - pip install numpy
+    - pip install pylint
+
+before_script:
+    - uname -a
+    - printenv | sort
+
+script:
+    - date
+    - ls -al
+    - make check
