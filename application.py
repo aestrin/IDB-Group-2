@@ -50,13 +50,16 @@ def planets():
     data = jsonpickle.encode(db.get_planets())
     return render_template('planets.html', planets=data)
 
+
 @application.route('/about')
 def about():
     return render_template('about.html')
 
+
 @application.route('/report')
 def report():
     return render_template('report.html')
+
 
 if __name__ == '__main__':
     application.run(debug=True)
@@ -64,4 +67,5 @@ if __name__ == '__main__':
 
 # TODO: Where am I supposed to use SQLAlchemy for phase 0?
 # TODO: Grab images from Bing Image search api, instead of hardcoding
-# TODO: Phase 2: Sort all models by their url id before adding to the DB, to make for consistent and retrievable IDs
+# TODO: Phase 2: Sort all models by their url id before adding to the DB,
+# to make for consistent and retrievable IDs

@@ -7,20 +7,26 @@ db = SQLAlchemy(application)
 
 
 film_character_table = db.Table('film_character_table',
-    db.Column('film_id', db.Integer, db.ForeignKey('film.id'), nullable=False),
-    db.Column('character_id', db.Integer, db.ForeignKey('character.id'), nullable=False),
-    db.PrimaryKeyConstraint('film_id', 'character_id')
-)
+                                db.Column('film_id', db.Integer, db.ForeignKey(
+                                    'film.id'), nullable=False),
+                                db.Column('character_id', db.Integer, db.ForeignKey(
+                                    'character.id'), nullable=False),
+                                db.PrimaryKeyConstraint(
+                                    'film_id', 'character_id')
+                                )
 
 film_planet_table = db.Table('film_planet_table',
-    db.Column('film_id', db.Integer, db.ForeignKey('film.id'), nullable=False),
-    db.Column('planet_id', db.Integer, db.ForeignKey('planet.id'), nullable=False),
-    db.PrimaryKeyConstraint('film_id', 'planet_id')
-)
+                             db.Column('film_id', db.Integer, db.ForeignKey(
+                                 'film.id'), nullable=False),
+                             db.Column('planet_id', db.Integer, db.ForeignKey(
+                                 'planet.id'), nullable=False),
+                             db.PrimaryKeyConstraint('film_id', 'planet_id')
+                             )
 
 
 class Film(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True,
+                   autoincrement=True, nullable=False)
 
     title = db.Column(db.String(120), nullable=False)
     director = db.Column(db.String(120), nullable=False)
@@ -29,8 +35,10 @@ class Film(db.Model):
     release_date = db.Column(db.String(120), nullable=False)
     img_url = db.Column(db.String(5000), nullable=False)
 
-    characters = db.relationship('Character', secondary=film_character_table, backref='film')
-    planets = db.relationship('Planet', secondary=film_planet_table, backref='film')
+    characters = db.relationship(
+        'Character', secondary=film_character_table, backref='film')
+    planets = db.relationship(
+        'Planet', secondary=film_planet_table, backref='film')
 
     def __init__(self, title, director, producer, episode_no, release_date, img_url):
         self.title = title
@@ -42,7 +50,8 @@ class Film(db.Model):
 
 
 class Character(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True,
+                   autoincrement=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
     birth_year = db.Column(db.String(120), nullable=False)
@@ -61,7 +70,8 @@ class Character(db.Model):
 
 
 class Planet(db.Model):
-    id = db.Column(db.Integer, primary_key=True, autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True,
+                   autoincrement=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
     climate = db.Column(db.String(120), nullable=False)
@@ -80,4 +90,3 @@ class Planet(db.Model):
         self.gravity = gravity
         self.terrain = terrain
         self.img_url = img_url
-
