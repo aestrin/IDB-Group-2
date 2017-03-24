@@ -1,0 +1,432 @@
+commit ec527de32993413604dca6d5ce6eb6ff9775d5d5
+Merge: eeeed83 e6d3be4
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 18:23:29 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit eeeed832577bef4dd41d321233f6448124abb8da
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 18:23:19 2017 -0500
+
+    finished pydoc and pylint and autopep8
+
+commit e6d3be4045cd1ba9b71fe56965a3e3733535ca02
+Merge: 485e6aa 6bfcd1e
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Mar 23 18:04:36 2017 -0500
+
+    added github stats to about page
+
+commit 485e6aa468f613c9ea7fa58f05074639f1f90638
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Mar 23 17:50:15 2017 -0500
+
+    updated grid tiles
+
+commit 6bfcd1ec7b6543d25851140717d3aaa2c19cbb4b
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Thu Mar 23 17:49:38 2017 -0500
+
+    Finished about page w/ write up, closes #21 and closes #20.
+
+commit 6e7b8532bda5bed90d6e38fd128b871b8c9fdb02
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 17:10:04 2017 -0500
+
+    added tests.py and ran autopep8
+
+commit 61fcdef9defb799872a51ca87bcf23ef1da6d6e0
+Merge: 93e58f9 613b15e
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Mar 23 16:58:01 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 93e58f96785801cdbfb29f18c7406aeb9545ae06
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Mar 23 16:57:58 2017 -0500
+
+    added font updates
+
+commit 613b15e4351feab034f70e2ddc39e3626c99fc8c
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Mar 23 11:35:08 2017 -0500
+
+    About page details
+
+commit 7f43823495114bbd68dd53561e63d797a018bf0e
+Merge: c491530 7b391bc
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 00:20:58 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit c491530dc036fecf0e07fc9263e56c0f06b2357e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 00:20:50 2017 -0500
+
+    added makefile and travis
+
+commit 7b391bc1e274ea65eaa53678e6cdea64b6925850
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Mar 23 00:05:44 2017 -0500
+
+    fixed image in carousel
+
+commit 626a55d548ed7a8ec08a06c6e8eab082eed4fcf0
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 23:41:50 2017 -0500
+
+    style fixing for grid
+
+commit d60d4fcb67b8f3add7a31f69bffd81be60ebc6d7
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 23:32:31 2017 -0500
+
+    filters for models added front end
+
+commit 409b8789d7d07a5633bac8c9b63a172868decf62
+Merge: 82ebaea b5103c3
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 23:13:27 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 82ebaea6a11a439467718bf6fdbd8affb532409d
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 23:13:21 2017 -0500
+
+    added content to about page and began filter buttons on grid pages
+
+commit b5103c370490ff0f96e605f7c5553660e540e36d
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Mar 22 20:52:00 2017 -0500
+
+    react fix hopefully
+
+commit b3f1cd0678b3b7f058bcc13285db9ef8c60c7706
+Merge: 475b8ad de79baf
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Mar 22 20:30:12 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+    Merge Safari fix with dev.
+
+commit 475b8ade5b6718128b415e38e46827a706920a4e
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Mar 22 20:29:29 2017 -0500
+
+    Attempt to fix #14 (Safari react code generation).
+
+commit de79baf5dc9637ac08b01077feb7bf58eef6e439
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 19:16:09 2017 -0500
+
+    fixed issue in application.py
+
+commit c3c169e200f4c5bdf6e399b35c88fe4fa648aaaf
+Merge: d0828a0 df7d500
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 18:39:06 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit d0828a07461f9c3cbdd3957ca361be2f9fb37191
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 18:38:39 2017 -0500
+
+    added our dope report page and styled the nav bar
+
+commit df7d50071b83f0ba245f1aec7b9033b3ffff2fa8
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Mar 22 18:28:45 2017 -0500
+
+    wip
+
+commit 5e6209bb17a4e1c58f723d8d5b59973adc3cc4a4
+Merge: ca94f81 011934f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Mar 22 18:19:30 2017 -0500
+
+    Merge branch 'react-testing' into dev
+
+commit 011934f24b24b88ff5916bfe9622dbfbecd8b2df
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Mar 22 18:18:26 2017 -0500
+
+    deploying: wip
+
+commit ca94f81cfcef1ae7f4cb5dba76ad4a243e47d993
+Merge: e041e68 af22330
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Mar 22 16:47:18 2017 -0500
+
+    Added updates to about page, merged with react-test branch
+
+commit e041e684a1e86f07d6e06ac0c89d033965a31ddc
+Merge: 9eb235a d8a0143
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Mar 21 22:34:59 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 9eb235ae07c597b08f3fa184c361ea740a486236
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Mar 21 22:34:56 2017 -0500
+
+    added carousel to home page and added video background
+
+commit af2233085ec57194cc8b0ff8abdcbbfb4f4ec3ab
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Mar 21 21:02:17 2017 -0500
+
+    All model pages are grids, closes #11, and sorting feature added, closes #12.
+
+commit 02f482b855b34b38a6c77ab305274c029d27a3b9
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Mar 21 19:41:32 2017 -0500
+
+    Added grid format and started sorting.
+
+commit d8a0143327de08e7013eb9055de03ca7b42464ff
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Mar 21 15:45:47 2017 -0500
+
+    Work on About page
+
+commit 323f94f6d8ce4e34664864ef1f374747e139e62a
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Mar 21 05:03:31 2017 -0500
+
+    SQLAlchemy stuff in models.py mostly done | added requirements.txt
+
+commit c8e4344e70ef5a36e067bf81af178660d59cd158
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Mar 21 00:13:08 2017 -0500
+
+    All model pages working with react, closes #10.
+
+commit 7ae89f6debe96eb6dc4755986359efb013792256
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Mon Mar 20 23:46:36 2017 -0500
+
+    Fixed links with react, closes #9.
+
+commit 3dd3739dd92e80cd27de942b1475d3751c77e53e
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Mon Mar 20 23:26:51 2017 -0500
+
+    Planets page working with react, closes #8.
+
+commit 5acf6e5bcd7a0eb434eb0e7489525cc9452be00b
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Mon Mar 20 21:20:43 2017 -0500
+
+    react initial code | planets not working
+
+commit bf4c78527e35f554939132b7c45669954e3e58bc
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Mon Mar 20 19:27:25 2017 -0500
+
+    Added react code, closes #3, added part of carousel, closes #7 and closes #1.
+
+commit 07ec7ab22f71ce55acaabe306032db983cdf5c79
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 20:53:11 2017 -0500
+
+    link fix
+
+commit e2674c6970a3cfbd5a01facc0f9df66da9389024
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 19:39:39 2017 -0500
+
+    ignore .pyc files
+
+commit 7148e7ad02c32cd483e15855138102dba7d1dadb
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 19:33:18 2017 -0500
+
+    fixed films and characters and instances pages | all linking working
+
+commit a57180e3e5b751832a2ab30722d9744970d99f78
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 18:57:40 2017 -0500
+
+    fixed planets and planet instance | other pages wip
+
+commit d51715c4b421307e2239e40535941422bee3d103
+Merge: fe58c62 1f7d933
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 18:34:44 2017 -0500
+
+    fixed merge conflicts | not working atm
+
+commit 1f7d933a58c812745bf15bb5badf27ebda32006f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 18:19:28 2017 -0500
+
+    gitignore changes
+
+commit bb4487b3211e49a87ca504a0e83f6b3a3b8190a1
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 18:14:53 2017 -0500
+
+    linking wip
+
+commit fe58c624260438235ae760d923a158568a100f94
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Sun Mar 19 17:56:55 2017 -0500
+
+    removed foleder
+
+commit 736769037291a47f4c1373dde40ff56a66bfeeea
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Sun Mar 19 17:36:49 2017 -0500
+
+    Working with mock dictionaries
+
+commit 9fac91d3b742cd63c01c4f3692742062e4db8073
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Sun Mar 19 17:20:49 2017 -0500
+
+    links WIP
+
+commit ab0918393b1553b4bb9fdb682f6c0255667085ca
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Mar 19 17:07:48 2017 -0500
+
+    removed hair color attribute
+
+commit e139471852e5f167758cc33ece412a789ef0edca
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 21:27:21 2017 -0500
+
+    moved nav.html to head.html, including all imports and head tag
+
+commit 44ac9a2c6a1400bf219c09fbf50cd96709208d58
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 21:17:20 2017 -0500
+
+    created common nav.html file for navigation bar
+
+commit d3f8894d98e1cfd219217845b5f0f2558ca0132e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 20:44:47 2017 -0500
+
+    added planets and planet_instance templates
+
+commit d80a8aceadbe9fe9a7241b6dfcf615961c21f3ec
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 20:16:58 2017 -0500
+
+    using Jinja2 for loops to reduce HTML redundancy
+
+commit b40ac4891531b8e429d8a2e6214e0a2546ea1f06
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 20:02:31 2017 -0500
+
+    added characters and character_instance templates
+
+commit b833b1cad16b6f75c35c0b23459934f5e25e1b84
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Mar 18 19:45:08 2017 -0500
+
+    add img URLs for characters and planets
+
+commit e13c89eae41cfed607ee0b43af4c98961e54d3da
+Merge: ac8fe72 b6602da
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 02:07:03 2017 -0500
+
+    Merge branch 'master' of https://github.com/aestrin/IDB-Group-2
+
+commit ac8fe722471854073cd7c332c98214a6e10236b1
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 01:58:38 2017 -0500
+
+    copied over README, merge
+
+commit b6602da3bcb904c62af5fa738744a2a7518f85dc
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 01:57:24 2017 -0500
+
+    restructuring repo
+
+commit a64348a93ba5e4fda8c993522ee724a42904b74d
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 01:28:50 2017 -0500
+
+    added some TODOs
+
+commit 42fabec6c2221cbd098fd3dbb5d4c9774e0effb8
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 01:20:23 2017 -0500
+
+    finished linking between films page and film instance pages
+
+commit ec539791c1565a277d38223f1f284efca7a043bb
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Fri Mar 17 00:55:46 2017 -0500
+
+    added mockDB, to be changed to Postgres DB calls later
+
+commit fe77bd75da188505e773f0c43c2a3debd4dde637
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 21:33:52 2017 -0500
+
+    added links on splash page
+
+commit d55cb2ccc5d17f81dc47b8990e0a37d09c9b55c9
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 20:19:32 2017 -0500
+
+    added film release date
+
+commit 716af62628f1f83c895eb77ae00c7d423b4adf86
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 20:09:40 2017 -0500
+
+    wip: films
+
+commit 62038b8d81bbeb16e184bb9f8cec2969d729e8ce
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 19:59:15 2017 -0500
+
+    wip: films page
+
+commit 03221022455aac95957dd8cb6575282d613a310c
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 16:29:13 2017 -0500
+
+    added single column bootstrap theme
+
+commit 2a1568e7cfa6d9f608856ae3e8ea460f960aeac0
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 16 04:15:17 2017 -0500
+
+    initial commit
+
+commit 857455b094f3706b675f112260e45cadb81c61d7
+Author: arjunmbajaj <arjunbajaj@wireless-10-147-153-240.public.utexas.edu>
+Date:   Mon Mar 13 14:45:58 2017 -0500
+
+    added JSON files no help
+
+commit 7ec3de772bd4d865815a0b39c296c269291c1800
+Author: aestrin <aestrin@utexas.edu>
+Date:   Mon Mar 13 14:27:40 2017 -0500
+
+    updated README
+
+commit cf09ed3e0f52386f25cde2ee8df1490eabc73a36
+Author: aestrin <aestrin@utexas.edu>
+Date:   Mon Mar 13 14:25:50 2017 -0500
+
+    added README
+
+commit b393cec9d2177d065284ec45555df50d941cf663
+Author: aestrin <aestrin@utexas.edu>
+Date:   Mon Mar 13 14:23:33 2017 -0500
+
+    initial commit for react project
