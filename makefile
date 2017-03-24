@@ -1,6 +1,5 @@
 FILES :=            \
     application.py  \
-    models.py       \
     __init__.py
 
 server:
