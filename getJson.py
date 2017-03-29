@@ -3,7 +3,7 @@ import json
 
 
 NUM_PEOPLE = 88
-NUM_STARSHIPS = 80
+NUM_STARSHIPS = 200
 NUM_PLANETS = 61
 NUM_FILMS = 7
 
@@ -19,10 +19,10 @@ def getJsonDict(model,numModel):
 	return jsondict
 
 
-# peopleDict = getJsonDict("people",NUM_PEOPLE)
+peopleDict = getJsonDict("people",NUM_PEOPLE)
 starshipDict = getJsonDict("starships",NUM_STARSHIPS)
-# filmDict = getJsonDict("films",NUM_FILMS)
-# planetDict = getJsonDict("planets",NUM_PLANETS)
+filmDict = getJsonDict("films",NUM_FILMS)
+planetDict = getJsonDict("planets",NUM_PLANETS)
 
 
 with open('allPeople.json', 'w') as outfile:  
