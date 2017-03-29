@@ -1,4 +1,6 @@
 import requests
+import json
+
 
 NUM_PEOPLE = 88
 NUM_STARSHIPS = 37
@@ -21,7 +23,12 @@ starshipDict = getJsonDict("starships",NUM_STARSHIPS)
 filmDict = getJsonDict("films",NUM_FILMS)
 planetDict = getJsonDict("planets",NUM_PLANETS)
 
-print(peopleDict)
-print(starshipDict)
-print(filmDict)
-print(planetDict)
+
+with open('allPeople.json', 'w') as outfile:  
+    json.dump(peopleDict, outfile)
+with open('allStarships.json', 'w') as outfile:  
+    json.dump(starshipDict, outfile)
+with open('allFilms.json', 'w') as outfile:  
+    json.dump(filmDict, outfile)
+with open('allPlanets.json', 'w') as outfile:  
+    json.dump(planetDict, outfile)
