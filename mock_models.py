@@ -13,8 +13,9 @@ class Film:
 
 
 class Character:
-    def __init__(self, name, birth_year, height, mass, img_url, films, planets):
+    def __init__(self, name, gender, birth_year, height, mass, img_url, films, planets):
         self.name = name
+        self.gender = gender
         self.birth_year = birth_year
         self.height = height
         self.mass = mass

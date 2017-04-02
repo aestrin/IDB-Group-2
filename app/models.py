@@ -58,8 +58,7 @@ class Film(db.Model):
             Species (many-to-many)
     """
 
-    id = db.Column(db.Integer, primary_key=True,
-                   autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     title = db.Column(db.String(120), nullable=False)
     director = db.Column(db.String(120), nullable=False)
@@ -101,8 +100,7 @@ class Character(db.Model):
             Species (one-to-one)
     """
 
-    id = db.Column(db.Integer, primary_key=True,
-                   autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
     gender = db.Column(db.String(120), nullable=False)
@@ -144,8 +142,7 @@ class Planet(db.Model):
             Species (one-to-many)
     """
 
-    id = db.Column(db.Integer, primary_key=True,
-                   autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
     climate = db.Column(db.String(120), nullable=False)
@@ -186,8 +183,7 @@ class Species(db.Model):
             Planets (one-to-one)
     """
 
-    id = db.Column(db.Integer, primary_key=True,
-                   autoincrement=True, nullable=False)
+    id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
     classification = db.Column(db.String(120), nullable=False)
