@@ -95,6 +95,7 @@ class Character(db.Model):
                    autoincrement=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
+    gender = db.Column(db.String(120), nullable=False)
     birth_year = db.Column(db.String(120), nullable=False)
     height = db.Column(db.String(120), nullable=False)
     mass = db.Column(db.String(120), nullable=False)
@@ -102,8 +103,9 @@ class Character(db.Model):
 
     planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
 
-    def __init__(self, name, birth_year, height, mass, img_url):
+    def __init__(self, name, gender, birth_year, height, mass, img_url):
         self.name = name
+        self.gender = gender
         self.birth_year = birth_year
         self.height = height
         self.mass = mass
@@ -146,3 +148,28 @@ class Planet(db.Model):
         self.gravity = gravity
         self.terrain = terrain
         self.img_url = img_url
+
+
+class Species(db.Model):
+    id = db.Column(db.Integer, primary_key=True,
+                   autoincrement=True, nullable=False)
+
+    name = db.Column(db.String(120), nullable=False)
+    classification = db.Column(db.String(120), nullable=False)
+    language = db.Column(db.String(120), nullable=False)
+    average_height = db.Column(db.String(120), nullable=False)
+    eye_colors = db.Column(db.String(120), nullable=False)
+
+    characters = db.relationship('Character', backref='species', lazy='dynamic')
+
+    def __init__(self, name, classification, language, average_height, eye_colors, img_url):
+        self.name = name
+        self.classification = classification
+        self.language = language
+        self.average_height = average_height
+        self.eye_colors = eye_colors
+        self.img_url = img_url
+
+
+
+
