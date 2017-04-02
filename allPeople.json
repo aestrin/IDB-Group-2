@@ -2043,5 +2043,25 @@
         ], 
         "homeworld": "http://swapi.co/api/planets/28/", 
         "birth_year": "unknown"
+    }, 
+    "88": {
+        "starships": [], 
+        "edited": "2015-10-13T10:35:39.229894Z", 
+        "name": "Captain Phasma", 
+        "created": "2015-10-13T10:35:39.229823Z", 
+        "url": "http://swapi.co/api/people/88/", 
+        "gender": "female", 
+        "vehicles": [], 
+        "skin_color": "unknown", 
+        "hair_color": "unknown", 
+        "height": "unknown", 
+        "eye_color": "unknown", 
+        "mass": "unknown", 
+        "films": [
+            "http://swapi.co/api/films/7/"
+        ], 
+        "species": [], 
+        "homeworld": "http://swapi.co/api/planets/28/", 
+        "birth_year": "unknown"
     }
 }

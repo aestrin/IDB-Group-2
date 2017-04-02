@@ -1147,5 +1147,23 @@
             "http://swapi.co/api/people/82/"
         ], 
         "population": "unknown"
+    }, 
+    "61": {
+        "diameter": "unknown", 
+        "climate": "unknown", 
+        "surface_water": "unknown", 
+        "name": "Jakku", 
+        "created": "2015-04-17T06:55:57.556495Z", 
+        "url": "http://swapi.co/api/planets/61/", 
+        "rotation_period": "unknown", 
+        "edited": "2015-04-17T06:55:57.556551Z", 
+        "terrain": "deserts", 
+        "gravity": "unknown", 
+        "orbital_period": "unknown", 
+        "films": [
+            "http://swapi.co/api/films/7/"
+        ], 
+        "residents": [], 
+        "population": "unknown"
     }
 }

@@ -1,0 +1,863 @@
+{
+    "1": {
+        "edited": "2015-04-17T06:59:55.850671Z", 
+        "name": "Human", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/1/", 
+            "http://swapi.co/api/people/4/", 
+            "http://swapi.co/api/people/5/", 
+            "http://swapi.co/api/people/6/", 
+            "http://swapi.co/api/people/7/", 
+            "http://swapi.co/api/people/9/", 
+            "http://swapi.co/api/people/10/", 
+            "http://swapi.co/api/people/11/", 
+            "http://swapi.co/api/people/12/", 
+            "http://swapi.co/api/people/14/", 
+            "http://swapi.co/api/people/18/", 
+            "http://swapi.co/api/people/19/", 
+            "http://swapi.co/api/people/21/", 
+            "http://swapi.co/api/people/22/", 
+            "http://swapi.co/api/people/25/", 
+            "http://swapi.co/api/people/26/", 
+            "http://swapi.co/api/people/28/", 
+            "http://swapi.co/api/people/29/", 
+            "http://swapi.co/api/people/32/", 
+            "http://swapi.co/api/people/34/", 
+            "http://swapi.co/api/people/43/", 
+            "http://swapi.co/api/people/51/", 
+            "http://swapi.co/api/people/60/", 
+            "http://swapi.co/api/people/61/", 
+            "http://swapi.co/api/people/62/", 
+            "http://swapi.co/api/people/66/", 
+            "http://swapi.co/api/people/67/", 
+            "http://swapi.co/api/people/68/", 
+            "http://swapi.co/api/people/69/", 
+            "http://swapi.co/api/people/74/", 
+            "http://swapi.co/api/people/81/", 
+            "http://swapi.co/api/people/84/", 
+            "http://swapi.co/api/people/85/", 
+            "http://swapi.co/api/people/86/", 
+            "http://swapi.co/api/people/35/"
+        ], 
+        "eye_colors": "brown, blue, green, hazel, grey, amber", 
+        "created": "2014-12-10T13:52:11.567000Z", 
+        "skin_colors": "caucasian, black, asian, hispanic", 
+        "designation": "sentient", 
+        "language": "Galactic Basic", 
+        "url": "http://swapi.co/api/species/1/", 
+        "hair_colors": "blonde, brown, black, red", 
+        "homeworld": "http://swapi.co/api/planets/9/", 
+        "films": [
+            "http://swapi.co/api/films/7/", 
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/2/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "average_lifespan": "120", 
+        "average_height": "180"
+    }, 
+    "2": {
+        "edited": "2015-04-17T06:59:43.869528Z", 
+        "name": "Droid", 
+        "classification": "artificial", 
+        "people": [
+            "http://swapi.co/api/people/2/", 
+            "http://swapi.co/api/people/3/", 
+            "http://swapi.co/api/people/8/", 
+            "http://swapi.co/api/people/23/", 
+            "http://swapi.co/api/people/87/"
+        ], 
+        "eye_colors": "n/a", 
+        "created": "2014-12-10T15:16:16.259000Z", 
+        "skin_colors": "n/a", 
+        "designation": "sentient", 
+        "language": "n/a", 
+        "url": "http://swapi.co/api/species/2/", 
+        "hair_colors": "n/a", 
+        "homeworld": null, 
+        "films": [
+            "http://swapi.co/api/films/7/", 
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/2/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "average_lifespan": "indefinite", 
+        "average_height": "n/a"
+    }, 
+    "3": {
+        "edited": "2015-01-30T21:23:03.074598Z", 
+        "name": "Wookiee", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/13/", 
+            "http://swapi.co/api/people/80/"
+        ], 
+        "eye_colors": "blue, green, yellow, brown, golden, red", 
+        "created": "2014-12-10T16:44:31.486000Z", 
+        "skin_colors": "gray", 
+        "designation": "sentient", 
+        "language": "Shyriiwook", 
+        "url": "http://swapi.co/api/species/3/", 
+        "hair_colors": "black, brown", 
+        "homeworld": "http://swapi.co/api/planets/14/", 
+        "films": [
+            "http://swapi.co/api/films/7/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/2/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "average_lifespan": "400", 
+        "average_height": "210"
+    }, 
+    "4": {
+        "edited": "2016-07-19T13:27:03.156498Z", 
+        "name": "Rodian", 
+        "classification": "sentient", 
+        "people": [
+            "http://swapi.co/api/people/15/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-10T17:05:26.471000Z", 
+        "skin_colors": "green, blue", 
+        "designation": "reptilian", 
+        "language": "Galactic Basic", 
+        "url": "http://swapi.co/api/species/4/", 
+        "hair_colors": "n/a", 
+        "homeworld": "http://swapi.co/api/planets/23/", 
+        "films": [
+            "http://swapi.co/api/films/1/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "170"
+    }, 
+    "5": {
+        "edited": "2014-12-20T21:36:42.146000Z", 
+        "name": "Hutt", 
+        "classification": "gastropod", 
+        "people": [
+            "http://swapi.co/api/people/16/"
+        ], 
+        "eye_colors": "yellow, red", 
+        "created": "2014-12-10T17:12:50.410000Z", 
+        "skin_colors": "green, brown, tan", 
+        "designation": "sentient", 
+        "language": "Huttese", 
+        "url": "http://swapi.co/api/species/5/", 
+        "hair_colors": "n/a", 
+        "homeworld": "http://swapi.co/api/planets/24/", 
+        "films": [
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "average_lifespan": "1000", 
+        "average_height": "300"
+    }, 
+    "6": {
+        "edited": "2014-12-20T21:36:42.148000Z", 
+        "name": "Yoda's species", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/20/"
+        ], 
+        "eye_colors": "brown, green, yellow", 
+        "created": "2014-12-15T12:27:22.877000Z", 
+        "skin_colors": "green, yellow", 
+        "designation": "sentient", 
+        "language": "Galactic basic", 
+        "url": "http://swapi.co/api/species/6/", 
+        "hair_colors": "brown, white", 
+        "homeworld": "http://swapi.co/api/planets/28/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/2/"
+        ], 
+        "average_lifespan": "900", 
+        "average_height": "66"
+    }, 
+    "7": {
+        "edited": "2014-12-20T21:36:42.151000Z", 
+        "name": "Trandoshan", 
+        "classification": "reptile", 
+        "people": [
+            "http://swapi.co/api/people/24/"
+        ], 
+        "eye_colors": "yellow, orange", 
+        "created": "2014-12-15T13:07:47.704000Z", 
+        "skin_colors": "brown, green", 
+        "designation": "sentient", 
+        "language": "Dosh", 
+        "url": "http://swapi.co/api/species/7/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/29/", 
+        "films": [
+            "http://swapi.co/api/films/2/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "200"
+    }, 
+    "8": {
+        "edited": "2014-12-20T21:36:42.153000Z", 
+        "name": "Mon Calamari", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/27/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-18T11:09:52.263000Z", 
+        "skin_colors": "red, blue, brown, magenta", 
+        "designation": "sentient", 
+        "language": "Mon Calamarian", 
+        "url": "http://swapi.co/api/species/8/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/31/", 
+        "films": [
+            "http://swapi.co/api/films/3/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "160"
+    }, 
+    "9": {
+        "edited": "2014-12-20T21:36:42.155000Z", 
+        "name": "Ewok", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/30/"
+        ], 
+        "eye_colors": "orange, brown", 
+        "created": "2014-12-18T11:22:00.285000Z", 
+        "skin_colors": "brown", 
+        "designation": "sentient", 
+        "language": "Ewokese", 
+        "url": "http://swapi.co/api/species/9/", 
+        "hair_colors": "white, brown, black", 
+        "homeworld": "http://swapi.co/api/planets/7/", 
+        "films": [
+            "http://swapi.co/api/films/3/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "100"
+    }, 
+    "10": {
+        "edited": "2014-12-20T21:36:42.157000Z", 
+        "name": "Sullustan", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/31/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-18T11:26:20.103000Z", 
+        "skin_colors": "pale", 
+        "designation": "sentient", 
+        "language": "Sullutese", 
+        "url": "http://swapi.co/api/species/10/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/33/", 
+        "films": [
+            "http://swapi.co/api/films/3/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "180"
+    }, 
+    "11": {
+        "edited": "2014-12-20T21:36:42.160000Z", 
+        "name": "Neimodian", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/33/"
+        ], 
+        "eye_colors": "red, pink", 
+        "created": "2014-12-19T17:07:31.319000Z", 
+        "skin_colors": "grey, green", 
+        "designation": "sentient", 
+        "language": "Neimoidia", 
+        "url": "http://swapi.co/api/species/11/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/18/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "180"
+    }, 
+    "12": {
+        "edited": "2014-12-20T21:36:42.163000Z", 
+        "name": "Gungan", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/36/", 
+            "http://swapi.co/api/people/37/", 
+            "http://swapi.co/api/people/38/"
+        ], 
+        "eye_colors": "orange", 
+        "created": "2014-12-19T17:30:37.341000Z", 
+        "skin_colors": "brown, green", 
+        "designation": "sentient", 
+        "language": "Gungan basic", 
+        "url": "http://swapi.co/api/species/12/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/8/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "190"
+    }, 
+    "13": {
+        "edited": "2014-12-20T21:36:42.165000Z", 
+        "name": "Toydarian", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/40/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-19T17:48:56.893000Z", 
+        "skin_colors": "blue, green, grey", 
+        "designation": "sentient", 
+        "language": "Toydarian", 
+        "url": "http://swapi.co/api/species/13/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/34/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "91", 
+        "average_height": "120"
+    }, 
+    "14": {
+        "edited": "2014-12-20T21:36:42.167000Z", 
+        "name": "Dug", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/41/"
+        ], 
+        "eye_colors": "yellow, blue", 
+        "created": "2014-12-19T17:53:11.214000Z", 
+        "skin_colors": "brown, purple, grey, red", 
+        "designation": "sentient", 
+        "language": "Dugese", 
+        "url": "http://swapi.co/api/species/14/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/35/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "100"
+    }, 
+    "15": {
+        "edited": "2014-12-20T21:36:42.169000Z", 
+        "name": "Twi'lek", 
+        "classification": "mammals", 
+        "people": [
+            "http://swapi.co/api/people/45/", 
+            "http://swapi.co/api/people/46/"
+        ], 
+        "eye_colors": "blue, brown, orange, pink", 
+        "created": "2014-12-20T09:48:02.406000Z", 
+        "skin_colors": "orange, yellow, blue, green, pink, purple, tan", 
+        "designation": "sentient", 
+        "language": "Twi'leki", 
+        "url": "http://swapi.co/api/species/15/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/37/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "200"
+    }, 
+    "16": {
+        "edited": "2014-12-20T21:36:42.171000Z", 
+        "name": "Aleena", 
+        "classification": "reptile", 
+        "people": [
+            "http://swapi.co/api/people/47/"
+        ], 
+        "eye_colors": "unknown", 
+        "created": "2014-12-20T09:53:16.481000Z", 
+        "skin_colors": "blue, gray", 
+        "designation": "sentient", 
+        "language": "Aleena", 
+        "url": "http://swapi.co/api/species/16/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/38/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "79", 
+        "average_height": "80"
+    }, 
+    "17": {
+        "edited": "2014-12-20T21:36:42.173000Z", 
+        "name": "Vulptereen", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/48/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-20T09:57:33.128000Z", 
+        "skin_colors": "grey", 
+        "designation": "sentient", 
+        "language": "vulpterish", 
+        "url": "http://swapi.co/api/species/17/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/39/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "100"
+    }, 
+    "18": {
+        "edited": "2014-12-20T21:36:42.175000Z", 
+        "name": "Xexto", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/49/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-20T10:02:13.915000Z", 
+        "skin_colors": "grey, yellow, purple", 
+        "designation": "sentient", 
+        "language": "Xextese", 
+        "url": "http://swapi.co/api/species/18/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/40/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "125"
+    }, 
+    "19": {
+        "edited": "2014-12-20T21:36:42.177000Z", 
+        "name": "Toong", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/50/"
+        ], 
+        "eye_colors": "orange", 
+        "created": "2014-12-20T10:08:36.795000Z", 
+        "skin_colors": "grey, green, yellow", 
+        "designation": "sentient", 
+        "language": "Tundan", 
+        "url": "http://swapi.co/api/species/19/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/41/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "200"
+    }, 
+    "20": {
+        "edited": "2014-12-20T21:36:42.179000Z", 
+        "name": "Cerean", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/52/"
+        ], 
+        "eye_colors": "hazel", 
+        "created": "2014-12-20T10:15:33.765000Z", 
+        "skin_colors": "pale pink", 
+        "designation": "sentient", 
+        "language": "Cerean", 
+        "url": "http://swapi.co/api/species/20/", 
+        "hair_colors": "red, blond, black, white", 
+        "homeworld": "http://swapi.co/api/planets/43/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "200"
+    }, 
+    "21": {
+        "edited": "2014-12-20T21:36:42.181000Z", 
+        "name": "Nautolan", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/53/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-20T10:18:58.610000Z", 
+        "skin_colors": "green, blue, brown, red", 
+        "designation": "sentient", 
+        "language": "Nautila", 
+        "url": "http://swapi.co/api/species/21/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/44/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "70", 
+        "average_height": "180"
+    }, 
+    "22": {
+        "edited": "2014-12-20T21:36:42.183000Z", 
+        "name": "Zabrak", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/44/", 
+            "http://swapi.co/api/people/54/"
+        ], 
+        "eye_colors": "brown, orange", 
+        "created": "2014-12-20T10:26:59.894000Z", 
+        "skin_colors": "pale, brown, red, orange, yellow", 
+        "designation": "sentient", 
+        "language": "Zabraki", 
+        "url": "http://swapi.co/api/species/22/", 
+        "hair_colors": "black", 
+        "homeworld": "http://swapi.co/api/planets/45/", 
+        "films": [
+            "http://swapi.co/api/films/4/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "180"
+    }, 
+    "23": {
+        "edited": "2014-12-20T21:36:42.186000Z", 
+        "name": "Tholothian", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/55/"
+        ], 
+        "eye_colors": "blue, indigo", 
+        "created": "2014-12-20T10:29:13.798000Z", 
+        "skin_colors": "dark", 
+        "designation": "sentient", 
+        "language": "unknown", 
+        "url": "http://swapi.co/api/species/23/", 
+        "hair_colors": "unknown", 
+        "homeworld": "http://swapi.co/api/planets/46/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "unknown"
+    }, 
+    "24": {
+        "edited": "2014-12-20T21:36:42.188000Z", 
+        "name": "Iktotchi", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/56/"
+        ], 
+        "eye_colors": "orange", 
+        "created": "2014-12-20T10:32:13.046000Z", 
+        "skin_colors": "pink", 
+        "designation": "sentient", 
+        "language": "Iktotchese", 
+        "url": "http://swapi.co/api/species/24/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/47/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "180"
+    }, 
+    "25": {
+        "edited": "2014-12-20T21:36:42.189000Z", 
+        "name": "Quermian", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/57/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-20T10:34:50.827000Z", 
+        "skin_colors": "white", 
+        "designation": "sentient", 
+        "language": "Quermian", 
+        "url": "http://swapi.co/api/species/25/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/48/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "86", 
+        "average_height": "240"
+    }, 
+    "26": {
+        "edited": "2014-12-20T21:36:42.191000Z", 
+        "name": "Kel Dor", 
+        "classification": "unknown", 
+        "people": [
+            "http://swapi.co/api/people/58/"
+        ], 
+        "eye_colors": "black, silver", 
+        "created": "2014-12-20T10:49:21.692000Z", 
+        "skin_colors": "peach, orange, red", 
+        "designation": "sentient", 
+        "language": "Kel Dor", 
+        "url": "http://swapi.co/api/species/26/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/49/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "70", 
+        "average_height": "180"
+    }, 
+    "27": {
+        "edited": "2014-12-20T21:36:42.193000Z", 
+        "name": "Chagrian", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/59/"
+        ], 
+        "eye_colors": "blue", 
+        "created": "2014-12-20T10:53:28.795000Z", 
+        "skin_colors": "blue", 
+        "designation": "sentient", 
+        "language": "Chagria", 
+        "url": "http://swapi.co/api/species/27/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/50/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "190"
+    }, 
+    "28": {
+        "edited": "2014-12-20T21:36:42.195000Z", 
+        "name": "Geonosian", 
+        "classification": "insectoid", 
+        "people": [
+            "http://swapi.co/api/people/63/"
+        ], 
+        "eye_colors": "green, hazel", 
+        "created": "2014-12-20T16:40:45.618000Z", 
+        "skin_colors": "green, brown", 
+        "designation": "sentient", 
+        "language": "Geonosian", 
+        "url": "http://swapi.co/api/species/28/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/11/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "178"
+    }, 
+    "29": {
+        "edited": "2014-12-20T21:36:42.197000Z", 
+        "name": "Mirialan", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/64/", 
+            "http://swapi.co/api/people/65/"
+        ], 
+        "eye_colors": "blue, green, red, yellow, brown, orange", 
+        "created": "2014-12-20T16:46:48.290000Z", 
+        "skin_colors": "yellow, green", 
+        "designation": "sentient", 
+        "language": "Mirialan", 
+        "url": "http://swapi.co/api/species/29/", 
+        "hair_colors": "black, brown", 
+        "homeworld": "http://swapi.co/api/planets/51/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "180"
+    }, 
+    "30": {
+        "edited": "2014-12-20T21:36:42.199000Z", 
+        "name": "Clawdite", 
+        "classification": "reptilian", 
+        "people": [
+            "http://swapi.co/api/people/70/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-20T16:57:46.171000Z", 
+        "skin_colors": "green, yellow", 
+        "designation": "sentient", 
+        "language": "Clawdite", 
+        "url": "http://swapi.co/api/species/30/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/54/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "70", 
+        "average_height": "180"
+    }, 
+    "31": {
+        "edited": "2014-12-20T21:36:42.200000Z", 
+        "name": "Besalisk", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/71/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-20T17:28:28.821000Z", 
+        "skin_colors": "brown", 
+        "designation": "sentient", 
+        "language": "besalisk", 
+        "url": "http://swapi.co/api/species/31/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/55/", 
+        "films": [
+            "http://swapi.co/api/films/5/"
+        ], 
+        "average_lifespan": "75", 
+        "average_height": "178"
+    }, 
+    "32": {
+        "edited": "2014-12-20T21:36:42.202000Z", 
+        "name": "Kaminoan", 
+        "classification": "amphibian", 
+        "people": [
+            "http://swapi.co/api/people/72/", 
+            "http://swapi.co/api/people/73/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-20T17:31:24.838000Z", 
+        "skin_colors": "grey, blue", 
+        "designation": "sentient", 
+        "language": "Kaminoan", 
+        "url": "http://swapi.co/api/species/32/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/10/", 
+        "films": [
+            "http://swapi.co/api/films/5/"
+        ], 
+        "average_lifespan": "80", 
+        "average_height": "220"
+    }, 
+    "33": {
+        "edited": "2014-12-20T21:36:42.204000Z", 
+        "name": "Skakoan", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/76/"
+        ], 
+        "eye_colors": "unknown", 
+        "created": "2014-12-20T17:53:54.515000Z", 
+        "skin_colors": "grey, green", 
+        "designation": "sentient", 
+        "language": "Skakoan", 
+        "url": "http://swapi.co/api/species/33/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/56/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "unknown", 
+        "average_height": "unknown"
+    }, 
+    "34": {
+        "edited": "2014-12-20T21:36:42.207000Z", 
+        "name": "Muun", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/77/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-20T17:58:19.088000Z", 
+        "skin_colors": "grey, white", 
+        "designation": "sentient", 
+        "language": "Muun", 
+        "url": "http://swapi.co/api/species/34/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/57/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "100", 
+        "average_height": "190"
+    }, 
+    "35": {
+        "edited": "2014-12-20T21:36:42.209000Z", 
+        "name": "Togruta", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/78/"
+        ], 
+        "eye_colors": "red, orange, yellow, green, blue, black", 
+        "created": "2014-12-20T18:44:03.246000Z", 
+        "skin_colors": "red, white, orange, yellow, green, blue", 
+        "designation": "sentient", 
+        "language": "Togruti", 
+        "url": "http://swapi.co/api/species/35/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/58/", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "94", 
+        "average_height": "180"
+    }, 
+    "36": {
+        "edited": "2014-12-20T21:36:42.210000Z", 
+        "name": "Kaleesh", 
+        "classification": "reptile", 
+        "people": [
+            "http://swapi.co/api/people/79/"
+        ], 
+        "eye_colors": "yellow", 
+        "created": "2014-12-20T19:45:42.537000Z", 
+        "skin_colors": "brown, orange, tan", 
+        "designation": "sentient", 
+        "language": "Kaleesh", 
+        "url": "http://swapi.co/api/species/36/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/59/", 
+        "films": [
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "80", 
+        "average_height": "170"
+    }, 
+    "37": {
+        "edited": "2014-12-20T21:36:42.212000Z", 
+        "name": "Pau'an", 
+        "classification": "mammal", 
+        "people": [
+            "http://swapi.co/api/people/83/"
+        ], 
+        "eye_colors": "black", 
+        "created": "2014-12-20T20:35:06.777000Z", 
+        "skin_colors": "grey", 
+        "designation": "sentient", 
+        "language": "Utapese", 
+        "url": "http://swapi.co/api/species/37/", 
+        "hair_colors": "none", 
+        "homeworld": "http://swapi.co/api/planets/12/", 
+        "films": [
+            "http://swapi.co/api/films/6/"
+        ], 
+        "average_lifespan": "700", 
+        "average_height": "190"
+    }
+}
