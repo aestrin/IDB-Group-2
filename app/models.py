@@ -11,7 +11,6 @@
 from flask_sqlalchemy import SQLAlchemy
 from application import application
 
-
 application.config['SQLALCHEMY_DATABASE_URI'] = ".....TBD....."
 
 db = SQLAlchemy(application)
@@ -23,7 +22,7 @@ film_character_table = db.Table('film_character_table',
                                     'character.id'), nullable=False),
                                 db.PrimaryKeyConstraint(
                                     'film_id', 'character_id')
-                             )
+                                )
 
 film_planet_table = db.Table('film_planet_table',
                              db.Column('film_id', db.Integer, db.ForeignKey(
@@ -32,6 +31,14 @@ film_planet_table = db.Table('film_planet_table',
                                  'planet.id'), nullable=False),
                              db.PrimaryKeyConstraint('film_id', 'planet_id')
                              )
+
+film_species_table = db.Table('film_species_table',
+                              db.Column('film_id', db.Integer, db.ForeignKey(
+                                  'film.id'), nullable=False),
+                              db.Column('species_id', db.Integer, db.ForeignKey(
+                                  'species.id'), nullable=False),
+                              db.PrimaryKeyConstraint('film_id', 'species_id')
+                              )
 
 
 class Film(db.Model):
@@ -48,7 +55,7 @@ class Film(db.Model):
         Contains the following relations:
             Planets (many-to-many)
             Characters (many-to-many)
-
+            Species (many-to-many)
     """
 
     id = db.Column(db.Integer, primary_key=True,
@@ -65,6 +72,8 @@ class Film(db.Model):
         'Character', secondary=film_character_table, backref='film')
     planets = db.relationship(
         'Planet', secondary=film_planet_table, backref='film')
+    films = db.relationship(
+        'Film', secondary=film_species_table, backref='film')
 
     def __init__(self, title, director, producer, episode_no, release_date, img_url):
         self.title = title
@@ -89,6 +98,7 @@ class Character(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Planets (one-to-one)
+            Species (one-to-one)
     """
 
     id = db.Column(db.Integer, primary_key=True,
@@ -101,7 +111,11 @@ class Character(db.Model):
     mass = db.Column(db.String(120), nullable=False)
     img_url = db.Column(db.String(5000), nullable=False)
 
+    # One to one
     planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
+
+    # One to one
+    species_id = db.Column(db.Integer, db.ForeignKey('species.id'))
 
     def __init__(self, name, gender, birth_year, height, mass, img_url):
         self.name = name
@@ -117,6 +131,7 @@ class Planet(db.Model):
         Planet model
         Contains the following planets:
             DB id
+            name
             climate
             population
             gravity
@@ -126,6 +141,7 @@ class Planet(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Characters (one-to-many)
+            Species (one-to-many)
     """
 
     id = db.Column(db.Integer, primary_key=True,
@@ -141,6 +157,9 @@ class Planet(db.Model):
     # Planet to Character is One to Many
     characters = db.relationship('Character', backref='planet', lazy='dynamic')
 
+    # Planet to Species is One to Many
+    species = db.relationship('Species', backref='planet', lazy='dynamic')
+
     def __init__(self, name, climate, population, gravity, terrain, img_url):
         self.name = name
         self.climate = climate
@@ -151,6 +170,22 @@ class Planet(db.Model):
 
 
 class Species(db.Model):
+    """
+        Species model
+        Contains the following planets:
+            DB id
+            name
+            classification
+            language
+            average_height
+            eye_colors
+
+        Contains the following relations:
+            Films (many-to-many)
+            Characters (one-to-many)
+            Planets (one-to-one)
+    """
+
     id = db.Column(db.Integer, primary_key=True,
                    autoincrement=True, nullable=False)
 
@@ -160,6 +195,10 @@ class Species(db.Model):
     average_height = db.Column(db.String(120), nullable=False)
     eye_colors = db.Column(db.String(120), nullable=False)
 
+    # Species to Planet is One to One
+    planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
+
+    # Species to Character is One to Many
     characters = db.relationship('Character', backref='species', lazy='dynamic')
 
     def __init__(self, name, classification, language, average_height, eye_colors, img_url):
@@ -169,7 +208,3 @@ class Species(db.Model):
         self.average_height = average_height
         self.eye_colors = eye_colors
         self.img_url = img_url
-
-
-
-
