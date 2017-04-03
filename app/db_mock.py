@@ -79,11 +79,11 @@ class MockDB:
         # f3 = Film(d[2]['title'], d[2]['director'], d[2]['producer'], d[2]['episode_id'], d[2]['release_date'], "http://static.dolimg.com/lucas/movies/starwars/starwars_epi5_01-de788d5a9549.jpg",
         #           [Link(self.c[0], 0), Link(self.c[1], 1), Link(self.c[2], 2)], [Link(self.p[2], 2)])
 
-        f1 = Film(d[0]['title'], d[0]['director'], d[0]['producer'], d[0]['episode_id'], d[0]['release_date'],
+        f1 = Film(1,d[0]['title'], d[0]['director'], d[0]['producer'], d[0]['episode_id'], d[0]['release_date'],
                   "http://cdn2us.denofgeek.com/sites/denofgeekus/files/starwars-iv.jpg")
-        f2 = Film(d[1]['title'], d[1]['director'], d[1]['producer'], d[1]['episode_id'], d[1]['release_date'],
+        f2 = Film(1,d[1]['title'], d[1]['director'], d[1]['producer'], d[1]['episode_id'], d[1]['release_date'],
                   "https://i.ytimg.com/vi/jDIHiIxUGEY/maxresdefault.jpg")
-        f3 = Film(d[2]['title'], d[2]['director'], d[2]['producer'], d[2]['episode_id'], d[2]['release_date'],
+        f3 = Film(1,d[2]['title'], d[2]['director'], d[2]['producer'], d[2]['episode_id'], d[2]['release_date'],
                   "http://static.dolimg.com/lucas/movies/starwars/starwars_epi5_01-de788d5a9549.jpg")
 
         return [f1, f2, f3]
@@ -178,6 +178,47 @@ class MockDB:
         #
         # db.session.commit()
 
-        # print 'DONE'
+        # add all films
+        # f_name = os.path.join(APP_ROOT, "scraper", "allFilms.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     film = Film(id, d['title'], d['director'], d['producer'], d['episode_id'], d['release_date'], "http://cdn2us.denofgeek.com/sites/denofgeekus/files/starwars-iv.jpg")
+        #     film.characters = []
+        #     film.planets = []
+        #     film.species = []
+        #     for c in d['characters']:
+        #         tokens = c.split("/")
+        #         c_id = int(tokens[len(tokens) - 2])
+        #         character = self.get_character(c_id)
+        #         film.characters.append(character)
+        #
+        #     for p in d['planets']:
+        #         tokens = p.split("/")
+        #         p_id = int(tokens[len(tokens) - 2])
+        #         planet = self.get_planet(p_id)
+        #         film.planets.append(planet)
+        #
+        #     for s in d['species']:
+        #         tokens = s.split("/")
+        #         s_id = int(tokens[len(tokens) - 2])
+        #         specie = self.get_species(s_id)
+        #         film.species.append(specie)
+        #
+        #     db.session.add(film)
+        #
+        # db.session.commit()
+
+        # films = Film.query.all()
+        # for f in films:
+        #     f.characters = []
+        #     f.planets = []
+        #     f.species = []
+        # db.session.query(Film).delete()
+        # db.session.commit()
+        print 'DONE'
 
 

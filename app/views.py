@@ -56,6 +56,7 @@ def planets():
 
 @application.route('/about')
 def about():
+    # db_util.add_to_db_no_relationships()
     return render_template('about.html')
 
 

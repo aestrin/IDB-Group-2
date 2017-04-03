@@ -62,13 +62,14 @@ class Film(db.Model):
     img_url = db.Column(db.String(5000), nullable=False)
 
     characters = db.relationship(
-        'Character', secondary=film_character_table, backref='film')
+        'Character', secondary=film_character_table, backref='films')
     planets = db.relationship(
-        'Planet', secondary=film_planet_table, backref='film')
-    films = db.relationship(
-        'Film', secondary=film_species_table, backref='film')
+        'Planet', secondary=film_planet_table, backref='films')
+    species = db.relationship(
+        'Species', secondary=film_species_table, backref='films')
 
-    def __init__(self, title, director, producer, episode_no, release_date, img_url):
+    def __init__(self, id, title, director, producer, episode_no, release_date, img_url):
+        self.id = id
         self.title = title
         self.director = director
         self.producer = producer
