@@ -76,6 +76,9 @@ class Film(db.Model):
         self.release_date = release_date
         self.img_url = img_url
 
+    def __repr__(self):
+        return '<Film %r>' % self.title
+
 
 class Character(db.Model):
     """
@@ -109,13 +112,17 @@ class Character(db.Model):
     # One to one
     species_id = db.Column(db.Integer, db.ForeignKey('species.id'))
 
-    def __init__(self, name, gender, birth_year, height, mass, img_url):
+    def __init__(self, id, name, gender, birth_year, height, mass, img_url):
+        self.id = id
         self.name = name
         self.gender = gender
         self.birth_year = birth_year
         self.height = height
         self.mass = mass
         self.img_url = img_url
+
+    def __repr__(self):
+        return '<Character %r>' % self.name
 
 
 class Planet(db.Model):
@@ -151,13 +158,17 @@ class Planet(db.Model):
     # Planet to Species is One to Many
     species = db.relationship('Species', backref='planet', lazy='dynamic')
 
-    def __init__(self, name, climate, population, gravity, terrain, img_url):
+    def __init__(self, id, name, climate, population, gravity, terrain, img_url):
+        self.id = id
         self.name = name
         self.climate = climate
         self.population = population
         self.gravity = gravity
         self.terrain = terrain
         self.img_url = img_url
+
+    def __repr__(self):
+        return '<Planet %r>' % self.name
 
 
 class Species(db.Model):
@@ -192,10 +203,15 @@ class Species(db.Model):
     # Species to Character is One to Many
     characters = db.relationship('Character', backref='species', lazy='dynamic')
 
-    def __init__(self, name, classification, language, average_height, eye_colors, img_url):
+    def __init__(self, id, name, classification, language, average_height, eye_colors, img_url):
+        self.id = id
         self.name = name
         self.classification = classification
         self.language = language
         self.average_height = average_height
         self.eye_colors = eye_colors
         self.img_url = img_url
+
+    def __repr__(self):
+        return '<Species %r>' % self.name
+

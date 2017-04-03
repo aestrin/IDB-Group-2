@@ -87,11 +87,11 @@ class MockDB:
         # c3 = Character(d[2]['name'], d[0]['gender'], d[2]['birth_year'], d[2]['height'], d[2]['mass'], "http://rcysl.com/wp-content/uploads/2017/03/R2d2-Wallpaper-In-High-Definition-.jpg",
         #                [Link(self.f[0], 0), Link(self.f[1], 1), Link(self.f[2], 2)], [Link(self.p[1], 1)])
 
-        c1 = Character(d[0]['name'], d[0]['gender'], d[0]['birth_year'], d[0]['height'], d[0]['mass'],
+        c1 = Character(1,d[0]['name'], d[0]['gender'], d[0]['birth_year'], d[0]['height'], d[0]['mass'],
                        "http://starwarscardtraderapp.com/wp-content/uploads/2015/12/99-1-7-Award-Luke-Skywalker.png")
-        c2 = Character(d[1]['name'], d[0]['gender'], d[1]['birth_year'], d[1]['height'], d[1]['mass'],
+        c2 = Character(1,d[1]['name'], d[0]['gender'], d[1]['birth_year'], d[1]['height'], d[1]['mass'],
                        "https://lumiere-a.akamaihd.net/v1/images/databank_lobot_01_169_8a50d7ae.jpeg?region=0%2C0%2C1560%2C878&width=768")
-        c3 = Character(d[2]['name'], d[0]['gender'], d[2]['birth_year'], d[2]['height'], d[2]['mass'],
+        c3 = Character(1,d[2]['name'], d[0]['gender'], d[2]['birth_year'], d[2]['height'], d[2]['mass'],
                        "http://rcysl.com/wp-content/uploads/2017/03/R2d2-Wallpaper-In-High-Definition-.jpg")
 
         return [c1, c2, c3]
@@ -109,11 +109,11 @@ class MockDB:
         # p3 = Planet(d[2]['name'], d[2]['climate'], d[2]['population'], d[2]['gravity'], d[2]['terrain'], "http://cdn.segmentnext.com/wp-content/uploads/2016/05/Star-Wars-Battlefront-Bespin-DLC-1.jpg",
         #             [Link(self.f[2], 2)], [Link(self.c[1], 1)])
 
-        p1 = Planet(d[0]['name'], d[0]['climate'], d[0]['population'], d[0]['gravity'], d[0]['terrain'],
+        p1 = Planet(1,d[0]['name'], d[0]['climate'], d[0]['population'], d[0]['gravity'], d[0]['terrain'],
                     "https://img.clipartfox.com/92129e5d25a3b8557820a8e286ee002e_chott-el-jerid-wookieepedia-star-wars-tatooine-clipart_1900-815.jpeg")
-        p2 = Planet(d[1]['name'], d[1]['climate'], d[1]['population'], d[1]['gravity'], d[1]['terrain'],
+        p2 = Planet(1,d[1]['name'], d[1]['climate'], d[1]['population'], d[1]['gravity'], d[1]['terrain'],
                     "http://overmental.com/wp-content/uploads/2015/07/Naboo-TPM-790x336.jpg")
-        p3 = Planet(d[2]['name'], d[2]['climate'], d[2]['population'], d[2]['gravity'], d[2]['terrain'],
+        p3 = Planet(1,d[2]['name'], d[2]['climate'], d[2]['population'], d[2]['gravity'], d[2]['terrain'],
                     "http://cdn.segmentnext.com/wp-content/uploads/2016/05/Star-Wars-Battlefront-Bespin-DLC-1.jpg")
         return [p1, p2, p3]
 
@@ -124,19 +124,46 @@ class MockDB:
         APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 
         # add all characters
-        f_name = os.path.join(APP_ROOT, "scraper", "allPeople.json")
-        with open(f_name) as f:
-            data = json.load(f)
-
-        for k in data:
-            d = data[k]
-            key = int(k)
-            print key
-            print d['edited']
-
+        # f_name = os.path.join(APP_ROOT, "scraper", "allPeople.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     character = Character(id, d['name'], d['gender'], d['birth_year'], d['height'], d['mass'], "http://starwarscardtraderapp.com/wp-content/uploads/2015/12/99-1-7-Award-Luke-Skywalker.png")
+        #     db.session.add(character)
+        #
+        # db.session.commit()
 
         # add all planets
+        # f_name = os.path.join(APP_ROOT, "scraper", "allPlanets.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     planet = Planet(id, d['name'], d['climate'], d['population'], d['gravity'], d['terrain'], "http://overmental.com/wp-content/uploads/2015/07/Naboo-TPM-790x336.jpg")
+        #     db.session.add(planet)
+        #
+        # db.session.commit()
+        # print 'DONE'
 
         # add all species
+        # f_name = os.path.join(APP_ROOT, "scraper", "allSpecies.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     species = Species(id, d['name'], d['classification'], d['language'], d['average_height'], d['eye_colors'], "https://s3.amazonaws.com/tf.images/reduced-ban16554.jpg")
+        #     print species.__dict__
+        #     db.session.add(species)
+        #
+        # db.session.commit()
+
+        # print 'DONE'
 
 
