@@ -38,12 +38,13 @@
                   <li>Population: {{ planet.population }}</li>
                   <li>Gravity: {{ planet.gravity }}</li>
                   <li>Terrain: {{ planet.terrain }}</li>
-                  <li>Residents: 
-{#                        <ul>#}
-{#                            {% for c in planet.characters %}#}
-{#                                <li><a href="{{ url_for('character', character_id=c.id) }}">{{ c.name }}</a></li>#}
-{#                            {% endfor %}#}
-{#                        </ul>#}
+                  <li>Residents:
+{#                  TODO: Residents is empty for 12/61 planets. Need to handle this by printing None on the front-end#}
+                    <ul>
+                        {% for c in planet.characters %}
+                            <li><a href="{{ url_for('character', character_id=c.id) }}">{{ c.name }}</a></li>
+                        {% endfor %}
+                    </ul>
                   </li>
                   <li>Films:
                     <ul>

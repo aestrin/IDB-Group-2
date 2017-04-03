@@ -58,10 +58,6 @@ def report():
     return render_template('report.html')
 
 
-# TODO: Where am I supposed to use SQLAlchemy for phase 0?
 # TODO: Grab images from Bing Image search api, instead of hardcoding
-# TODO: Phase 2: Sort all models by their url id before adding to the DB,
-# to make for consistent and retrievable IDs
 # TODO: Python version issue. Using 2.7 but should be using 3.6 :(
-# TODO: Get character gender from DB!
 

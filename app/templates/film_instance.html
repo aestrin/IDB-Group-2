@@ -45,7 +45,7 @@
                             {% endfor %}
                         </ul>
                     </li>
-                        <li>Planets:
+                    <li>Planets:
                         <ul>
                             {% for p in film.planets %}
                                 <li><a href="{{ url_for('planet', planet_id=p.id) }}">{{ p.name }}</a></li>
