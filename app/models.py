@@ -156,9 +156,6 @@ class Planet(db.Model):
     # Planet to Character is One to Many
     characters = db.relationship('Character', backref='planet', lazy='dynamic')
 
-    # Planet to Species is One to Many
-    species = db.relationship('Species', backref='planet', lazy='dynamic')
-
     def __init__(self, id, name, climate, population, gravity, terrain, img_url):
         self.id = id
         self.name = name
@@ -197,9 +194,6 @@ class Species(db.Model):
     average_height = db.Column(db.String(120), nullable=False)
     eye_colors = db.Column(db.String(1200), nullable=False)
     img_url = db.Column(db.String(5000), nullable=False)
-
-    # Species to Planet is One to One
-    planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
 
     # Species to Character is One to Many
     characters = db.relationship('Character', backref='species', lazy='dynamic')

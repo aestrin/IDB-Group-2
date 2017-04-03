@@ -162,7 +162,6 @@ class MockDB:
         #     db.session.add(planet)
         #
         # db.session.commit()
-        # print 'DONE'
 
         # add all species
         # f_name = os.path.join(APP_ROOT, "scraper", "allSpecies.json")
@@ -209,6 +208,43 @@ class MockDB:
         #         film.species.append(specie)
         #
         #     db.session.add(film)
+        #
+        # db.session.commit()
+
+
+        # update all planet-to-character relationships and vice-versa
+        # f_name = os.path.join(APP_ROOT, "scraper", "allPlanets.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     planet = self.get_planet(id)
+        #     planet.characters = []
+        #     for c in d['residents']:
+        #         tokens = c.split("/")
+        #         c_id = int(tokens[len(tokens) - 2])
+        #         character = self.get_character(c_id)
+        #         planet.characters.append(character)
+        #
+        # db.session.commit()
+
+        # update all species-to-character relationships and vice-versa
+        # f_name = os.path.join(APP_ROOT, "scraper", "allSpecies.json")
+        # with open(f_name) as f:
+        #     data = json.load(f)
+        #
+        # for k in data:
+        #     d = data[k]
+        #     id = int(k)
+        #     species = self.get_species(id)
+        #     species.characters = []
+        #     for c in d['people']:
+        #         tokens = c.split("/")
+        #         c_id = int(tokens[len(tokens) - 2])
+        #         character = self.get_character(c_id)
+        #         species.characters.append(character)
         #
         # db.session.commit()
 
