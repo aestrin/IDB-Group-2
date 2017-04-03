@@ -56,6 +56,10 @@ def about():
 @application.route('/report')
 def report():
     return render_template('report.html')
+@application.route('/species/<species_id>')
+def species(species_id):
+    species_id = int(species_id)
+    return render_template('species_instance.html',species=get_species(species_id))
 
 
 # TODO: Grab images from Bing Image search api, instead of hardcoding
