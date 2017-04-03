@@ -1,9 +1,7 @@
+from unittest import TestCase
+
+from app.views import application
 from models import Film, Character, Planet
-from flask_sqlalchemy import SQLAlchemy
-from application import application
-
-from unittest import main, TestCase
-
 from models import db
 
 

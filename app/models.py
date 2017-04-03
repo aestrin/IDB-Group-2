@@ -7,15 +7,7 @@
 # pylint: disable = no-member
 # pylint: disable = import-error
 
-
-from flask_sqlalchemy import SQLAlchemy
-from application import application
-from config import Config
-
-config = Config()
-application.config['SQLALCHEMY_DATABASE_URI'] = config.get_db_url()
-
-db = SQLAlchemy(application)
+from app import db
 
 film_character_table = db.Table('film_character_table',
                                 db.Column('film_id', db.Integer, db.ForeignKey(

@@ -118,13 +118,13 @@
                             <li className={"list-group-item"}>Director: {props.film.director}</li>
                             <li className={"list-group-item"}>Producers: {props.film.producer}</li>
                             <li className={"list-group-item"}>Release Date: {props.film.release_date}</li>
-                            <li className={"list-group-item"}>Characters:
-                                <RefList list={props.film.characters} reftype={"characters"} />
-                            </li>
-                                <li className={"list-group-item"} >Planets:
-                                <RefList list={props.film.planets} reftype={"planets"} />
-                            
-                            </li>
+{#                            <li className={"list-group-item"}>Characters:#}
+{#                                <RefList list={props.film.characters} reftype={"characters"} />#}
+{#                            </li>#}
+{#                                <li className={"list-group-item"} >Planets:#}
+{#                                <RefList list={props.film.planets} reftype={"planets"} />#}
+{#                            #}
+{#                            </li>#}
                         </ul>
 
                 </div></div></div>)
