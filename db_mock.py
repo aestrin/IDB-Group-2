@@ -1,14 +1,19 @@
 from mock_models import Film, Character, Planet
+# from app.models import Film, Character, Planet, Species, db
+# from app.models import db
 import json
 import os
 
 # TODO: Phase 2: instead of using self.xxx, need to use DB for
 # persistence. Use queries to retrieve model instances.
 
+# TODO: Python version issue. Using 2.7 but should be using 3.6 :(
 
-# TODO: In phase 2, Link object is not required. The retreived film/character/planet objects from the DB should have
+# TODO: In phase 2, Link object is not required. The retrieved film/character/planet objects from the DB should have
 # the id already in it, so you can simply pass the full object into the render_template, to get name/id on the HTML
 # side
+
+
 class Link:
 
     def __init__(self, description, index):
@@ -90,3 +95,27 @@ class MockDB:
         p3 = Planet(d[2]['name'], d[2]['climate'], d[2]['population'], d[2]['gravity'], d[2]['terrain'], "http://cdn.segmentnext.com/wp-content/uploads/2016/05/Star-Wars-Battlefront-Bespin-DLC-1.jpg",
                     [Link(self.f[2], 2)], [Link(self.c[1], 1)])
         return [p1, p2, p3]
+
+    def add_to_db_no_relationships(self):
+
+        db.create_all()
+
+        APP_ROOT = os.path.dirname(os.path.abspath(__file__))
+
+        # add all characters
+        f_name = os.path.join(APP_ROOT, 'allPeople.json')
+        with open(f_name) as f:
+            data = json.load(f)
+
+        for k in data:
+            d = data[k]
+            key = int(k)
+            print key
+            print d['edited']
+
+
+        # add all planets
+
+        # add all species
+
+

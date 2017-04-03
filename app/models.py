@@ -10,8 +10,10 @@
 
 from flask_sqlalchemy import SQLAlchemy
 from application import application
+from config import Config
 
-application.config['SQLALCHEMY_DATABASE_URI'] = ".....TBD....."
+config = Config()
+application.config['SQLALCHEMY_DATABASE_URI'] = config.get_db_url()
 
 db = SQLAlchemy(application)
 
@@ -189,7 +191,8 @@ class Species(db.Model):
     classification = db.Column(db.String(120), nullable=False)
     language = db.Column(db.String(120), nullable=False)
     average_height = db.Column(db.String(120), nullable=False)
-    eye_colors = db.Column(db.String(120), nullable=False)
+    eye_colors = db.Column(db.String(1200), nullable=False)
+    img_url = db.Column(db.String(5000), nullable=False)
 
     # Species to Planet is One to One
     planet_id = db.Column(db.Integer, db.ForeignKey('planet.id'))
