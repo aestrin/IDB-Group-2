@@ -47,8 +47,8 @@
                     </li>
                         <li>Films:
                         <ul>
-                            {% for l in character.films %}
-                                <li><a href="{{ url_for('film', film_id=l.index) }}">{{ l.description }}</a></li>
+                            {% for f in character.films %}
+                                <li><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>

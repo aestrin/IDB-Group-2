@@ -40,15 +40,15 @@
                     <li>Release Date: {{ film.release_date }}</li>
                     <li>Characters:
                         <ul>
-                            {% for l in film.characters %}
-                                <li><a href="{{ url_for('character', character_id=l.index) }}">{{ l.description }}</a></li>
+                            {% for c in film.characters %}
+                                <li><a href="{{ url_for('character', character_id=c.id) }}">{{ c.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>
                         <li>Planets:
                         <ul>
-                            {% for l in film.planets %}
-                                <li><a href="{{ url_for('planet', planet_id=l.index) }}">{{ l.description }}</a></li>
+                            {% for p in film.planets %}
+                                <li><a href="{{ url_for('planet', planet_id=p.id) }}">{{ p.name }}</a></li>
                             {% endfor %}
                         </ul>
                     </li>

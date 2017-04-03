@@ -34,8 +34,9 @@ class MockDB:
         self.characters = self.init_characters()
         self.planets = self.init_planets()
 
-    def get_film(self, index):
-        return self.films[index]
+    def get_film(self, id):
+        film = db.session.query(Film).get(id)
+        return film
 
     def get_character(self, id):
         character = db.session.query(Character).get(id)
@@ -50,9 +51,8 @@ class MockDB:
         return species
 
     def get_films(self):
-        # films = Film.query.all()
-        # return self.films
-        return self.films
+        films = Film.query.all()
+        return films
 
     def get_characters(self):
         characters = Character.query.all()
@@ -219,6 +219,7 @@ class MockDB:
         #     f.species = []
         # db.session.query(Film).delete()
         # db.session.commit()
+
         print 'DONE'
 
 
