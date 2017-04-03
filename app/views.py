@@ -51,10 +51,11 @@ def planets():
     data = jsonpickle.encode(db_util.get_planets())
     return render_template('planets.html', planets=data)
 
+# TODO: Add routes for species
+
 
 @application.route('/about')
 def about():
-    db_util.add_to_db_no_relationships()
     return render_template('about.html')
 
 

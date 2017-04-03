@@ -37,20 +37,34 @@ class MockDB:
     def get_film(self, index):
         return self.films[index]
 
-    def get_character(self, index):
-        return self.characters[index]
+    def get_character(self, id):
+        character = db.session.query(Character).get(id)
+        return character
 
-    def get_planet(self, index):
-        return self.planets[index]
+    def get_planet(self, id):
+        planet = db.session.query(Planet).get(id)
+        return planet
+
+    def get_species(self, id):
+        species = db.session.query(Species).get(id)
+        return species
 
     def get_films(self):
+        # films = Film.query.all()
+        # return self.films
         return self.films
 
     def get_characters(self):
-        return self.characters
+        characters = Character.query.all()
+        return characters
 
     def get_planets(self):
-        return self.planets
+        planets = Planet.query.all()
+        return planets
+
+    def get_all_species(self):
+        species = Species.query.all()
+        return species
 
     def init_films(self):
         f_name = os.path.join(self.static_folder, 'Films.json')
