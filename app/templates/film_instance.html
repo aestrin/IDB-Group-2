@@ -38,19 +38,22 @@
                     <li>Director: {{ film.director }}</li>
                     <li>Producers: {{ film.producer }}</li>
                     <li>Release Date: {{ film.release_date }}</li>
-                    <li>Characters:
+                    <li><a data-toggle="collapse" href="#collapse1">Characters </a></li>
+                    <div id="collapse1" class="panel-collapse collapse">
                         <ul>
                             {% for c in film.characters %}
                                 <li><a href="{{ url_for('character', character_id=c.id) }}">{{ c.name }}</a></li>
                             {% endfor %}
                         </ul>
-                    </li>
-                    <li>Planets:
+                    </div>
+                    <li><a data-toggle="collapse" href="#collapse2">Planets </a></li>
+                    <div id="collapse2" class="panel-collapse collapse">
                         <ul>
                             {% for p in film.planets %}
                                 <li><a href="{{ url_for('planet', planet_id=p.id) }}">{{ p.name }}</a></li>
                             {% endfor %}
                         </ul>
+                        <div>
                     </li>
                 </ul>
             </div>
