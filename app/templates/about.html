@@ -78,7 +78,7 @@
                 <h3>Arjun Bajaj</h3>
                 <h4>Fullstack Knight</h4>
                 <p>CS + BHP Junior Major from Austin Texas. I like basketball and playing with my pupper Atticus</p>  
-				  <div class="row">
+          <div class="row">
                   <h5>Number of Commits: 6</h5>
                   <h5>Number of Issues: 1</h5>
                   <h5>Number of Unit Tests: 7</h5>
@@ -121,6 +121,39 @@
             <a href="https://swapi.co/"><p>Swapi - The Starwars API</p></a>
           </div>
         </div>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <h2> Table of Contents of Techincal Report</h2>
+  <br>
+  <p><a href="#Introduction">Introduction</a></p>
+  <p style="padding-left: 2em"><a href="#IntendedUseCases">Intended Use Cases</a></p>
+  <p><a href="#Design">Design</a></p>
+  <p><a href="#Tools">Tools</a></p>
+    <p style="padding-left: 2em"><a href="#FrontEnd">Front End</a></p>
+      <p style="padding-left: 4em"><a href="#React">React</a></p>
+      <p style="padding-left: 4em"><a href="#Bootstrap">Bootstrap</a></p>
+    <p style="padding-left: 2em"><a href="#BackEnd">Back End</a></p>
+      <p style="padding-left: 4em"><a href="#Flask">Flask</a></p>
+      <p style="padding-left: 4em"><a href="#Python">Python</a></p>
+    <p style="padding-left: 2em"><a href ="#OtherTools">Other Tools</a></p>
+      <p style="padding-left: 4em"><a href="#Apiary">Apiary</a></p>
+      <p style="padding-left: 4em"><a href="#Slack">Slack</a></p>
+      <p style="padding-left: 4em"><a href="#Travis">Flask</a></p>
+      <p style="padding-left: 4em"><a href="#Pydoc">Python</a></p>
+      <p style="padding-left: 4em"><a href="#autopep8">Autopep8</a></p>
+      <p style="padding-left: 4em"><a href="#Github">Github</a></p>
+      <p style="padding-left: 4em"><a href="#Sublime">Sublime Text</a></p>
+      <p style="padding-left: 4em"><a href="#Yuml">Pylint</a></p>
+      <p style="padding-left: 4em"><a href="#Pycharm">Autopep8</a></p>
+      <p style="padding-left: 4em"><a href="#Pycharm">Source Tree</a></p>
+      <p style="padding-left: 4em"><a href="#AWS">Amazon Web Services</a></p>
+      <p style="padding-left: 4em"><a href="#PIP">Python PIP</a></p>
+   <p><a href="#Hosting">Hosting</a></p>
+
+
 
 
 
@@ -135,9 +168,11 @@
           <p>Adam Estrin</p>
           <p>Hongzhou Liu</p></h3>
           <p>&nbsp;</p>
+          <a name = "Introduction"></a>
           <h2><p><strong>Introduction</strong></p></h2>
           <p>&nbsp;</p>
           <h4><p>George Lucas&rsquo; Star Wars has captivated generations with its expansive storylines, epic scores, and awe-inspiring characters. The series itself has impressed upon society a significant cultural impact with references to the film that are deeply embedded within Western popular culture. The events depicted in the seven films are expansive &ndash; spanning millennia, with hundreds of different characters, vehicles and species. However, navigating this expansive behemoth of a saga has proven more difficult than one would think and is often bogged down ,in the now non-canon, expanded universe. It is for this reason that our group set out to fix that and provide users an easy to navigate site that allows for one to appreciate the deeply linked nature of all the films and allows one to appreciate the subtleties of continuity one might have missed in these works of art.</p></h4>
+          <a name = "IntendedUseCases"></a>
           <h2><p><strong><br /> Intended Use Cases</strong></p></h2>
           <h4><p><br /> The sites navigation allows users to easily navigate from a particular point of interest such as a favorite obscure character, and allows a user to then view the home planet of said character and see all noted appearances of the character in the films. All the information about these objects are at most 4 clicks away. This eliminates the need to scour the internet for different aspects about each model and streamlines the information into an easily digestible format, avoiding unnecessary information in the process. Moreover to speed up their navigation we&rsquo;ve included ways to filter, and sort the information based on attributes within the website. In later stages of the we plan to implement a search functionality to further ease the navigation when it comes to specific shared attributes or to find a specific entry even faster.</p></h4>
           <p>&nbsp;</p>
@@ -209,74 +244,98 @@
           </tbody>
           </table>
           <p><br /> </p>
+          <a name = "Design"></a>
           <h2><p><strong>Design</strong></p></h2>
           <p>&nbsp;</p>
           <h4><p>Our API design was outlined in apiary. It uses a simple GET request driven system to allow users to query for information about various planets, characters, and films in the Star Wars universe. The design of the API is very straight forward. To obtain a list of the available planets, characters, or films, simply send a request to http://thesweawakens.me/api/planets, http://thesweawakens.me/api/characters, or http://thesweawakens.me/api/films respectively. A JSON is returned containing the number of results followed by a list of objects containing the properties of that object (as well as a URL with it&rsquo;s ID). To get information about a specific member of any of these categories, simply append &ldquo;/{id-number}&rdquo; to the catagory&rsquo;s URL. For instance, to obtain the planet with id 2 send a GET request to http://thesweawakens.me/api/planets/2. The result is a JSON containing just the properties of that planet.</p></h4>
           <p>&nbsp;</p>
           <img src="/static/UML.png" style="display: block;margin: 0 auto;">
           <p>&nbsp;</p>
+          <a name = "Tools"></a>
           <h1><p><strong>Tools</strong></p></h1>
           <p>&nbsp;</p>
+          <a name = "FrontEnd"></a>
           <h2><p><strong>Front End</strong></p></h2>
           <p>&nbsp;</p>
           <h4><p>The front end is built off of Facebook&rsquo;s React, Bootstrap, and basic HTML CSS and JavaScript.</p></h4>
           <p>&nbsp;</p>
           <h3><p>React</p></h3>
+          <a name = "React"></a>
           <h4><p>React is used to dynamically generate content on the client-side. The react code is written in the jsx format which is cross-compiled into Javascript at runtime. React provides a simple way to create and add elements to the page&rsquo;s DOM (runtime representation of the HTML hierarchy) without having to work with clunky javascript functions. We used React to generate the grid for our model pages. This gives us the control we need to do in-client sorting, filtering, and column-size adjustments. React allows us to create code that is highly modular and reusable and thus the unique code needed for an individual model page is very minimal.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Bootstrap"></a>
           <h3><p>Bootstrap</p></h3>
           <h4><p>Developed by Twitter, Bootstrap is a HTML, CSS, and Javascript framework that provides many styles, elements, and templates that allows high-quality HTML to be built in a simple, modular way. Bootstrap provides the necessary CSS classes and templates to create such elements as carousels (such as the one on our homepage) and navigation bars. Additionally the framework allows for reactive design especially in the array of different screen sizes and aspect ratios that exist in our world.</p></h4>
           <p>&nbsp;</p>
+          <a name = "BackEnd"></a>
           <h2><p><strong>Back End<br /> </strong></h2>
           <p>&nbsp;</p>
           <h4>The back end of our website is built upon Flask and Python.</h4><br />
+          <a name = "Flask"></a>
           <h3>Flask</p></h3>
           <h4><p> We employed Flask, a python microframework, to interact with the database and process HTTP requests in order serve static HTML pages to the end user programmatically. Flask also comes with Jinja2 which allows us to render HTML pages using the variables in our Python code. It also allows us to piece together markup from multiple source files, allowing for effective code reuse.</p><h4>
           <p>&nbsp;</p>
+          <a name = "Python"></a>
           <h3><p>Python</p></h3>
           <h4><p>The greatest programming language known to man, developed by Guido Van Rossum in 1989. We utilized this in order to process our JSON, create our models and unit tests, and serve HTML through Flask. An interpretative language that allows for high-readability and brevity while also containing many of the bells and whistles of other high performance programming languages and has one of the largest developer communities in the world.</p></h4>
           <p>&nbsp;</p>
+          <a name = "OtherTools"></a>
           <h1><p><strong>Other Tools</strong></p></h1>
           <p>&nbsp;</p>
+          <a name = "Apiary"></a>
           <h3><p>Apiary</p></h3>
           <h4><p>A platform that allows for developers to easily outline the functionality and intended effects of their respective Application Programming Interfaces. Moreover the platform allows developers to overcome many of the typical and traditional api pitfalls.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Slack"></a>
           <h3><p>Slack</p></h3>
           <h4><p>Our team used slack in order to keep in constant communication. Moreover with our connected github, we were able to get constant updates on our team's commits,issues and progress.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Travis"></a>
           <h3><p>Travis CI</p></h3>
           <h4><p>A continuous integration tool that allows for building and testing software in an automated way. Travis CI is linked to a github repository, and each time a new commit is made, Travis will attempt to build the project and run tests. Additionally, Travis can be integrated with AWS Elastic Beanstalk to allow for Continuous Deployment. By providing encrypted access keys to your EB instance, Travis will automatically deploy to the production environment on a successful build.</p></h4>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
+          <a name = "Pydoc"></a>
           <h3><p>Pydoc</p></h3>
           <h4><p>A documentation generator for the classes within our implementation and the python language. Run from the command line the tool is very similar to perldoc, which it drew its inspiration. The tool itself is applied to each module showing the documentation page from the doc strings for each module.</p></h4>
           <p>&nbsp;</p>
+          <a name = "autopep8"></a>
           <h3><p>Autopep8</p></h3>
           <h4><p>A tool that automatically formats the Python code to conform to the PEP 8 Style guide. Autopep8 is able to fix many of the common formatting issues that is reported by the pycodeutility.</p></h4>
           <p>&nbsp;</p>
           <h3><p>Github</p></h3>
+          <a name = "Github"></a>
           <h4><p>A remote repository service employing git, allows for multiple contributors, branches and issue tracking. All our work was shared and managed through Github.</p></h4>
-          <p>&nbsp;</p>
+          <p>&nbsp;</p>          
+          <a name = "Github"></a>
           <h3><p>Sublime Text 2</p></h3>
           <h4><p>A lightweight text editor that allows for basic text editing, syntax highlighting and find and replace. This was the preferred choice of many of our developers especially for the sleek Brogrammer theme.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Pylint"></a>
           <h3><p>Pylint</p></h3>
           <h4><p>A source code, bug, and quality checker for Python.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Yuml"></a>
           <h3><p>yUML</p></h3>
           <h4><p>A simple online tool to create UML diagrams. It allows the easy creation of models and their relations and multiplicities.</p></h4>
           <p>&nbsp;</p>
+          <a name = "PyCharm"></a>
           <h3><p>PyCharm</p></h3>
           <h4><p>Python and HTML IDE developed by JetBrains. Integrate with Git to be able to see local changes at a quick glance. Moreover, PyCharm shares many of the benefits of other full-fledged IDEs as compared to simple text editors.</p></h4>
           <p>&nbsp;</p>
+          <a name = "SourceTree"></a>
           <h3><p>SourceTree</p></h3>
           <h4><p>Command-line git is the quickest way to get things done, but it can make life much easier to have a visual representation of your workflow on different branches, especially when working collaboratively. SourceTree is developed by Atlassian.</p></h4>
           <p>&nbsp;</p>
+          <a name = "AWS"></a>
           <h3><p>Amazon Web Services</p></h3>
           <h4><p>Online hosting service for the deployment of the application (Elastic Beanstalk), including storage for our relational database (RDS) in the next phase.</p></h4>
           <p>&nbsp;</p>
+          <a name = "PIP"></a>
+          <h3><p>Python PIP</p></h3>
           <h4><p>Python package management system that allows for easy installation of necessary tools, including many others outlined in this section, that are written in python.</p></h4>
           <p>&nbsp;</p>
+          <a name = "Hosting"></a>
           <h2><p><strong>Hosting</strong></p></h2>
           <p>&nbsp;</p>
           <h4><p>We used AWS Elastic Beanstalk to deploy our website. The entire process turned out to be pretty simple, thanks to the vast amount of documentation available out there, including a Flask specific tutorial on the AWS website. There were definitely some gaps in information along the way, and we&rsquo;ll list out useful tips and things to look out for in the following documented process.</p></h4>
