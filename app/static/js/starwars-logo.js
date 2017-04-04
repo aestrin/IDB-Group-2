@@ -26,3 +26,22 @@ for(i=0;i<bylineArr.length;i++){									// Loop for every letter
   	byline.appendChild(span); 					// Add the span to the h2
   }
 }
+
+// var byline2 = document.getElementById('byline2');  	// Find the H2
+// bylineText2 = byline2.innerHTML;										// Get the content of the H2
+// bylineArr2 = bylineText2.split('');									// Split content into array
+// byline2.innerHTML = '';														// Empty current content
+//
+// var span2;					// Create variables to create elements
+// var letter2;
+//
+// for(i=0;i<bylineArr2.length;i++){									// Loop for every letter
+//   span2 = document.createElement("span");					// Create a <span> element
+//   letter2 = document.createTextNode(bylineArr2[i]);	// Create the letter
+//   if(bylineArr2[i] == ' ') {												// If the letter is a space...
+//     byline2.appendChild(letter2);					// ...Add the space without a span
+//   } else {
+// 		span2.appendChild(letter2);						// Add the letter to the span
+//   	byline2.appendChild(span2); 					// Add the span to the h2
+//   }
+// }
