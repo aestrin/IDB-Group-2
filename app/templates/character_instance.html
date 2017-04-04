@@ -39,13 +39,15 @@
                     <li>Height: {{ character.height }}</li>
                     <li>Weight: {{ character.mass }}</li>
                     <li>Home world: <a href="{{ url_for('planet', planet_id=character.planet.id) }}">{{ character.planet.name }}</a></li>
-                    <li>Films:
+                    <li><a data-toggle="collapse" href="#collapse1">Films:</a></li>
+                    <div id="collapse1" class="panel-collapse collapse">
+                   
                         <ul>
                             {% for f in character.films %}
                                 <li><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
                             {% endfor %}
                         </ul>
-                    </li>
+                    </div>
                 </ul>
             </div>
         </div>
