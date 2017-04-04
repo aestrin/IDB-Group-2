@@ -8,53 +8,51 @@ def main():
     planetDict = get_dict("allPlanets.json")
     speciesDict = get_dict("allSpecies.json")
 
-    # print peopleDict
+    for key in peopleDict:
+        img_url, height, width = get_img_url(peopleDict[key]['name'])
+        peopleDict[key]['img_url'] = img_url
+        peopleDict[key]['img_height'] = height
+        peopleDict[key]['img_width'] = width
 
-    # for key in peopleDict:
-    #     img_url, height, width = get_img_url(peopleDict[key]['name'])
-    #     peopleDict[key]['img_url'] = img_url
-    #     peopleDict[key]['img_height'] = height
-    #     peopleDict[key]['img_width'] = width
-    #
-    # print 'people write ..'
-    #
-    # with open('allPeople.json', 'w') as outfile:
-    #     json.dump(peopleDict, outfile, indent=4)
-    #
-    # print 'people write DONE'
+    print 'people write ..'
+
+    with open('allPeople.json', 'w') as outfile:
+        json.dump(peopleDict, outfile, indent=4)
+
+    print 'people write DONE'
 
 
 
-    # for key in filmDict:
-    #     img_url, height, width = get_img_url(filmDict[key]['title'])
-    #     filmDict[key]['img_url'] = img_url
-    #     filmDict[key]['img_height'] = height
-    #     filmDict[key]['img_width'] = width
-    #
-    # print 'film write ..'
-    #
-    # with open('allFilms.json', 'w') as outfile:
-    #     json.dump(filmDict, outfile, indent=4)
-    #
-    # print 'film write DONE'
+    for key in filmDict:
+        img_url, height, width = get_img_url(filmDict[key]['title'])
+        filmDict[key]['img_url'] = img_url
+        filmDict[key]['img_height'] = height
+        filmDict[key]['img_width'] = width
+
+    print 'film write ..'
+
+    with open('allFilms.json', 'w') as outfile:
+        json.dump(filmDict, outfile, indent=4)
+
+    print 'film write DONE'
 
 
 
-    # for key in planetDict:
-    #     img_url, height, width = get_img_url(planetDict[key]['name'])
-    #     planetDict[key]['img_url'] = img_url
-    #     planetDict[key]['img_height'] = height
-    #     planetDict[key]['img_width'] = width
-    #
-    # print 'planet write ..'
-    #
-    # with open('allPlanets.json', 'w') as outfile:
-    #     json.dump(planetDict, outfile, indent=4)
-    #
-    # print 'planet write DONE'
-    #
-    #
-    #
+    for key in planetDict:
+        img_url, height, width = get_img_url(planetDict[key]['name'])
+        planetDict[key]['img_url'] = img_url
+        planetDict[key]['img_height'] = height
+        planetDict[key]['img_width'] = width
+
+    print 'planet write ..'
+
+    with open('allPlanets.json', 'w') as outfile:
+        json.dump(planetDict, outfile, indent=4)
+
+    print 'planet write DONE'
+
+
+
     for key in speciesDict:
         img_url, height, width = get_img_url(speciesDict[key]['name'])
         speciesDict[key]['img_url'] = img_url
@@ -112,5 +110,5 @@ def get_img_url(q):
 
 
 if __name__ == "__main__":
-    main()
-
+    # main()
+    print 'nothing to do'
