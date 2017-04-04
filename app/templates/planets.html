@@ -102,10 +102,10 @@
         }
 
         function Planet(props){
-        return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
+        return (<div style={s = {padding: '100px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%', width: '300px',}}><div className = {"panel-content"}>
 
                     <a href={"#"}>
-                        <img className={"img-responsive"} src={props.planet.img_url} alt={""} style={panelPicStyle} />
+                        <img className={"img-responsive"} src={props.planet.img_url} alt={""} />
                     </a>
 
                     <a href={"/planets/"+props.planet.id}><h2 className={"text-center"}>{props.planet.name}</h2></a>
@@ -130,7 +130,7 @@
 
         console.log(planet_list);
 
-        renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 2);
+        renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 3);
 
 
     </script>

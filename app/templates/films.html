@@ -105,10 +105,10 @@
 
 
         function Film(props){
-            return (<div style={s = {padding: '20px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%',}}><div className = {"panel-content"}>
+            return (<div style={s = {padding: '100px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%', width: '300px',}}><div className = {"panel-content"}>
 
                         <a href={"#"}>
-                            <img className={"img-responsive"} src={props.film.img_url} alt={""} style={panelPicStyle} />
+                            <img className={"img-responsive"} src={props.film.img_url} alt={""} />
                         </a>
 
                         <a href={"films/"+props.film.id}><h2 className={"text-center"}>{props.film.title}</h2></a>
@@ -134,7 +134,7 @@
 
         console.log(film_list);
 
-        renderTable(buildModels(film_list, true), document.getElementById("grid_location"), 2);
+        renderTable(buildModels(film_list, true), document.getElementById("grid_location"), 3);
 
     </script>
 
