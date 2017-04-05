@@ -80,6 +80,9 @@ class Film(db.Model):
     def __repr__(self):
         return '<Film %r>' % self.title
 
+    def has_name(search):
+        return self.episode_no == search
+
 
 class Character(db.Model):
     """
@@ -125,6 +128,9 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % self.name
 
+    def has_name(search):
+        return self.name == search
+
 
 class Planet(db.Model):
     """
@@ -168,6 +174,9 @@ class Planet(db.Model):
     def __repr__(self):
         return '<Planet %r>' % self.name
 
+    def has_name(search):
+        return self.name == search
+
 
 class Species(db.Model):
     """
@@ -210,3 +219,5 @@ class Species(db.Model):
     def __repr__(self):
         return '<Species %r>' % self.name
 
+    def has_name(search):
+        return self.name == search
