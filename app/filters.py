@@ -3,7 +3,7 @@ class MatchFilter:
 		self.filtAtr = filtAtr
 
 	def __call__(self, items, value):
-		return [a for a in items if hasattr(a, filtAtr) and getattr(a, filtAtr) == value]
+		return [a for a in items if hasattr(a, self.filtAtr) and getattr(a, self.filtAtr) == value]
 
 
 class RangeFilter:
@@ -13,7 +13,7 @@ class RangeFilter:
 	def __call__(self, items, rangestr):
 		lo = float(rangestr[:rangestr.index("-")])
 		hi = float(rangestr[rangestr.index("-") + 1:])
-		return [a for a in items if hasattr(a, filtAtr) and getattr(a, filtAtr) != "unknown" and float(getattr(a, filtAtr)) >= lo and float(getattr(a, filtAtr)) <= hi]
+		return [a for a in items if hasattr(a, self.filtAtr) and getattr(a, self.filtAtr) != "unknown" and float(getattr(a, self.filtAtr)) >= lo and float(getattr(a, self.filtAtr)) <= hi]
 
 def NameFilter(items, rangestr):
 		lo = rangestr[:rangestr.index("-")].lower()

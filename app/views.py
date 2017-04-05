@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request
 from app import application
 from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
-from filters import filters
+from app.filters import filters
 import json
 from copy import deepcopy   
 
