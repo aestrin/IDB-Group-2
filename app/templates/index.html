@@ -5,14 +5,15 @@
     {% include 'head.html' %}
     <title>Title</title>
     <link href="{{ url_for('static', filename='css/home-page.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/starwars-logo.css') }}" rel="stylesheet">
 </head>
 <body>
 
-  <div class="video-background">
+  <!-- <div class="video-background">
     <div class="video-foreground">
       <iframe src="https://www.youtube.com/embed/6MPJGaBHoOM?controls=0&showinfo=0&rel=0&autoplay=1&loop=1" frameborder="0" allowfullscreen></iframe>
     </div>
-  </div>
+  </div> -->
 
   <!-- Full Page Image Background Carousel Header -->
    <header id="myCarousel" class="carousel slide">
@@ -26,19 +27,31 @@
        <!-- Wrapper for Slides -->
        <div class="carousel-inner">
            <div class="item active">
-               <div class="carousel-caption">
-                  <img src="http://fontmeme.com/permalink/170322/c168ce26c5b7647882314e1288e892a4.png" alt="star-wars-font" border="0">
-               </div>
+
+                 <div class="starwars-demo">
+                    <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                    <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
+                    <h2 class="byline" id="byline">The SWE Awakens</h2>
+                  </div>
+
            </div>
            <div class="item">
-               <div class="carousel-caption">
-                  <img src="http://fontmeme.com/permalink/170323/72a37307f9952bfde95429386266d790.png" alt="star-wars-font" border="0">
-               </div>
+
+               <div class="starwars-demo">
+                 <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                 <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
+                  <h2 class="byline" id="byline">Return of the SWE</h2>
+                </div>
+
            </div>
            <div class="item">
-               <div class="carousel-caption">
-                   <img src="http://fontmeme.com/permalink/170323/f67fc646a2fcf087f4fbdd73d897699f.png" alt="star-wars-font" border="0">
-               </div>
+
+               <div class="starwars-demo">
+                 <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                 <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
+                  <h2 class="byline" id="byline">Revenge of the swe</h2>
+                </div>
+
            </div>
        </div>
 
@@ -51,6 +64,8 @@
        </a>
 
    </header>
+
+   <script src="{{ url_for('static', filename='js/starwars-logo.js') }}"></script>
 
 </body>
 </html>
