@@ -160,6 +160,26 @@
             reload();
         }
 
+        function nextPage()
+        {
+            page += 1;
+            reload();
+        }
+
+        function prevPage()
+        {
+            if(page != 1)
+                page -= 1;
+            reload();
+        }
+
+        function filterPage(filtBy, filt)
+        {
+            filterBy = filtBy;
+            filter = filt;
+            reload();
+        }
+
         function Planet(props){
             return (<div style={s = {padding: '100px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '400px', width: '300px',}}><div className = {"panel-content"}>
 
@@ -205,11 +225,11 @@
 
         ReactDOM.render(<PlanetSort />, document.getElementById("sorts"));
 
-        var planet_list = JSON.parse({{planets | tojson}});
+        //var planet_list = JSON.parse({{planets | tojson}});
 
-        console.log(planet_list);
-
-        renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 3);
+        //console.log(planet_list);
+        reload();
+        //renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 3);
 
 
     </script>
