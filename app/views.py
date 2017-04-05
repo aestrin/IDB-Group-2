@@ -1,6 +1,6 @@
 from flask import render_template
 from app import application
-from db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
+from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
 
 import jsonpickle
 
