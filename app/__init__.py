@@ -2,7 +2,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from config import Config
 
-application = Flask(__name__)
+application = Flask(__name__, static_url_path='/app/')
 
 config = Config()
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
