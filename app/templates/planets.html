@@ -28,28 +28,7 @@
 
         <div class="row">
           <div class="col-lg-2 col-sm-2">
-            <br>
-            <h3>Residents</h3>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Luke Skywalker</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">R2-D2</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Lobot</label>
-            </div>
-
-            <h3>Films</h3>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">A New Hope</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">Return of the Jedi</label>
-            </div>
-            <div class="checkbox">
-             <label><input type="checkbox" value="">The Empire Strikes Bac</label>
-            </div>
+            <div id="filters"></div>
           </div>
           <div class="col-lg-10 col-sm-10">
             <div id="grid_location"> </div>
@@ -59,14 +38,8 @@
         {#TODO: create common stylesheet for img style width and height#}
         <hr>
 
-        <div class="row text-center">
-          <ul class="pagination pagination-centered">
-            <li><a href="#">1</a></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-          </ul>
+        <div class="row text-center" id="pagination"></div>
+
         </div>
         {% include 'footer.html' %}
 
@@ -79,9 +52,6 @@
         var i;
         var x;
         var s;
-
-
-
 
         {% include 'table_builder.jsx' %}
 
@@ -207,19 +177,55 @@
                             <a><i className={"fa fa-chevron-down"} aria-hidden={"true"} onClick={sortDir.bind(null, 1)}></i></a>
                             <a><i className={"fa fa-chevron-up"} aria-hidden={"true"} onClick={sortDir.bind(null, 0)}></i></a>
                         </h4>
-                        <hr />
+                        <hr/>
                       </div>
-                    </div>)
-        }
+                    </div>
+        )}
 
+        function PlanetPagination(props) {
+            return (
+              <ul className={"pagination pagination-centered"}>
+                <li><a href={"#"}>1</a></li>
+                <li><a href={"#"}>2</a></li>
+                <li><a href={"#"}>3</a></li>
+                <li><a href={"#"}>4</a></li>
+                <li><a href={"#"}>5</a></li>
+              </ul>
+        )}
+
+        function PlanetFilter(props) {
+          return (
+            <div>
+              <h3>Residents</h3>
+              <div className={"checkbox"}>
+               <label><input type={"checkbox"} value={""}></input>Luke Skywalker</label>
+              </div>
+              <div className={"checkbox"}>
+               <label><input type={"checkbox"} value={""}></input>R2-D2</label>
+              </div>
+              <div className={"checkbox"}>
+               <label><input type={"checkbox"} value={""}></input>Lobot</label>
+              </div>
+
+              <h3>Films</h3>
+              <div className={"checkbox"}>
+               <label><input type="checkbox" value={""}></input>A New Hope</label>
+              </div>
+              <div className={"checkbox"}>
+               <label><input type={"checkbox"} value={""}></input>Return of the Jedi</label>
+              </div>
+              <div className={"checkbox"}>
+               <label><input type={"checkbox"} value={""}></input>The Empire Strikes Bac</label>
+              </div>
+            </div>
+        )}
+
+
+        ReactDOM.render(<PlanetFilter />, document.getElementById("filters"));
         ReactDOM.render(<PlanetSort />, document.getElementById("sorts"));
+        ReactDOM.render(<PlanetPagination />, document.getElementById("pagination"));
 
-        //var planet_list = JSON.parse({{planets | tojson}});
-
-        //console.log(planet_list);
         reload();
-        //renderTable(buildModels(planet_list, true), document.getElementById("grid_location"), 3);
-
 
     </script>
 
