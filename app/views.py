@@ -131,7 +131,7 @@ def process_query(mylist):
     # sort
     if sort != None:
         mylist.sort(key= lambda a: getattr(a, sort), reverse=rev)
-    mylist = paginate(mylist, 5, int(page))
+    mylist = paginate(mylist, 6, int(page))
     """
     if not raw:
         planet_list = clean_data(deepcopy(planet_list))

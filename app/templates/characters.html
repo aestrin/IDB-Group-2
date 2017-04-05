@@ -103,10 +103,6 @@
             var chars = [];
             for(i = 0; i < list.length; i++)
             {
-                if(init)
-                {
-                    list[i].id = i;
-                }
                 chars.push(<Character character={list[i]} />);
             }
             return chars

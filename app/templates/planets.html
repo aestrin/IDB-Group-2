@@ -24,21 +24,7 @@
         <!-- /.row -->
 
         <!-- Sort Bar -->
-
-        <div class="row">
-          <div class="col-lg-12">
-            <h4>Sort:
-                <a href="#" onclick="sortBy('name', planet_list)">Name</a>
-                <a href="#" onclick="sortBy('climate', planet_list)">Climate</a>
-                <a href="#" onclick="sortBy('population', planet_list)">Population</a>
-                <a href="#" onclick="sortBy('gravity', planet_list)">Gravity</a>
-                <a href="#" onclick="sortBy('terrain', planet_list)">Terrain</a>
-                <a><i class="fa fa-chevron-down" aria-hidden="true"></i></a>
-                <a><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
-            </h4>
-            <hr />
-          </div>
-        </div>
+        <div id = "sorts"> </div>
 
         <div class="row">
           <div class="col-lg-2 col-sm-2">
@@ -94,7 +80,9 @@
         var x;
         var s;
 
-        {% include 'sorting.jsx' %}
+
+        
+
         {% include 'table_builder.jsx' %}
 
         function buildModels(list, init)
@@ -102,13 +90,74 @@
             var planets = [];
             for(i = 0; i < list.length; i++)
             {
-                if(init)
-                {
-                    list[i].id = i;
-                }
                 planets.push(<Planet planet={list[i]} />);
             }
             return planets
+        }
+
+        function load(error, response)
+        {
+            if(error == null)
+            {
+                console.log(response);
+                document.getElementById("grid_location").innerHTML = "";
+                renderTable(buildModels(response, true), document.getElementById("grid_location"), 3);
+            }
+        }
+
+        var baseUrl = "/api/planets/";
+        var filter = null;
+        var filterBy = null;
+        var sort = null;
+        var up = 1;
+        var page = 1;
+
+        function buildURL()
+        {
+            var url = baseUrl;
+            url += "?page="+page;
+            if(filter != null)
+                url += "&filterBy="+filterBy+"&filter"+filter;
+            if(sort != null)
+            {
+                if(up)
+                    url +="&sortUp="+sort;
+                else
+                    url +="&sortDown="+sort;
+            }
+            url += "&raw";
+            return url;
+        }
+
+        function reload()
+        {
+            var url = buildURL();
+            var req = new XMLHttpRequest();
+            req.open('GET', url, true);
+            req.responseType = 'json';
+            req.onload = function() {
+              var status = req.status;
+              if (status == 200) {
+                load(null, req.response);
+              } else {
+                load(status);
+              }
+            };
+            req.send();
+        }
+
+        function sortBy(value)
+        {
+            sort = value;
+            page = 1;
+            reload();
+        }
+
+        function sortDir(value)
+        {
+            up = value;
+            page = 1;
+            reload();
         }
 
         function Planet(props){
@@ -135,6 +184,26 @@
 
             </div></div></div>)
         }
+
+
+        function PlanetSort(props){
+            return (<div className={"row"}>
+                      <div className={"col-lg-12"}>
+                        <h4>Sort:
+                            <a href={"#"} onClick={sortBy.bind(null, "name")}>Name </a>
+                            <a href={"#"} onClick={sortBy.bind(null, "climate")}>Climate </a>
+                            <a href={"#"} onClick={sortBy.bind(null, "population")}>Population </a>
+                            <a href={"#"} onClick={sortBy.bind(null, "gravity")}>Gravity </a>
+                            <a href={"#"} onClick={sortBy.bind(null, "terrain")}>Terrain </a>
+                            <a><i className={"fa fa-chevron-down"} aria-hidden={"true"} onClick={sortDir.bind(null, 1)}></i></a>
+                            <a><i className={"fa fa-chevron-up"} aria-hidden={"true"} onClick={sortDir.bind(null, 0)}></i></a>
+                        </h4>
+                        <hr />
+                      </div>
+                    </div>)
+        }
+
+        ReactDOM.render(<PlanetSort />, document.getElementById("sorts"));
 
         var planet_list = JSON.parse({{planets | tojson}});
 

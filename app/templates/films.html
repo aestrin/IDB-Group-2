@@ -101,10 +101,6 @@
             var movies = [];
             for(i = 0; i < list.length; i++)
             {
-                if(init)
-                {
-                    list[i].id = i;
-                }
                 movies.push(<Film film={list[i]} />);
             }
             return movies
