@@ -15,8 +15,18 @@ body {
   padding-top: 150px;
 }
 
-.center {
+@font-face {
+    font-family: "Star Wars";
+    src: url('fonts/starwars.ttf');
+}
 
+.navbar-brand {
+  font-family: "Star Wars";
+  font-size: 150%;
+  position: absolute;
+  top: 50%;
+  /*left:50%;*/
+  transform: translate(0%,-50%);
 }
 
 .navbar-inverse {
@@ -120,4 +130,33 @@ pre {
 	font-variant: normal;
 	font-weight: 400;
 	line-height: 18.5714px;
+}
+
+
+
+/*Pannel CSS*/
+.pannel-container {
+  /*padding-top: 300px;*/
+  height: 450px;
+  border-style: groove;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.lists {
+  list-style-type: none;
+  /*text-align: center;*/
+}
+
+/*.custom-pannel {
+  height: 100%;
+  width: 100%;
+}*/
+
+.grid-images {
+  padding-top: 20px;
+  max-width: 230px;
+  max-height: 230px;
+  height:auto;
+  margin:auto;
 }

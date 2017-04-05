@@ -4,8 +4,8 @@
     <!-- App global header -->
     {% include 'head.html' %}
     <title>Title</title>
-    <link href="/static/css/home-page.css" rel="stylesheet">
-    <link href="/static/css/starwars-logo.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/home-page.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/starwars-logo.css') }}" rel="stylesheet">
 </head>
 <body>
 
@@ -29,8 +29,8 @@
            <div class="item active">
 
                  <div class="starwars-demo">
-                    <img src="/static/img/star.svg" alt="Star" class="star">
-                    <img src="/static/img/wars.svg" alt="The SWE AWAKENS" class="wars">
+                    <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                    <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
                     <h2 class="byline" id="byline">The SWE Awakens</h2>
                   </div>
 
@@ -38,8 +38,8 @@
            <div class="item">
 
                <div class="starwars-demo">
-                 <img src="/static/img/star.svg" alt="Star" class="star">
-                 <img src="/static/img/wars.svg" alt="The SWE AWAKENS" class="wars">
+                 <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                 <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
                   <h2 class="byline" id="byline">Return of the SWE</h2>
                 </div>
 
@@ -47,8 +47,8 @@
            <div class="item">
 
                <div class="starwars-demo">
-                 <img src="/static/img/star.svg" alt="Star" class="star">
-                 <img src="/static/img/wars.svg" alt="The SWE AWAKENS" class="wars">
+                 <img src="{{ url_for('static', filename='img/star.svg') }}" alt="Star" class="star">
+                 <img src="{{ url_for('static', filename='img/wars.svg') }}" alt="The SWE AWAKENS" class="wars">
                   <h2 class="byline" id="byline">Revenge of the swe</h2>
                 </div>
 
@@ -65,7 +65,7 @@
 
    </header>
 
-   <script src="/static/js/starwars-logo.js"></script>
+   <script src="{{ url_for('static', filename='js/starwars-logo.js') }}"></script>
 
 </body>
 </html>

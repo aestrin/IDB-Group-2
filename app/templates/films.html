@@ -101,10 +101,6 @@
             var movies = [];
             for(i = 0; i < list.length; i++)
             {
-                if(init)
-                {
-                    list[i].id = i;
-                }
                 movies.push(<Film film={list[i]} />);
             }
             return movies
@@ -112,30 +108,21 @@
 
 
         function Film(props){
-            return (<div style={s = {padding: '100px', height: '100%',}}><div className = {"panel panel-default"} style={s = {height: '100%', width: '300px',}}><div className = {"panel-content"}>
+          return (
+            <div className={"pannel-container"}>
+              <div className = {"custom-pannel"}>
+                <img className={"img-responsive grid-images"} src={props.film.img_url} alt={""} />
+                <a href={"films/"+props.film.id}><h2 className={"text-center"}>{props.film.title}</h2></a>
+                <h4 className={"text-center"}>Episode {props.film.episode_no}</h4>
 
-                        <a href={"#"}>
-                            <img className={"img-responsive grid-images"} src={props.film.img_url} alt={""} />
-                        </a>
-
-                        <a href={"films/"+props.film.id}><h2 className={"text-center"}>{props.film.title}</h2></a>
-                        <h4 className={"text-center"}>Episode {props.film.episode_no}</h4>
-
-                        <ul className={"list-group"}>
-                            <li className={"list-group-item"}>Director: {props.film.director}</li>
-                            <li className={"list-group-item"}>Producers: {props.film.producer}</li>
-                            <li className={"list-group-item"}>Release Date: {props.film.release_date}</li>
-{#                            <li className={"list-group-item"}>Characters:#}
-{#                                <RefList list={props.film.characters} reftype={"characters"} />#}
-{#                            </li>#}
-{#                                <li className={"list-group-item"} >Planets:#}
-{#                                <RefList list={props.film.planets} reftype={"planets"} />#}
-{#                            #}
-{#                            </li>#}
-                        </ul>
-
-                </div></div></div>)
-        }
+                <ul className={"lists"}>
+                    <li >Director: {props.film.director}</li>
+                    <li >Producers: {props.film.producer}</li>
+                    <li >Release Date: {props.film.release_date}</li>
+                </ul>
+              </div>
+            </div>
+        )}
 
         var film_list = JSON.parse({{films | tojson}});
 

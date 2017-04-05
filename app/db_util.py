@@ -41,3 +41,5 @@ def get_all_species():
     species = Species.query.all()
     return species
 
+def get_characters_p(predicate):
+    characters = Character.query.filter(predicate).all()

@@ -7,7 +7,7 @@
     <meta name="author" content="">
 
     <!-- jQuery -->
-    <script src="/static/js/jquery.js"></script>
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://getbootstrap.com/dist/css/bootstrap.min.css">
@@ -18,8 +18,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
     <!-- Custom CSS -->
-    <link href="/static/css/1-col-portfolio.css" rel="stylesheet">
-    <link href="/static/css/nav-bar.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/1-col-portfolio.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/nav-bar.css') }}" rel="stylesheet">
 
     <!-- Font Awesome Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,15 +35,9 @@
 
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="/static/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
 
-    <style>
-        .grid-images {
-            max-width: 200px;
-            max-height: 200px;
-            height:auto;
-            margin:auto;}
-    </style>
+    
 
 </head>
 
@@ -61,7 +55,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">The SWE Awakens</a>
+
+                <a class="navbar-brand text-center" href="{{ url_for('index') }}">The SWE Awakens</a>
+
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -85,7 +81,7 @@
         <!-- /.container -->
     </nav>
 
-    <script src="/static/js/nav-bar.js"></script>
+    <script src="{{ url_for('static', filename='js/nav-bar.js') }}"></script>
 
 </body>
 </html>
