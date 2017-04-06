@@ -14,16 +14,16 @@ application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://awsuser_idb_test:pushkariscool@starwars-idb.ceczpdhwgqiv.us-east-1.rds.amazonaws.com:5432/postgres'
 db = SQLAlchemy(application)
 
-f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
+f_name = os.path.join(APP_ROOT, "app/scraper", "TestSpecies.json")
 with open(f_name) as f:
      speciesdata = json.load(f)
-f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
+f_name = os.path.join(APP_ROOT, "app/scraper", "TestPlanets.json")
 with open(f_name) as f:
      planetdata = json.load(f)
-f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
+f_name = os.path.join(APP_ROOT, "app/scraper", "TestPeople.json")
 with open(f_name) as f:
             peopledata = json.load(f)
-f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
+f_name = os.path.join(APP_ROOT, "app/scraper", "TestFilms.json")
 with open(f_name) as f:
             filmdata = json.load(f)
 
