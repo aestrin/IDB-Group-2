@@ -123,15 +123,72 @@
         </div>
 
 
+        <script>
+            function displayMessage(error, response) {
+                $('#running').hide();
+                if(error == null) {
+                    console.log(response);
+                    var success = response.success;
+                    if(success) {
+{#                        $('#tests-pass-alert').show();#}
+                        $('#tests-pass-div').show();
+                        document.getElementById("tests-pass-div").innerHTML = "<h4>Tests PASSED!</h4> <h5>Output: " + response.output + "</h5>";
+                    } else {
+{#                        $('#tests-fail-alert').show();#}
+                        $('#tests-fail-div').show();
+                        document.getElementById("tests-fail-div").innerHTML = "<h4>Tests FAILED!</h4>";
+                    }
+                }
+            }
+
+            function runTests() {
+{#                $('#tests-pass-alert').hide();#}
+{#                $('#tests-fail-alert').hide();#}
+                $('#tests-pass-div').hide();
+                $('#tests-fail-div').hide();
+                $('#running').show();
+
+                var url = "/api/tests";
+                var req = new XMLHttpRequest();
+                req.open('GET', url, true);
+                req.responseType = 'json';
+                req.onload = function() {
+                  var status = req.status;
+                  if (status == 200) {
+                    displayMessage(null, req.response);
+                  } else {
+                    displayMessage(status);
+                  }
+                };
+                req.send();
+            }
+
+
+        </script>
+
         <div class="row">
           <h1 class="page-header text-center">Unit Tests</h1>
-          <button type="button" class="btn btn-secondary btn-lg btn-block">Run</button>
+          <button type="button" onclick="runTests()" class="btn btn-secondary btn-lg btn-block">Run</button>
         </div>
         <hr>
 
-        <br>
-        <br>
-        <br>
+        <div id="running" style="display:none;">
+            <h4>Running Unit Tests....</h4>
+        </div>
+
+        <div id="tests-pass-div" style="display:none;"></div>
+        <div id="tests-fail-div" style="display:none;"></div>
+
+{#        <div id="tests-pass-alert" class="alert alert-success alert-dismissable" style="display:none;">#}
+{#          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>#}
+{#          <div id="tests-pass-div"></div>#}
+{#        </div>#}
+{##}
+{#        <div id="tests-fail-alert" class="alert alert-danger alert-dismissable" style="display:none;">#}
+{#          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>#}
+{#          <div id="tests-fail-div"></div>#}
+{#        </div>#}
+
         <br>
 
         <h2> Table of Contents of Techincal Report</h2>
