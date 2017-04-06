@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- App global header -->
+    {% include 'head.html' %}
+
+    <title>Star Wars - Species</title>
+
+</head>
+
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Species</h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Sort Bar -->
+        <div id = "sorts"> </div>
+
+        <div class="row">
+          <div class="col-lg-2 col-sm-2">
+            <div id="filters"></div>
+          </div>
+          <div class="col-lg-10 col-sm-10">
+            <div id="grid_location"> </div>
+          </div>
+        </div>
+
+        {#TODO: create common stylesheet for img style width and height#}
+        <hr>
+
+        <div class="row text-center" id="pagination"></div>
+
+        {% include 'footer.html' %}
+
+    </div>
+    <!-- /.container -->
+
+
+    <script type="text/babel">
+
+        var i;
+        var x;
+        var s;
+
+        var baseUrl = "/api/species/";
+        {% include 'table_builder.jsx' %}
+        sort = "name";
+
+        function buildModels(list, init)
+        {
+            var species = [];
+            for(i = 0; i < list.length; i++)
+            {
+                species.push(<Species species={list[i]} />);
+            }
+            return species
+        }
+
+        function Species(props){
+          return (
+            <div className={"panel-container"}>
+              <img className={"img-responsive grid-images"} src={props.species.img_url} alt={""} />
+              <a href={"species/"+props.species.id}><h2 className={"text-center"}>{props.species.name}</h2></a>
+
+              <ul className={"lists"}>
+                  <li >Classification: {props.species.classification}</li>
+                  <li >Language: {props.species.language}</li>
+                  <li >Average Height: {props.species.average_height}</li>
+                  <li >Eye Color(s): {props.species.eye_colors}</li>
+              </ul>
+            </div>
+        )}
+
+        function SpeciesSort(props){
+            return (<div className={"row"}>
+                      <div className={"col-lg-12"}>
+                        <h4>Sort By:&nbsp;&nbsp;
+                            <div className={"btn-group"} data-toggle={"buttons"}>
+                              <label className={"btn btn-primary active"} onClick={sortBy.bind(null, "name")}>
+                                <input type={"radio"} name={"options"} id={"option1"} autocomplete={"off"}  /> Name
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "classification")}>
+                                <input type={"radio"} name={"options"} id={"option2"} autocomplete={"off"} /> Classification
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "language")}>
+                                <input type={"radio"} name={"options"} id={"option3"} autocomplete={"off"} /> Language
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "average_height")}>
+                                <input type={"radio"} name={"options"} id={"option4"} autocomplete={"off"} /> Average Height
+                              </label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <div className={"btn-group"} data-toggle={"buttons"}>
+                              <label className={"btn btn-primary active"} onClick={sortDir.bind(null, 1)}>
+                                <input type={"radio"} name={"arrow"} id={"option6"} autocomplete={"off"} /> ASC
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortDir.bind(null, 0)}>
+                                <input type={"radio"} name={"arrow"} id={"option7"} autocomplete={"off"} /> DSC
+                              </label>
+                            </div>
+                        </h4>
+                        <hr/>
+                      </div>
+                    </div>
+        )}
+
+        function SpeciesPagination(props) {
+            return (
+              <ul className={"pagination pagination-centered"}>
+                <li className={"page-item"} id={"prev"}><a className={"page-link"} onClick={prevPage} href={"#"}>Previous</a></li>
+                <li className={"page-item"} id={"next"}><a className={"page-link"} onClick={nextPage} href={"#"}>Next</a></li>
+              </ul>
+        )}
+
+        function SpeciesFilter(props) {
+          return (
+            <div>
+              <h3>Name</h3>
+
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "A-H")}></input>A-H</label>
+              </div>
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "I-P")}></input>I-P</label>
+              </div>
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "Q-Z")}></input>Q-Z</label>
+              </div>
+            </div>
+        )}
+
+        ReactDOM.render(<SpeciesFilter />, document.getElementById("filters"));
+        ReactDOM.render(<SpeciesSort />, document.getElementById("sorts"));
+        ReactDOM.render(<SpeciesPagination />, document.getElementById("pagination"));
+
+        reload();
+
+    </script>
+
+</body>
+
+</html>

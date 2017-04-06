@@ -48,7 +48,17 @@ def planets():
     data = jsonpickle.encode(get_planets())
     return render_template('planets.html', planets=data)
 
-# TODO: Add routes for species
+
+@application.route('/species/<species_id>')
+def species(species_id):
+    species_id = int(species_id)
+    return render_template('species_instance.html',species=get_species(species_id))
+
+
+@application.route('/species')
+def all_species():
+    data = jsonpickle.encode(get_all_species())
+    return render_template('species.html', species=data)
 
 
 @application.route('/about')
@@ -59,10 +69,7 @@ def about():
 @application.route('/report')
 def report():
     return render_template('report.html')
-@application.route('/species/<species_id>')
-def species(species_id):
-    species_id = int(species_id)
-    return render_template('species_instance.html',species=get_species(species_id))
+
 
 # api stuff
 
