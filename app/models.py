@@ -206,7 +206,8 @@ class Species(db.Model):
     img_url = db.Column(db.String(5000), nullable=False)
 
     # Species to Character is One to Many
-    characters = db.relationship('Character', backref='species', lazy='dynamic')
+    characters = db.relationship(
+        'Character', backref='species', lazy='dynamic')
 
     def __init__(self, id, name, classification, language, average_height, eye_colors, img_url):
         self.id = id

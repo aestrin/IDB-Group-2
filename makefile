@@ -74,5 +74,8 @@ check:
     echo "success";
 
 
+format:
+	$(AUTOPEP8) -i app/models.py
+
 test: Tests
 	ls -al
