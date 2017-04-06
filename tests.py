@@ -1,12 +1,20 @@
-from unittest import TestCase,main
+# pylint: disable = bad-whitespace
+# pylint: disable = invalid-name
+# pylint: disable = missing-docstring
+# pylint: disable = too-many-arguments
+# pylint: disable = bad-continuation
+# pylint: disable = too-few-public-methods
+# pylint: disable = no-member
+# pylint: disable = redefined-builtin
+# pylint: disable = locally-disabled
 
 
-from app.models import Film, Character, Planet,Species
-from sqlalchemy.orm import sessionmaker
-from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
 import os
 import json
+from unittest import TestCase, main
+from app.models import Film, Character, Planet, Species
+from flask import Flask
+from flask_sqlalchemy import SQLAlchemy
 
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 application = Flask(__name__, static_url_path='/app/static')
@@ -28,7 +36,6 @@ with open(f_name) as f:
             filmdata = json.load(f)
 
 class TestModel (TestCase):
-
 
     def test_species_1(self):
         """Test querying the database by attribute using simple keywords"""

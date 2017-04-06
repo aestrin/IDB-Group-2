@@ -6,6 +6,7 @@
 # pylint: disable = too-few-public-methods
 # pylint: disable = no-member
 # pylint: disable = import-error
+# pylint: disable = redefined-builtin
 
 from app import db
 
@@ -80,7 +81,7 @@ class Film(db.Model):
     def __repr__(self):
         return '<Film %r>' % self.title
 
-    def has_name(search):
+    def has_name(self, search):
         return self.episode_no == search
 
 
@@ -128,7 +129,7 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search
 
 
@@ -174,7 +175,7 @@ class Planet(db.Model):
     def __repr__(self):
         return '<Planet %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search
 
 
@@ -219,5 +220,5 @@ class Species(db.Model):
     def __repr__(self):
         return '<Species %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search
