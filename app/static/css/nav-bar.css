@@ -23,11 +23,14 @@ body {
 .navbar-brand {
   font-family: "Star Wars";
   font-size: 150%;
+  /*-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;*/
   position: absolute;
   top: 50%;
   /*left:50%;*/
   transform: translate(0%,-50%);
 }
+
 
 .navbar-inverse {
   border-bottom: 2px solid yellow;
@@ -132,7 +135,15 @@ pre {
 	line-height: 18.5714px;
 }
 
+/*Sort CSS*/
 
+
+/*.btn-default:focus,
+.btn-default:active,
+.btn-default.active
+{
+  background-color: #1A1A1A;
+}*/
 
 /*Pannel CSS*/
 .panel-container {
