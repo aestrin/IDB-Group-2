@@ -40,6 +40,6 @@ class RangeFilter:
 def NameFilter(items, rangestr):
 		lo = rangestr[:rangestr.index("-")].lower()
 		hi = rangestr[rangestr.index("-") + 1:].lower()
-		return [a for a in items if hasattr(a, "name") and a.name.lower() >= lo and a.name.lower() <= hi]
+		return [a for a in items if hasattr(a, "name") and a.name.lower()[0] >= lo and a.name.lower()[0] <= hi]
 
 filters = {"height" : RangeFilter("height"), "mass" : RangeFilter("mass"), "avg height" : RangeFilter("average_height"), "population": RangeFilter("population"), "name" : NameFilter, "director" : MatchFilter("director")}
