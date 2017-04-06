@@ -4,8 +4,12 @@ from app.db_util import get_film, get_films, get_planet, get_planets, get_charac
 from app.filters import filters, numeric_fields, toNum
 import json
 from copy import deepcopy   
-
 import jsonpickle
+import subprocess
+import os
+import sys
+sys.path.append("..")
+import tests 
 
 
 @application.route('/')
@@ -169,6 +173,16 @@ def api_character_query():
 @application.route('/api/characters/<character_id>')
 def api_character(character_id):
     return process_query([get_character(int(character_id))], model='character')
+
+""" Run Tests """
+@application.route('/api/tests')
+def tests():
+    try:
+        proc = subprocess.check_output(["python","tests.py"], stderr= subprocess.STDOUT, universal_newlines=True)
+    except subprocess.CalledProcessError as e:
+        print(e.output)
+        proc = 'error. Check console'
+    return str(proc) 
 
 
 def process_query(mylist, model):

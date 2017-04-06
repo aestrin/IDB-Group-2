@@ -7,6 +7,7 @@ from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 import os
 import json
+
 APP_ROOT = os.path.dirname(os.path.abspath(__file__))
 application = Flask(__name__, static_url_path='/app/static')
 application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -302,7 +303,8 @@ class TestModel (TestCase):
         db.session.delete(film)
         db.session.delete(film2)
         db.session.commit()
-      
-      
+
+
+
 if __name__ == "__main__":  # pragma: no cover
     main()
