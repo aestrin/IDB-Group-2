@@ -3,21 +3,25 @@ from app import db
 
 
 def get_film(id):
+    id = int(id)
     film = db.session.query(Film).get(id)
     return film
 
 
 def get_character(id):
+    id = int(id)
     character = db.session.query(Character).get(id)
     return character
 
 
 def get_planet(id):
+    id = int(id)
     planet = db.session.query(Planet).get(id)
     return planet
 
 
 def get_species(id):
+    id = int(id)
     species = db.session.query(Species).get(id)
     return species
 

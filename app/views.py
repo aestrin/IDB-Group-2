@@ -91,20 +91,23 @@ def fix_character(c):
 def api():
     return "Our API starts here!"
 
+# PLANETS API
+
 @application.route('/api/planets')
 def api_planets():
     return redirect('/api/planets/?page=1')
 
+
 @application.route('/api/planets/')
 def api_planet_query():
-    planets = get_planets()
-    for p in planets:
-        fix_planet(p)
-    return process_query(planets)
+    return process_query(get_planets(), model='planet')
+
 
 @application.route('/api/planets/<planet_id>')
 def api_planet(planet_id):
-    return process_query([fix_planet(get_planet(int(planet_id)))])
+    return process_query([get_planet(int(planet_id))], model='planet')
+
+# SPECIES API
 
 @application.route('/api/species')
 def api_species():
@@ -141,7 +144,7 @@ def api_character_query():
     return process_query(get_characters())
 
 
-def process_query(mylist):
+def process_query(mylist, model):
     page = request.args.get('page')
     if page is None:
         page = 1
@@ -154,6 +157,21 @@ def process_query(mylist):
         raw = True
     else:
         raw = False
+
+    if not raw:
+        # fix the list
+        if model == 'film':
+            for f in mylist:
+                fix_film(f)
+        elif model == 'planet':
+            for p in mylist:
+                fix_planet(p)
+        elif model == 'character':
+            for c in mylist:
+                fix_character(c)
+        elif model == 'species':
+            for s in mylist:
+                fix_species(s)
 
     # determine if sort should be backwards
     if sort != None:
@@ -178,12 +196,13 @@ def process_query(mylist):
     """
     if not raw:
         mylist = clean_data(deepcopy(mylist))"""
-    
+
     mylist = jsonpickle.encode(mylist)
 
     if not raw:
         mylist = clean_json(mylist)
     # return jsonpickle.encode(db.get_planets())
+
     return mylist
 
 
