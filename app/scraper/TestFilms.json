@@ -1,0 +1,130 @@
+{
+    "1": {
+        "starships": [
+            "http://swapi.co/api/starships/2/", 
+            "http://swapi.co/api/starships/3/", 
+            "http://swapi.co/api/starships/5/", 
+            "http://swapi.co/api/starships/9/", 
+            "http://swapi.co/api/starships/10/", 
+            "http://swapi.co/api/starships/11/", 
+            "http://swapi.co/api/starships/12/", 
+            "http://swapi.co/api/starships/13/"
+        ], 
+        "edited": "2015-04-11T09:46:52.774897Z", 
+        "characters": [
+            "http://swapi.co/api/people/1/", 
+            "http://swapi.co/api/people/2/", 
+            "http://swapi.co/api/people/3/", 
+            "http://swapi.co/api/people/4/", 
+            "http://swapi.co/api/people/5/", 
+            "http://swapi.co/api/people/6/", 
+            "http://swapi.co/api/people/7/", 
+            "http://swapi.co/api/people/8/", 
+            "http://swapi.co/api/people/9/", 
+            "http://swapi.co/api/people/10/", 
+            "http://swapi.co/api/people/12/", 
+            "http://swapi.co/api/people/13/", 
+            "http://swapi.co/api/people/14/", 
+            "http://swapi.co/api/people/15/", 
+            "http://swapi.co/api/people/16/", 
+            "http://swapi.co/api/people/18/", 
+            "http://swapi.co/api/people/19/", 
+            "http://swapi.co/api/people/81/"
+        ], 
+        "producer": "Gary Kurtz, Rick McCallum", 
+        "title": "A New Hope", 
+        "url": "http://swapi.co/api/films/1/", 
+        "release_date": "1977-05-25", 
+        "vehicles": [
+            "http://swapi.co/api/vehicles/4/", 
+            "http://swapi.co/api/vehicles/6/", 
+            "http://swapi.co/api/vehicles/7/", 
+            "http://swapi.co/api/vehicles/8/"
+        ], 
+        "img_width": 1024, 
+        "episode_id": 4, 
+        "director": "George Lucas", 
+        "img_height": 768, 
+        "created": "2014-12-10T14:23:31.880000Z", 
+        "opening_crawl": "It is a period of civil war.\r\nRebel spaceships, striking\r\nfrom a hidden base, have won\r\ntheir first victory against\r\nthe evil Galactic Empire.\r\n\r\nDuring the battle, Rebel\r\nspies managed to steal secret\r\nplans to the Empire's\r\nultimate weapon, the DEATH\r\nSTAR, an armored space\r\nstation with enough power\r\nto destroy an entire planet.\r\n\r\nPursued by the Empire's\r\nsinister agents, Princess\r\nLeia races home aboard her\r\nstarship, custodian of the\r\nstolen plans that can save her\r\npeople and restore\r\nfreedom to the galaxy....", 
+        "planets": [
+            "http://swapi.co/api/planets/2/", 
+            "http://swapi.co/api/planets/3/", 
+            "http://swapi.co/api/planets/1/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=E2E5980DEF01464B975E58B614E033A4&CID=2408B67DA86863EA0FE4BC27A9596280&rd=1&h=QBjLjoHq2bHTHxA1LWSwD-yV8br8NprlQXDw6kLjeHM&v=1&r=http%3a%2f%2fimages6.fanpop.com%2fimage%2fphotos%2f33500000%2fnew-hope-star-wars-a-new-hope-33585512-1024-768.jpg&p=DevEx,5008.1", 
+        "species": [
+            "http://swapi.co/api/species/5/", 
+            "http://swapi.co/api/species/3/", 
+            "http://swapi.co/api/species/2/", 
+            "http://swapi.co/api/species/1/", 
+            "http://swapi.co/api/species/4/"
+        ]
+    }, 
+
+    "2": {
+        "starships": [
+            "http://swapi.co/api/starships/10/", 
+            "http://swapi.co/api/starships/11/", 
+            "http://swapi.co/api/starships/12/", 
+            "http://swapi.co/api/starships/15/", 
+            "http://swapi.co/api/starships/21/", 
+            "http://swapi.co/api/starships/22/", 
+            "http://swapi.co/api/starships/23/", 
+            "http://swapi.co/api/starships/3/", 
+            "http://swapi.co/api/starships/17/"
+        ], 
+        "edited": "2015-04-11T09:46:31.433607Z", 
+        "characters": [
+            "http://swapi.co/api/people/1/", 
+            "http://swapi.co/api/people/2/", 
+            "http://swapi.co/api/people/3/", 
+            "http://swapi.co/api/people/4/", 
+            "http://swapi.co/api/people/5/", 
+            "http://swapi.co/api/people/10/", 
+            "http://swapi.co/api/people/13/", 
+            "http://swapi.co/api/people/14/", 
+            "http://swapi.co/api/people/18/", 
+            "http://swapi.co/api/people/20/", 
+            "http://swapi.co/api/people/21/", 
+            "http://swapi.co/api/people/22/", 
+            "http://swapi.co/api/people/23/", 
+            "http://swapi.co/api/people/24/", 
+            "http://swapi.co/api/people/25/", 
+            "http://swapi.co/api/people/26/"
+        ], 
+        "producer": "Gary Kutz, Rick McCallum", 
+        "title": "The Empire Strikes Back", 
+        "url": "http://swapi.co/api/films/2/", 
+        "release_date": "1980-05-17", 
+        "vehicles": [
+            "http://swapi.co/api/vehicles/8/", 
+            "http://swapi.co/api/vehicles/14/", 
+            "http://swapi.co/api/vehicles/16/", 
+            "http://swapi.co/api/vehicles/18/", 
+            "http://swapi.co/api/vehicles/19/", 
+            "http://swapi.co/api/vehicles/20/"
+        ], 
+        "img_width": 1000, 
+        "episode_id": 5, 
+        "director": "Irvin Kershner", 
+        "img_height": 1404, 
+        "created": "2014-12-12T11:26:24.656000Z", 
+        "opening_crawl": "It is a dark time for the\r\nRebellion. Although the Death\r\nStar has been destroyed,\r\nImperial troops have driven the\r\nRebel forces from their hidden\r\nbase and pursued them across\r\nthe galaxy.\r\n\r\nEvading the dreaded Imperial\r\nStarfleet, a group of freedom\r\nfighters led by Luke Skywalker\r\nhas established a new secret\r\nbase on the remote ice world\r\nof Hoth.\r\n\r\nThe evil lord Darth Vader,\r\nobsessed with finding young\r\nSkywalker, has dispatched\r\nthousands of remote probes into\r\nthe far reaches of space....", 
+        "planets": [
+            "http://swapi.co/api/planets/4/", 
+            "http://swapi.co/api/planets/5/", 
+            "http://swapi.co/api/planets/6/", 
+            "http://swapi.co/api/planets/27/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=30F6931FD6A74F2FBF94FC6F258F81F8&CID=119F91FE09F86A0C2C179BA408C96B1E&rd=1&h=FZjeJBfKFe21uHnNxOx_w-42Nx2Fg1Z63FSy31P5ask&v=1&r=http%3a%2f%2f1.bp.blogspot.com%2f_ReWKCpkqxuo%2fS80pHf6gI3I%2fAAAAAAAAFsE%2fwkj05jm-7eE%2fs1600%2fStar%2bWars%2b-%2bThe%2bEmpire%2bStrikes%2bBack.jpg%23Empire%2520strikes%2520back%25201000x1404&p=DevEx,5008.1", 
+        "species": [
+            "http://swapi.co/api/species/6/", 
+            "http://swapi.co/api/species/7/", 
+            "http://swapi.co/api/species/3/", 
+            "http://swapi.co/api/species/2/", 
+            "http://swapi.co/api/species/1/"
+        ]
+    }
+
+}

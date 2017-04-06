@@ -1,0 +1,67 @@
+{
+    
+    "1": {
+        "diameter": "10465", 
+        "climate": "arid", 
+        "surface_water": "1", 
+        "name": "Tatooine", 
+        "created": "2014-12-09T13:50:49.641000Z", 
+        "url": "http://swapi.co/api/planets/1/", 
+        "rotation_period": "23", 
+        "edited": "2014-12-21T20:48:04.175778Z", 
+        "terrain": "desert", 
+        "gravity": "1 standard", 
+        "img_width": 3072, 
+        "orbital_period": "304", 
+        "films": [
+            "http://swapi.co/api/films/5/", 
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/3/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "residents": [
+            "http://swapi.co/api/people/1/", 
+            "http://swapi.co/api/people/2/", 
+            "http://swapi.co/api/people/4/", 
+            "http://swapi.co/api/people/6/", 
+            "http://swapi.co/api/people/7/", 
+            "http://swapi.co/api/people/8/", 
+            "http://swapi.co/api/people/9/", 
+            "http://swapi.co/api/people/11/", 
+            "http://swapi.co/api/people/43/", 
+            "http://swapi.co/api/people/62/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=03315F464E2E48018D5A1F49B6932A84&CID=1482CDB2874463561848C7E886756250&rd=1&h=z9QqDkqc53FZrtoUJEkA8weFWrImK-Ju1E9rEx8v40Y&v=1&r=http%3a%2f%2ffc07.deviantart.net%2ffs30%2ff%2f2008%2f076%2f9%2f3%2fTatooine_Star_Wars_movie_set_9_by_jkno4u.jpg&p=DevEx,5008.1", 
+        "img_height": 2304, 
+        "population": "200000"
+    }, 
+    
+    "2": {
+        "diameter": "12500", 
+        "climate": "temperate", 
+        "surface_water": "40", 
+        "name": "Alderaan", 
+        "created": "2014-12-10T11:35:48.479000Z", 
+        "url": "http://swapi.co/api/planets/2/", 
+        "rotation_period": "24", 
+        "edited": "2014-12-20T20:58:18.420000Z", 
+        "terrain": "grasslands, mountains", 
+        "gravity": "1 standard", 
+        "img_width": 560, 
+        "orbital_period": "364", 
+        "films": [
+            "http://swapi.co/api/films/6/", 
+            "http://swapi.co/api/films/1/"
+        ], 
+        "residents": [
+            "http://swapi.co/api/people/5/", 
+            "http://swapi.co/api/people/68/", 
+            "http://swapi.co/api/people/81/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=3949CB8BF02C4B8BB81D203E6172169D&CID=2778EE52731E652C014EE408722F64D8&rd=1&h=5fawO0bHinnzmSpYjaBjiuvKzvGqUMTzyLiSeKxXqPU&v=1&r=http%3a%2f%2fimages3.wikia.nocookie.net%2f__cb20061211013807%2fstarwars%2fimages%2f4%2f4a%2fAlderaan.jpg&p=DevEx,5008.1", 
+        "img_height": 560, 
+        "population": "2000000000"
+    } 
+    
+}
