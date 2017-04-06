@@ -66,6 +66,27 @@ def species(species_id):
 
 # api stuff
 
+def fix_film(f):
+    f.planet_list = ["http://www.thesweawakens.me/api/planets/{}".format(p.id) for p in f.planets]
+    f.species_list = ["http://www.thesweawakens.me/api/species/{}".format(p.id) for p in f.species]
+    f.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(p.id) for p in f.characters]
+    return f
+
+def fix_planet(p):
+    p.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(x.id) for x in p.characters]
+    p.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in p.films]
+    return p
+
+def fix_species(s):
+    s.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(x.id) for x in s.characters]
+    s.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in s.films]
+    return s
+
+def fix_character(c):
+    c.home_planet = "http://www.thesweawakens.me/api/characters/{}".format(c.planet_id)
+    c.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in c.films]
+    return c
+
 @application.route('/api')
 def api():
     return "Our API starts here!"
@@ -76,7 +97,14 @@ def api_planets():
 
 @application.route('/api/planets/')
 def api_planet_query():
-    return process_query(get_planets())
+    planets = get_planets()
+    for p in planets:
+        fix_planet(p)
+    return process_query(planets)
+
+@application.route('/api/planets/<planet_id>')
+def api_planet(planet_id):
+    return process_query([fix_planet(get_planet(int(planet_id)))])
 
 @application.route('/api/species')
 def api_species():
@@ -84,14 +112,24 @@ def api_species():
 
 @application.route('/api/species/')
 def api_species_query():
+    
     return process_query(get_species())
 
 @application.route('/api/films')
 def api_films():
     return redirect('/api/films/?page=1')
 
+@application.route('/api/films/<film_id>')
+def api_film(film_id):
+    return process_query([fix_film(get_film(int(film_id)))])
+
 @application.route('/api/films/')
 def api_film_query():
+    films = get_films()
+    for f in films:
+        fix_film(f)
+            
+
     return process_query(get_films())
 
 @application.route('/api/characters')
@@ -105,6 +143,8 @@ def api_character_query():
 
 def process_query(mylist):
     page = request.args.get('page')
+    if page is None:
+        page = 1
     filtBy = request.args.get('filterBy')
     filt = request.args.get('filter')
     sort = request.args.get('sortUp')
@@ -137,12 +177,12 @@ def process_query(mylist):
     mylist = paginate(mylist, 6, int(page))
     """
     if not raw:
-        planet_list = clean_data(deepcopy(planet_list))
-    """
+        mylist = clean_data(deepcopy(mylist))"""
+    
     mylist = jsonpickle.encode(mylist)
-    """"
+
     if not raw:
-        planet_list = clean_json(planet_list)"""
+        mylist = clean_json(mylist)
     # return jsonpickle.encode(db.get_planets())
     return mylist
 
@@ -170,7 +210,7 @@ def paginate(data, size, page):
 
 def clean_data(data):
     for i in data:
-        for atr in (a for a in dir(i) if not a.startswith('__')):
+        for atr in (a for a in dir(i) if not a.startswith('_')):
             if atr != 'name':
                 delattr(i, atr)
     return data
@@ -180,10 +220,23 @@ def to_json(data):
 
 def clean_json(data):
     json_data = json.loads(data)
-    print(json_data)
     for i in json_data:
-        if 'py/object' in i:
-           i.pop('py/object', None)
+        if "py/object" in i:
+            i.pop("py/object")
+        if "_sa_instance_state" in i:
+            i.pop("_sa_instance_state")
+        if "py/state" in i:
+            i.pop("py/state")
+        if "planets" in i:
+            i.pop("planets")
+        if "planet" in i:
+            i.pop("planet")
+        if "films" in i:
+            i.pop("films")
+        if "characters" in i:
+            i.pop("characters")
+        if "species" in i:
+            i.pop("species")
     return json.dumps(json_data)
 
 
