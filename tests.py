@@ -14,15 +14,25 @@ application.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 application.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://awsuser_idb_test:pushkariscool@starwars-idb.ceczpdhwgqiv.us-east-1.rds.amazonaws.com:5432/postgres'
 db = SQLAlchemy(application)
 
+f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
+with open(f_name) as f:
+     speciesdata = json.load(f)
+f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
+with open(f_name) as f:
+     planetdata = json.load(f)
+f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
+with open(f_name) as f:
+            peopledata = json.load(f)
+f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
+with open(f_name) as f:
+            filmdata = json.load(f)
 
 class TestModel (TestCase):
 
 
     def test_species_1(self):
         """Test querying the database by attribute using simple keywords"""
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = speciesdata
         d = data['24']
         id = 24
         species = Species(id, d['name'], d['classification'], d['language'], d['average_height'], d['eye_colors'], "https://s3.amazonaws.com/tf.images/reduced-ban16554.jpg")
@@ -34,9 +44,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_species_model_2(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = speciesdata
         d = data['24']
         d2 = data['25']
         id = 24
@@ -53,9 +61,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_species_model_3(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = speciesdata
         d = data['24']
         d2 = data['25']
         id = 24
@@ -72,9 +78,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_species_model_4(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allSpecies.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = speciesdata
         d = data['24']
         d2 = data['25']
         id = 24
@@ -92,9 +96,7 @@ class TestModel (TestCase):
 
     def test_planet_model_1(self):
         """Test querying the database by attribute using simple keywords"""
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = planetdata
         d = data['1']
         id = 1
         planet = Planet(id, d['name'], d['climate'], d['population'], d['gravity'], d['terrain'], "http://overmental.com/wp-content/uploads/2015/07/Naboo-TPM-790x336.jpg")
@@ -106,9 +108,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_planet_model_2(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = planetdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -125,9 +125,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_planet_model_3(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = planetdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -144,9 +142,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_planet_model_4(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPlanets.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = planetdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -163,9 +159,7 @@ class TestModel (TestCase):
         db.session.commit()
     def test_character_model_1(self):
         """Test querying the database by attribute using simple keywords"""
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = peopledata
         d = data['1']
         id = 1
         character = Character(id, d['name'], d['gender'], d['birth_year'], d['height'], d['mass'], "http://starwarscardtraderapp.com/wp-content/uploads/2015/12/99-1-7-Award-Luke-Skywalker.png")    
@@ -177,9 +171,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_character_model_2(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = peopledata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -196,9 +188,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_character_model_3(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = peopledata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -215,9 +205,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_character_model_4(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allPeople.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = peopledata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -234,9 +222,7 @@ class TestModel (TestCase):
         db.session.commit()
     def test_film_model_1(self):
         """Test querying the database by attribute using simple keywords"""
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = filmdata
         d = data['1']
         id = 1
         film = Film(id, d['title'], d['director'], d['producer'], d['episode_id'], d['release_date'], "http://cdn2us.denofgeek.com/sites/denofgeekus/files/starwars-iv.jpg")
@@ -248,9 +234,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_film_model_2(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = filmdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -267,9 +251,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_film_model_3(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = filmdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -286,9 +268,7 @@ class TestModel (TestCase):
         db.session.commit()
 
     def test_film_model_4(self):
-        f_name = os.path.join(APP_ROOT, "app/scraper", "allFilms.json")
-        with open(f_name) as f:
-            data = json.load(f)
+        data = filmdata
         d = data['1']
         d2 = data['2']
         id = 1
@@ -303,8 +283,7 @@ class TestModel (TestCase):
         db.session.delete(film)
         db.session.delete(film2)
         db.session.commit()
-
-
-
+      
+      
 if __name__ == "__main__":  # pragma: no cover
     main()
