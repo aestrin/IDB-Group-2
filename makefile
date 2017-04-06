@@ -1,6 +1,16 @@
-FILES :=            \
-    application.py  \
-    __init__.py
+FILES :=                \
+    application.py      \
+    IDB1.html           \
+    IDB1.pdf            \
+    IDB1.log            \
+    requirements.txt    \
+    apiary.apib         \
+    app/__init__.py     \
+    app/db_util.py      \
+    app/models.py       \
+    app/tests.py        \
+    app/views.py
+
 
 server:
 	pip install -r requirements.txt
