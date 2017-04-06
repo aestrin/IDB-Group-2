@@ -346,8 +346,20 @@
           <a name = "Design"></a>
           <h2><p><strong>Design</strong></p></h2>
           <p>&nbsp;</p>
-          <h4><p>Our API design was outlined in apiary. It uses a simple GET request driven system to allow users to query for information about various planets, characters, and films in the Star Wars universe. The design of the API is very straight forward. To obtain a list of the available planets, characters, or films, simply send a request to http://thesweawakens.me/api/planets, http://thesweawakens.me/api/characters, or http://thesweawakens.me/api/films respectively. A JSON is returned containing the number of results followed by a list of objects containing the properties of that object (as well as a URL with it&rsquo;s ID). To get information about a specific member of any of these categories, simply append &ldquo;/{id-number}&rdquo; to the catagory&rsquo;s URL. For instance, to obtain the planet with id 2 send a GET request to http://thesweawakens.me/api/planets/2. The result is a JSON containing just the properties of that planet.</p></h4>
-
+          <h4><p>
+            Our API design was outlined in apiary. It uses a simple GET request driven system to allow users to query for information about various planets, characters, and films in the Star Wars universe.
+            The design of the API is very straight forward. To obtain a list of the available planets, characters, or films, simply send a request to http://www.thesweawakens.me/api/planets,
+            <a href="http://www.thesweawakens.me/api/characters">http://www.thesweawakens.me/api/characters</a>, or <a href="http://www.thesweawakens.me/api/films">http://www.thesweawakens.me/api/films</a> respectively. When visited these links the user is automatically redirected to the first page of the list.
+            Each page contains 6 elements, you can view the next page by changing the “page=x” value in the URL. A JSON is returned a list of objects with the properties of that object. To get information
+            about a specific member of any of these categories, simply append “/{id-number}” to the catagory’s URL. For instance, to obtain the planet with id 2 send a GET request to
+            <a href="http://www.thesweawakens.me/api/planets/2">http://www.thesweawakens.me/api/planets/2</a>. The result is a JSON containing just the properties of that planet.
+          </p></h4>
+          <h4><p>
+            Finally, it is possible to sort or filter you list queries. Adding a “sortUp” or “sortDown” parameter allows you to view the list in a particular order. Adding a “filterBy” and “filter”
+            parameter allows you to apply a filter. The “filterBy” parameter selects the field of the model to filter on and the “filter” field is the values to filter for. For example
+            <a href="http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G">http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G</a> retrieves the second page of the planets list sorted by climate and only including the
+            planets with names start from B to G.
+          </p></h4>
           <img src="{{ url_for('static', filename='UML.png') }}" style="display: block;margin: 0 auto;">
           <p>&nbsp;</p>
           <p>&nbsp;</p>
