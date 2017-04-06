@@ -3,9 +3,8 @@ from app import application
 from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
 from app.filters import filters, numeric_fields, toNum
 import json
-from copy import deepcopy   
-
 import jsonpickle
+import subprocess
 
 
 @application.route('/')
@@ -48,7 +47,17 @@ def planets():
     data = jsonpickle.encode(get_planets())
     return render_template('planets.html', planets=data)
 
-# TODO: Add routes for species
+
+@application.route('/species/<species_id>')
+def species(species_id):
+    species_id = int(species_id)
+    return render_template('species_instance.html',species=get_species(species_id))
+
+
+@application.route('/species')
+def all_species():
+    data = jsonpickle.encode(get_all_species())
+    return render_template('species.html', species=data)
 
 
 @application.route('/about')
@@ -59,52 +68,122 @@ def about():
 @application.route('/report')
 def report():
     return render_template('report.html')
-@application.route('/species/<species_id>')
-def species(species_id):
-    species_id = int(species_id)
-    return render_template('species_instance.html',species=get_species(species_id))
+
 
 # api stuff
+
+def fix_film(f):
+    f.planet_list = ["http://www.thesweawakens.me/api/planets/{}".format(p.id) for p in f.planets]
+    f.species_list = ["http://www.thesweawakens.me/api/species/{}".format(p.id) for p in f.species]
+    f.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(p.id) for p in f.characters]
+    return f
+
+def fix_planet(p):
+    p.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(x.id) for x in p.characters]
+    p.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in p.films]
+    return p
+
+def fix_species(s):
+    s.character_list = ["http://www.thesweawakens.me/api/characters/{}".format(x.id) for x in s.characters]
+    s.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in s.films]
+    return s
+
+def fix_character(c):
+    c.home_planet = "http://www.thesweawakens.me/api/characters/{}".format(c.planet_id)
+    c.film_list = ["http://www.thesweawakens.me/api/films/{}".format(x.id) for x in c.films]
+    return c
 
 @application.route('/api')
 def api():
     return "Our API starts here!"
 
+
+""" PLANETS API """
+
+
 @application.route('/api/planets')
 def api_planets():
     return redirect('/api/planets/?page=1')
 
+
 @application.route('/api/planets/')
 def api_planet_query():
-    return process_query(get_planets())
+    return process_query(get_planets(), model='planet')
+
+
+@application.route('/api/planets/<planet_id>')
+def api_planet(planet_id):
+    return process_query([get_planet(int(planet_id))], model='planet')
+
+
+""" SPECIES API """
+
 
 @application.route('/api/species')
-def api_species():
+def api_all_species():
     return redirect('/api/species/?page=1')
 
+
 @application.route('/api/species/')
-def api_species_query():
-    return process_query(get_species())
+def api_all_species_query():
+    return process_query(get_all_species(), model='species')
+
+
+@application.route('/api/species/<species_id>')
+def api_species(species_id):
+    return process_query([get_species(int(species_id))], model='species')
+
+
+""" FILMS API """
+
 
 @application.route('/api/films')
 def api_films():
     return redirect('/api/films/?page=1')
 
+
 @application.route('/api/films/')
 def api_film_query():
-    return process_query(get_films())
+    return process_query(get_films(), model='film')
+
+
+@application.route('/api/films/<film_id>')
+def api_film(film_id):
+    return process_query([get_film(int(film_id))], model='film')
+
+
+""" CHARACTERS API """
+
 
 @application.route('/api/characters')
 def api_characters():
     return redirect('/api/characters/?page=1')
 
+
 @application.route('/api/characters/')
 def api_character_query():
-    return process_query(get_characters())
+    return process_query(get_characters(), model='character')
 
 
-def process_query(mylist):
+@application.route('/api/characters/<character_id>')
+def api_character(character_id):
+    return process_query([get_character(int(character_id))], model='character')
+
+""" Run Tests """
+@application.route('/api/tests')
+def tests():
+    try:
+        result = subprocess.check_output(["python","tests.py"], stderr= subprocess.STDOUT, universal_newlines=True)
+    except subprocess.CalledProcessError as e:
+        print(e.output)
+        result = "Error"
+    return str(result) 
+
+
+def process_query(mylist, model):
     page = request.args.get('page')
+    if page is None:
+        page = 1
     filtBy = request.args.get('filterBy')
     filt = request.args.get('filter')
     sort = request.args.get('sortUp')
@@ -114,6 +193,21 @@ def process_query(mylist):
         raw = True
     else:
         raw = False
+
+    if not raw:
+        # fix the list
+        if model == 'film':
+            for f in mylist:
+                fix_film(f)
+        elif model == 'planet':
+            for p in mylist:
+                fix_planet(p)
+        elif model == 'character':
+            for c in mylist:
+                fix_character(c)
+        elif model == 'species':
+            for s in mylist:
+                fix_species(s)
 
     # determine if sort should be backwards
     if sort != None:
@@ -137,13 +231,14 @@ def process_query(mylist):
     mylist = paginate(mylist, 6, int(page))
     """
     if not raw:
-        planet_list = clean_data(deepcopy(planet_list))
-    """
+        mylist = clean_data(deepcopy(mylist))"""
+
     mylist = jsonpickle.encode(mylist)
-    """"
+
     if not raw:
-        planet_list = clean_json(planet_list)"""
+        mylist = clean_json(mylist)
     # return jsonpickle.encode(db.get_planets())
+
     return mylist
 
 
@@ -170,7 +265,7 @@ def paginate(data, size, page):
 
 def clean_data(data):
     for i in data:
-        for atr in (a for a in dir(i) if not a.startswith('__')):
+        for atr in (a for a in dir(i) if not a.startswith('_')):
             if atr != 'name':
                 delattr(i, atr)
     return data
@@ -180,10 +275,23 @@ def to_json(data):
 
 def clean_json(data):
     json_data = json.loads(data)
-    print(json_data)
     for i in json_data:
-        if 'py/object' in i:
-           i.pop('py/object', None)
+        if "py/object" in i:
+            i.pop("py/object")
+        if "_sa_instance_state" in i:
+            i.pop("_sa_instance_state")
+        if "py/state" in i:
+            i.pop("py/state")
+        if "planets" in i:
+            i.pop("planets")
+        if "planet" in i:
+            i.pop("planet")
+        if "films" in i:
+            i.pop("films")
+        if "characters" in i:
+            i.pop("characters")
+        if "species" in i:
+            i.pop("species")
     return json.dumps(json_data)
 
 

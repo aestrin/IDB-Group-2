@@ -1,0 +1,52 @@
+{
+    "24": {
+        "edited": "2014-12-20T21:36:42.188000Z", 
+        "name": "Iktotchi", 
+        "classification": "unknown", 
+        "created": "2014-12-20T10:32:13.046000Z", 
+        "eye_colors": "orange", 
+        "img_width": 930, 
+        "people": [
+            "http://swapi.co/api/people/56/"
+        ], 
+        "img_height": 1280, 
+        "skin_colors": "pink", 
+        "designation": "sentient", 
+        "language": "Iktotchese", 
+        "average_lifespan": "unknown", 
+        "hair_colors": "none", 
+        "url": "http://swapi.co/api/species/24/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=952F8807B7D84FF3B1F6C040EC09AFBF&CID=0536487D380464842128422739356579&rd=1&h=io8r9fvbvCw-DzkQofagWQQ2D9SiDaK--_kbaBQphQM&v=1&r=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20061202133616%2fstarwars%2fimages%2ff%2ff0%2fIktotchi_NEGAS.jpg&p=DevEx,5008.1", 
+        "homeworld": "http://swapi.co/api/planets/47/", 
+        "average_height": "180"
+    }, 
+    "25": {
+        "edited": "2014-12-20T21:36:42.189000Z", 
+        "name": "Quermian", 
+        "classification": "mammal", 
+        "created": "2014-12-20T10:34:50.827000Z", 
+        "eye_colors": "yellow", 
+        "img_width": 290, 
+        "people": [
+            "http://swapi.co/api/people/57/"
+        ], 
+        "img_height": 406, 
+        "skin_colors": "white", 
+        "designation": "sentient", 
+        "language": "Quermian", 
+        "average_lifespan": "86", 
+        "hair_colors": "none", 
+        "url": "http://swapi.co/api/species/25/", 
+        "films": [
+            "http://swapi.co/api/films/4/", 
+            "http://swapi.co/api/films/6/"
+        ], 
+        "img_url": "http://www.bing.com/cr?IG=E729B9BF372E4FFE920CC16664A0A1F6&CID=382D7EBE661A6FA5257674E4672B6EE1&rd=1&h=a9FBoHPiO9bXV_E5Lc-F_E9VmECYWrPrm0KdrwB_IXI&v=1&r=http%3a%2f%2fimg1.wikia.nocookie.net%2f__cb20060202173020%2fstarwars%2fimages%2f5%2f5e%2fMovie_poof.jpg&p=DevEx,5008.1", 
+        "homeworld": "http://swapi.co/api/planets/48/", 
+        "average_height": "240"
+    }
+}

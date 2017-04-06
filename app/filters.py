@@ -42,4 +42,10 @@ def NameFilter(items, rangestr):
 		hi = rangestr[rangestr.index("-") + 1:].lower()
 		return [a for a in items if hasattr(a, "name") and a.name.lower()[0] >= lo and a.name.lower()[0] <= hi]
 
-filters = {"height" : RangeFilter("height"), "mass" : RangeFilter("mass"), "avg height" : RangeFilter("average_height"), "population": RangeFilter("population"), "name" : NameFilter, "director" : MatchFilter("director")}
+
+def TitleFilter(items, rangestr):
+	lo = rangestr[:rangestr.index("-")].lower()
+	hi = rangestr[rangestr.index("-") + 1:].lower()
+	return [a for a in items if hasattr(a, "title") and a.title.lower()[0] >= lo and a.title.lower()[0] <= hi]
+
+filters = {"height" : RangeFilter("height"), "mass" : RangeFilter("mass"), "avg height" : RangeFilter("average_height"), "population": RangeFilter("population"), "name" : NameFilter, "title" : TitleFilter, "director" : MatchFilter("director")}

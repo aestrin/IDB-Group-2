@@ -77,7 +77,7 @@
                 <img class="img-circle img-responsive img-center" src="https://scontent-dft4-2.xx.fbcdn.net/v/t31.0-8/14124513_10209331419354906_2573575169530812498_o.jpg?oh=f911a0b55fbf47fea4721407af0b759b&oe=5958E9A9" alt="">
                 <h3>Arjun Bajaj</h3>
                 <h4>Fullstack Knight</h4>
-                <p>CS + BHP Junior Major from Austin Texas. I like basketball and playing with my pupper Atticus</p>  
+                <p>CS + BHP Junior Major from Austin Texas. I like basketball and playing with my pupper Atticus</p>
           <div class="row">
                   <h5>Number of Commits: 20</h5>
                   <h5>Number of Issues: 2</h5>
@@ -121,41 +121,45 @@
             <a href="https://swapi.co/"><p>Swapi - The Starwars API</p></a>
           </div>
         </div>
-  <br>
-  <br>
-  <br>
-  <br>
-
-  <h2> Table of Contents of Techincal Report</h2>
-  <br>
-  <p><a href="#Introduction">Introduction</a></p>
-  <p style="padding-left: 2em"><a href="#IntendedUseCases">Intended Use Cases</a></p>
-  <p><a href="#Design">Design</a></p>
-  <p><a href="#Tools">Tools</a></p>
-    <p style="padding-left: 2em"><a href="#FrontEnd">Front End</a></p>
-      <p style="padding-left: 4em"><a href="#React">React</a></p>
-      <p style="padding-left: 4em"><a href="#Bootstrap">Bootstrap</a></p>
-    <p style="padding-left: 2em"><a href="#BackEnd">Back End</a></p>
-      <p style="padding-left: 4em"><a href="#Flask">Flask</a></p>
-      <p style="padding-left: 4em"><a href="#Python">Python</a></p>
-    <p style="padding-left: 2em"><a href ="#OtherTools">Other Tools</a></p>
-      <p style="padding-left: 4em"><a href="#Apiary">Apiary</a></p>
-      <p style="padding-left: 4em"><a href="#Slack">Slack</a></p>
-      <p style="padding-left: 4em"><a href="#Travis">Flask</a></p>
-      <p style="padding-left: 4em"><a href="#Pydoc">Python</a></p>
-      <p style="padding-left: 4em"><a href="#autopep8">Autopep8</a></p>
-      <p style="padding-left: 4em"><a href="#Github">Github</a></p>
-      <p style="padding-left: 4em"><a href="#Sublime">Sublime Text</a></p>
-      <p style="padding-left: 4em"><a href="#Yuml">Pylint</a></p>
-      <p style="padding-left: 4em"><a href="#Pycharm">Autopep8</a></p>
-      <p style="padding-left: 4em"><a href="#Pycharm">Source Tree</a></p>
-      <p style="padding-left: 4em"><a href="#AWS">Amazon Web Services</a></p>
-      <p style="padding-left: 4em"><a href="#PIP">Python PIP</a></p>
-   <p><a href="#Hosting">Hosting</a></p>
 
 
+        <div class="row">
+          <h1 class="page-header text-center">Unit Tests</h1>
+          <button type="button" class="btn btn-secondary btn-lg btn-block">Run</button>
+        </div>
+        <hr>
 
+        <br>
+        <br>
+        <br>
+        <br>
 
+        <h2> Table of Contents of Techincal Report</h2>
+        <br>
+        <p><a href="#Introduction">Introduction</a></p>
+        <p style="padding-left: 2em"><a href="#IntendedUseCases">Intended Use Cases</a></p>
+        <p><a href="#Design">Design</a></p>
+        <p><a href="#Tools">Tools</a></p>
+          <p style="padding-left: 2em"><a href="#FrontEnd">Front End</a></p>
+            <p style="padding-left: 4em"><a href="#React">React</a></p>
+            <p style="padding-left: 4em"><a href="#Bootstrap">Bootstrap</a></p>
+          <p style="padding-left: 2em"><a href="#BackEnd">Back End</a></p>
+            <p style="padding-left: 4em"><a href="#Flask">Flask</a></p>
+            <p style="padding-left: 4em"><a href="#Python">Python</a></p>
+          <p style="padding-left: 2em"><a href ="#OtherTools">Other Tools</a></p>
+            <p style="padding-left: 4em"><a href="#Apiary">Apiary</a></p>
+            <p style="padding-left: 4em"><a href="#Slack">Slack</a></p>
+            <p style="padding-left: 4em"><a href="#Travis">Flask</a></p>
+            <p style="padding-left: 4em"><a href="#Pydoc">Python</a></p>
+            <p style="padding-left: 4em"><a href="#autopep8">Autopep8</a></p>
+            <p style="padding-left: 4em"><a href="#Github">Github</a></p>
+            <p style="padding-left: 4em"><a href="#Sublime">Sublime Text</a></p>
+            <p style="padding-left: 4em"><a href="#Yuml">Pylint</a></p>
+            <p style="padding-left: 4em"><a href="#Pycharm">Autopep8</a></p>
+            <p style="padding-left: 4em"><a href="#Pycharm">Source Tree</a></p>
+            <p style="padding-left: 4em"><a href="#AWS">Amazon Web Services</a></p>
+            <p style="padding-left: 4em"><a href="#PIP">Python PIP</a></p>
+         <p><a href="#Hosting">Hosting</a></p>
 
           <p>&nbsp;</p>
           <p>&nbsp;</p>
@@ -244,12 +248,118 @@
           </tbody>
           </table>
           <p><br /> </p>
+          <a name = "Models"></a>
+          <h2><p><strong>Models</strong></p></h2>
+           <p>&nbsp;</p>
+          <h4><p>We have exactly four models within our Star Wars database. Species, Characters, Planets and Films. Within each model is information contained from the many Star Wars API found at swapi.co as well as images pulled from Bing images. </p><h4>
+          <h3><p>Species</p></h3>
+          <p>&nbsp;</p>
+          <h4><p>
+          The first of the models Species is outlined below
+          <br>Species model has these attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Classification:</strong> e.g mammal, amphibian <br>
+          <strong>Language:</strong>e.g Galactic Standard<br>
+          <strong>average_height:</strong>  e.g 180 <br>
+          <strong>eye_colors:</strong> e.gyellow<br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Characters </strong>(one-to-many)<br>
+          <strong>Planets</strong> (one-to-one)<br><br>
+          The basis of this model is to show the vast species involved in the star wars universe, the interesting tidbits of where these species come up and in what movies are my favorite property of this model.
+
+          <br>
+          <h3><p>Characters</p></h3>
+          <p>&nbsp;</p>
+          <h4><p>
+          The second of the models Characters is outlined below,
+          <br>Character model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Birth year:</strong> 48 BBY(Years after or before the events of Rogue One)<br>
+          <strong>Height :</strong>e.g 180cm<br>
+          <strong>Mass :</strong>  e.g 55 kg <br>
+          <strong>image url:</strong><br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Planets </strong>(one-to-one)<br>
+          <strong>Species </strong> (one-to-one)<br><br>
+          The character model is the main focal point of our project, as this is what the fan really wants to dive deeper into. Star Wars is known to as a space opera not sci-fi, and its because of their deep, rich characters with such unique and different
+          </p></h4>
+
+          <br>
+          <h3><p>Planets</p></h3>
+          <p>&nbsp;</p>
+          <h4><p>
+          The third of our models is outlined below,
+          <br>Planet model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Climate</strong> e.g arid, moist, temperate<br>
+          <strong>Population :</strong>6,200,000,000<br>
+          <strong>Gravity:</strong>e.g. 1 galatic standard<br>
+          <strong>terrain:</strong>e.g. rocky, hilly, oceans<br>
+          <strong>image url:</strong><br>
+
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Characters </strong>(one-to-many)<br>
+          <strong>Species </strong> (one-to-many)<br><br>
+          The planet model is mainly to serve as further context for both our Film model and Character model as it is the relation to the characters and films that really gives these planets their significance
+          </p></h4>
+
+
+          <br>
+          <h3><p>Films</p></h3>
+          <p>&nbsp;</p>
+          <h4><p>
+          The fourth of our models is outlined below,
+          <br>Film model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Title :</strong><br>
+          <strong>Director</strong> <br>
+          <strong>Episode number :</strong>6,200,000,000<br>
+          <strong>Release date:</strong><br>
+          <strong>terrain:</strong> e.gyellow<br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Planets</strong> (many-to-many)<br>
+          <strong>Characters </strong>(many-to-many)<br>
+          <strong>Species </strong> (many-to-many)<br><br>
+          The Film model is all encompassing, and is the is the highest or top level entity in our models. These are the very basis of the cultural phenomenon and as you can see from the relations has the most connections to the other models. Moreover, the richness of the API used to scrape the data allowed for the other models to be created in this way.
+          </p></h4>
+
+
+
           <a name = "Design"></a>
           <h2><p><strong>Design</strong></p></h2>
           <p>&nbsp;</p>
           <h4><p>Our API design was outlined in apiary. It uses a simple GET request driven system to allow users to query for information about various planets, characters, and films in the Star Wars universe. The design of the API is very straight forward. To obtain a list of the available planets, characters, or films, simply send a request to http://thesweawakens.me/api/planets, http://thesweawakens.me/api/characters, or http://thesweawakens.me/api/films respectively. A JSON is returned containing the number of results followed by a list of objects containing the properties of that object (as well as a URL with it&rsquo;s ID). To get information about a specific member of any of these categories, simply append &ldquo;/{id-number}&rdquo; to the catagory&rsquo;s URL. For instance, to obtain the planet with id 2 send a GET request to http://thesweawakens.me/api/planets/2. The result is a JSON containing just the properties of that planet.</p></h4>
-          <p>&nbsp;</p>
+
           <img src="{{ url_for('static', filename='UML.png') }}" style="display: block;margin: 0 auto;">
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name = "Scraping"></a>
+          <h2><p><strong>Scraping</strong></p></h2>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <h4><p>
+          In order to scrape both the data and the images we employed a programmatic way to pull all the appropriate information. After we established our four models we would work with, we started the process of pulling the data. In order to accomplish this feat we employed the use of the python libraries Requests and Json. The former was used in order to make repeated get requests, in our case to the star wars api, and the latter was used to parse the returned json and pretty-print and save a collated comprehensive data files. From here all we needed to do was import the files into our database.
+          </p></h4>
+          <p>&nbsp;</p>
           <p>&nbsp;</p>
           <a name = "Tools"></a>
           <h1><p><strong>Tools</strong></p></h1>
@@ -306,7 +416,7 @@
           <h3><p>Github</p></h3>
           <a name = "Github"></a>
           <h4><p>A remote repository service employing git, allows for multiple contributors, branches and issue tracking. All our work was shared and managed through Github.</p></h4>
-          <p>&nbsp;</p>          
+          <p>&nbsp;</p>
           <a name = "Github"></a>
           <h3><p>Sublime Text 2</p></h3>
           <h4><p>A lightweight text editor that allows for basic text editing, syntax highlighting and find and replace. This was the preferred choice of many of our developers especially for the sleek Brogrammer theme.</p></h4>
@@ -451,11 +561,60 @@
           <h4><p>We actually haven&rsquo;t implemented this part yet, but for the next phase we look forward to having Continuous Deployment. Travis allows automatic deployment to an AWS EB instance after a successful build, thereby removing the overhead of having to type <strong>$ eb deploy </strong>every time we want to make changes to our production environment. This can be done by simply providing an encrypted <strong>access_key_id</strong> and <strong>secret_access_key</strong> to the .travis.yml file, which gives Travis permission to deploy to our EB instance.</p></h4>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
+          <a name = "Database"></a>
+          <h2><p>Database<h2><p>
+          <br>
+          <h3><p>PostgreSQL:</p><h3>
+          <h4><p>Postgres , like other DBMS, is a relational database management tool that is completely open source. It has strong reliability and data integrity is the choice of many developers. As there was no choice in this decision, we ended up employing this as our relational database. Postgres also has the added benefit of being working very well with Flask and allows for easy setup using models.py and flask SQLAlchemy.</h4><p>
+          <br>
+          <h3><p>Setting up PostgreSQL with AWS</p><h3>
+          <h4><p>
+            In order to have persistent set of storage it is necessary to setup a database, preferable remote, to house the data. The process of setting up can be tricky, and following guides/documentation that is provided especially necessary. We ended up setting up with Amazon Web Services
+           <h4><p>These 2 links were especially useful:</p></h4>
+            <br>
+            <br>
+          <p><a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/"><span style="color: #1155cc;">https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/</span></a></p>
+          <p><a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html"><span style="color: #1155cc;">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html</span></a></p>
+          <br>
+          <br>
+          <h4>
+Setting up AWS RDS
+In order to setup the AWS instance appropriately its very important to follow the steps shown below, as simple deviations can prove very costly down the road.<br>
 
-          {% include 'footer.html' %}
+          </h4>
+          <br>
+          <h4><ol>
+          <li><p>G1)  Using the same login as before for the hosting one wants to navigate to the AWS console page and click on the RDS link</p></li>
+          <li><p>From here one should locate the similar launch button and begin the process of launching a postgres SQL instance</p></li>
+          <li><p>1) In the next few menus its important to select PostgreSQL(Hint:The one with the elephant picture not the dolphin) & Dev/Test. Additionally whenever a tooltip shows “Free-tier eligible” its will be the option we are going to go with, because who pays for anything anymore. </p></li>
+          <li><p>1) In this stage its important to keep track of these settings we fill out on this next stage as it’s the information necessary to login to our Postgres database in later steps. </p></li>
+          <br>
+          <strong> Master Username, Password,Database Identifier will all be used in the url needed to connect to SQLAlchemy later.</strong>
+          <br>
+          <br>
+          <li><p>When you reach the page “Configure Advanced Settings” leave this as is, for our purposes with Flask these aren’t necessary and the default values provided by Amazon will more than suffice for our purposes. However, if you want to add an extra layer of customization one can name their db otherwise it will have the default postgres as its name.</p></li>
+          <li><p>After double checking the previous steps you can finally click Launch! After waiting a few minutes your DB instance should be up and running!</p></li>
+          <li><p>1) At this point we’re all done with AWS we just need to copy down the endpoint, username, password, port, and db_identifier.</p></li>
+          <li><p>1) These values we saved from amazon will serve the basis of the url needed to connect to AWS. From here we will create the url as follows:</p></li>
+          <br>
+          postgresql://username : password @hostname : port / db_identifier
+          <br>
+          an example aws one is shown below
+          <br>
+          postgresql://awsuser:admin@:mypostgresql.c6c8mwvfdgv0.us-west-2.rds.amazonaws.com:5432/mypgdb
+          <br>
+          <br>
 
-    </div>
+          <li><p>After loading this into a environment variable you’re already to connect with the application. Just plug this into SQLAlchemy as the engine url and you’re all set. Its smooth-ish sailing from here!</p></li>
 
-</body>
+           </ol></h4>
+
+
+
+                {% include 'footer.html' %}
+
+          </div>
+
+  </body>
 
 </html>

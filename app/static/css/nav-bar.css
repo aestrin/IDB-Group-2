@@ -13,6 +13,21 @@
 
 body {
   padding-top: 150px;
+  background-color: #f7f7f7;
+}
+
+.page-header {
+
+  border-bottom: 1px solid #d9d9d9;;
+}
+
+hr {
+  display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #d9d9d9;
+   margin: 1em 0;
+   padding: 0;
 }
 
 @font-face {
@@ -23,11 +38,14 @@ body {
 .navbar-brand {
   font-family: "Star Wars";
   font-size: 150%;
+  /*-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: yellow;*/
   position: absolute;
   top: 50%;
   /*left:50%;*/
   transform: translate(0%,-50%);
 }
+
 
 .navbar-inverse {
   border-bottom: 2px solid yellow;
@@ -39,14 +57,6 @@ body {
     padding-top: 0;
 }
 
-.test {
-    height: auto;
-    width: auto;
-    max-height: 72px;
-    max-width: 250px;
-    line-height: 150px; /* whatever the fixed height of the bar is */
-    vertical-align: middle;
-}
 
 .navbar-nav li.active:after, .navbar-nav li.active:before {
 	bottom: 0%;
@@ -73,18 +83,7 @@ body {
   z-index: 1;
 }
 
-/*
-li,
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Comic Sans MS", cursive, sans-serif;
-}*/
-
+/*Font CSS*/
 h1 {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 	font-style: normal;
@@ -132,7 +131,19 @@ pre {
 	line-height: 18.5714px;
 }
 
+.instance-font {
+  font-size: 20px;
+  padding-top: 20px;
+}
 
+.instance-li {
+  padding-top: 10px;
+}
+
+.panel-font li{
+  font-size: 18px;
+  padding-top: 10px;
+}
 
 /*Pannel CSS*/
 .panel-container {
@@ -141,22 +152,26 @@ pre {
   border-style: groove;
   border-radius: 8px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .lists {
   list-style-type: none;
-  /*text-align: center;*/
 }
 
-/*.custom-pannel {
-  height: 100%;
-  width: 100%;
-}*/
-
+/*Images CSS*/
 .grid-images {
   padding-top: 20px;
   max-width: 230px;
   max-height: 230px;
+  height:auto;
+  margin:auto;
+}
+
+.instance-images {
+  padding-top: 20px;
+  max-width: 600px;
+  max-height: 600px;
   height:auto;
   margin:auto;
 }

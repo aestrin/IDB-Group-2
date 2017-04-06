@@ -32,6 +32,8 @@ function buildURL()
             url +="&sortDown="+sort;
     }
     url += "&raw";
+
+    console.log(url);
     return url;
 }
 
