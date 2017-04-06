@@ -148,7 +148,6 @@ class Planet(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Characters (one-to-many)
-            Species (one-to-many)
     """
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -193,7 +192,6 @@ class Species(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Characters (one-to-many)
-            Planets (one-to-one)
     """
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
