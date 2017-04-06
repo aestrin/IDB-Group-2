@@ -49,7 +49,6 @@ endif
 
 Tests: app/models.py tests.py .pylintrc
 	-$(PYLINT) app/models.py
-	python tests.py
 
 server:
 	pip install -r requirements.txt
