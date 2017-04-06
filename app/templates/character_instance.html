@@ -36,7 +36,7 @@
                     <li class="instance-font">Home world: <a href="{{ url_for('planet', planet_id=character.planet.id) }}">{{ character.planet.name }}</a></li>
                     <li class="instance-font"><a data-toggle="collapse" href="#collapse1">Films <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                     <div id="collapse1" class="panel-collapse collapse">
-                      <ul>
+                      <ul class="lists">
                           {% for f in character.films %}
                               <li class="instance-font"><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
                           {% endfor %}

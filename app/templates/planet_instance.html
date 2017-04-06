@@ -29,14 +29,14 @@
               <img class="img-responsive" src="{{ planet.img_url }}" alt="">
             </div>
             <div class="col-md-8">
-              <ul>
+              <ul class="lists">
                 <li class="instance-font">Climate: {{ planet.climate }}</li>
                 <li class="instance-font">Population: {{ planet.population }}</li>
                 <li class="instance-font">Gravity: {{ planet.gravity }}</li>
                 <li class="instance-font">Terrain: {{ planet.terrain }}</li>
                 <li class="instance-font"><a data-toggle="collapse" href="#collapse1">Residents <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                   <div id="collapse1" class="panel-collapse collapse">
-                  <ul>
+                  <ul class="lists">
                       {% for c in planet.characters %}
                           <li class="instance-font"><a href="{{ url_for('character', character_id=c.id) }}">{{ c.name }}</a></li>
                       {% endfor %}
@@ -44,7 +44,7 @@
                 </div>
                 <li class="instance-font"><a data-toggle="collapse" href="#collapse2">Films <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                   <div id="collapse2" class="panel-collapse collapse">
-                      <ul>
+                      <ul class="lists">
                       {% for f in planet.films %}
                           <li class="instance-font"><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
                       {% endfor %}
