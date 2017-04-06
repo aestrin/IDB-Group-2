@@ -1,7 +1,7 @@
 from flask import render_template, redirect, request
 from app import application
 from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
-from app.filters import filters
+from app.filters import filters, numeric_fields, toNum
 import json
 from copy import deepcopy   
 
@@ -130,7 +130,10 @@ def process_query(mylist):
             mylist = myFilter(mylist, filt)
     # sort
     if sort != None:
-        mylist.sort(key= lambda a: getattr(a, sort), reverse=rev)
+        if sort.lower() in numeric_fields:
+            mylist.sort(key= lambda a: toNum(getattr(a, sort)), reverse=rev)
+        else:
+            mylist.sort(key= lambda a: getattr(a, sort).lower(), reverse=rev)
     mylist = paginate(mylist, 6, int(page))
     """
     if not raw:

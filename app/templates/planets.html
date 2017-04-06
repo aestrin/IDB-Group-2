@@ -64,29 +64,35 @@
             return planets
         }
 
+        var size = 6;
+
         function load(error, response)
         {
             if(error == null)
             {
                 console.log(response);
                 document.getElementById("grid_location").innerHTML = "";
+                size = response.length;
                 renderTable(buildModels(response, true), document.getElementById("grid_location"), 3);
             }
         }
 
-        var baseUrl = "/api/planets/";
+        // common code
         var filter = null;
         var filterBy = null;
         var sort = null;
         var up = 1;
         var page = 1;
 
+        var baseUrl = "/api/planets/";
+        sort = "name"
+
         function buildURL()
         {
             var url = baseUrl;
             url += "?page="+page;
             if(filter != null)
-                url += "&filterBy="+filterBy+"&filter"+filter;
+                url += "&filterBy="+filterBy+"&filter="+filter;
             if(sort != null)
             {
                 if(up)
@@ -146,6 +152,7 @@
         {
             filterBy = filtBy;
             filter = filt;
+            page = 1;
             reload();
         }
 
@@ -164,6 +171,8 @@
             </div>
         )}
 
+          /*
+
         function PlanetSort(props){
             return (<div className={"row"}>
                       <div className={"col-lg-12"}>
@@ -179,43 +188,71 @@
                         <hr/>
                       </div>
                     </div>
+        )} */
+
+        function PlanetSort(props){
+            return (<div className={"row"}>
+                      <div className={"col-lg-12"}>
+                        <h4>Sort By:&nbsp;&nbsp;
+                            <div className={"btn-group"} data-toggle={"buttons"}>
+                              <label className={"btn btn-primary active"} onClick={sortBy.bind(null, "name")}>
+                                <input type={"radio"} name={"options"} id={"option1"} autocomplete={"off"}  /> Name
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "climate")}>
+                                <input type={"radio"} name={"options"} id={"option2"} autocomplete={"off"} /> Climate
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "population")}>
+                                <input type={"radio"} name={"options"} id={"option3"} autocomplete={"off"} /> Population
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "gravity")}>
+                                <input type={"radio"} name={"options"} id={"option4"} autocomplete={"off"} /> Gravity
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortBy.bind(null, "terrain")}>
+                                <input type={"radio"} name={"options"} id={"option5"} autocomplete={"off"} /> Terrain
+                              </label>
+                            </div>
+                            &nbsp;&nbsp;
+                            <div className={"btn-group"} data-toggle={"buttons"}>
+                              <label className={"btn btn-primary active"} onClick={sortDir.bind(null, 1)}>
+                                <input type={"radio"} name={"arrow"} id={"option6"} autocomplete={"off"} /> ASC
+                              </label>
+                              <label className={"btn btn-primary"} onClick={sortDir.bind(null, 0)}>
+                                <input type={"radio"} name={"arrow"} id={"option7"} autocomplete={"off"} /> DSC
+                              </label>
+                            </div>
+                        </h4>
+                        <hr/>
+                      </div>
+                    </div>
         )}
+
+
+
 
         function PlanetPagination(props) {
             return (
               <ul className={"pagination pagination-centered"}>
-                <li className={"page-item"}><a className={"page-link"} href={"#"}>Previous</a></li>
-                <li className={"page-item"}><a className={"page-link"} href={"#"}>Next</a></li>
+                <li className={"page-item"} id={"prev"}><a className={"page-link"} onClick={prevPage} href={"#"}>Previous</a></li>
+                <li className={"page-item"} id={"next"}><a className={"page-link"} onClick={nextPage} href={"#"}>Next</a></li>
               </ul>
         )}
 
         function PlanetFilter(props) {
           return (
             <div>
-              <h3>Residents</h3>
-              <div className={"checkbox"}>
-               <label><input type={"checkbox"} value={""}></input>Luke Skywalker</label>
-              </div>
-              <div className={"checkbox"}>
-               <label><input type={"checkbox"} value={""}></input>R2-D2</label>
-              </div>
-              <div className={"checkbox"}>
-               <label><input type={"checkbox"} value={""}></input>Lobot</label>
-              </div>
+              <h3>Name</h3>
 
-              <h3>Films</h3>
-              <div className={"checkbox"}>
-               <label><input type="checkbox" value={""}></input>A New Hope</label>
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "A-H")}></input>A-H</label>
               </div>
-              <div className={"checkbox"}>
-               <label><input type={"checkbox"} value={""}></input>Return of the Jedi</label>
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "J-P")}></input>J-P</label>
               </div>
-              <div className={"checkbox"}>
-               <label><input type={"checkbox"} value={""}></input>The Empire Strikes Bac</label>
+              <div className={"radio"}>
+               <label><input type={"radio"} value={""} name={"optradio"} onClick={filterPage.bind(null, "name", "Q-Z")}></input>Q-Z</label>
               </div>
             </div>
         )}
-
 
         ReactDOM.render(<PlanetFilter />, document.getElementById("filters"));
         ReactDOM.render(<PlanetSort />, document.getElementById("sorts"));
