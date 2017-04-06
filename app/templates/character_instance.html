@@ -11,42 +11,36 @@
 </head>
 
 <body>
-
     <!-- Page Content -->
     <div class="container">
 
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Character</h1>
+                <h1 class="text-center">{{ character.name }}</h1>
+                <hr>
             </div>
         </div>
-        <!-- /.row -->
 
         <!-- Project One -->
         <div class="row">
-            <div class="col-md-7">
-                <a href="#">
-                    <img class="img-responsive" src="{{ character.img_url }}" alt="" style="width: 700px; height: 300px;">
-                </a>
+            <div class="col-md-4">
+              <img class="img-responsive" src="{{ character.img_url }}" alt="">
             </div>
-            <div class="col-md-5">
-                <h2>{{ character.name }}</h2>
-{#                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>#}
-                <ul>
-                    <li>Birth year: {{ character.birth_year }}</li>
-                    <li>Gender: {{ character.gender }}</li>
-                    <li>Height: {{ character.height }}</li>
-                    <li>Weight: {{ character.mass }}</li>
-                    <li>Home world: <a href="{{ url_for('planet', planet_id=character.planet.id) }}">{{ character.planet.name }}</a></li>
-                    <li><a data-toggle="collapse" href="#collapse1">Films:</a></li>
+            <div class="col-md-8">
+                <ul class="lists">
+                    <li class="instance-font">Birth year: {{ character.birth_year }}</li>
+                    <li class="instance-font">Gender: {{ character.gender }}</li>
+                    <li class="instance-font">Height: {{ character.height }}</li>
+                    <li class="instance-font">Weight: {{ character.mass }}</li>
+                    <li class="instance-font">Home world: <a href="{{ url_for('planet', planet_id=character.planet.id) }}">{{ character.planet.name }}</a></li>
+                    <li class="instance-font"><a data-toggle="collapse" href="#collapse1">Films <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                     <div id="collapse1" class="panel-collapse collapse">
-                   
-                        <ul>
-                            {% for f in character.films %}
-                                <li><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
-                            {% endfor %}
-                        </ul>
+                      <ul>
+                          {% for f in character.films %}
+                              <li class="instance-font"><a href="{{ url_for('film', film_id=f.id) }}">{{ f.title }}</a></li>
+                          {% endfor %}
+                      </ul>
                     </div>
                 </ul>
             </div>
@@ -55,16 +49,9 @@
 
         <hr>
 
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
-                </div>
-            </div>
-            <!-- /.row -->
-        </footer>
-
+          {% include 'footer.html' %}
+        </div>
+      </div>
     </div>
     <!-- /.container -->
 
