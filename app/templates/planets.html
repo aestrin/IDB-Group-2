@@ -52,7 +52,9 @@
         var x;
         var s;
 
+        var baseUrl = "/api/planets/";
         {% include 'table_builder.jsx' %}
+        sort = "name";
 
         function buildModels(list, init)
         {
@@ -62,98 +64,6 @@
                 planets.push(<Planet planet={list[i]} />);
             }
             return planets
-        }
-
-        var size = 6;
-
-        function load(error, response)
-        {
-            if(error == null)
-            {
-                console.log(response);
-                document.getElementById("grid_location").innerHTML = "";
-                size = response.length;
-                renderTable(buildModels(response, true), document.getElementById("grid_location"), 3);
-            }
-        }
-
-        // common code
-        var filter = null;
-        var filterBy = null;
-        var sort = null;
-        var up = 1;
-        var page = 1;
-
-        var baseUrl = "/api/planets/";
-        sort = "name"
-
-        function buildURL()
-        {
-            var url = baseUrl;
-            url += "?page="+page;
-            if(filter != null)
-                url += "&filterBy="+filterBy+"&filter="+filter;
-            if(sort != null)
-            {
-                if(up)
-                    url +="&sortUp="+sort;
-                else
-                    url +="&sortDown="+sort;
-            }
-            url += "&raw";
-            return url;
-        }
-
-        function reload()
-        {
-            var url = buildURL();
-            var req = new XMLHttpRequest();
-            req.open('GET', url, true);
-            req.responseType = 'json';
-            req.onload = function() {
-              var status = req.status;
-              if (status == 200) {
-                load(null, req.response);
-              } else {
-                load(status);
-              }
-            };
-            req.send();
-        }
-
-        function sortBy(value)
-        {
-            sort = value;
-            page = 1;
-            reload();
-        }
-
-        function sortDir(value)
-        {
-            up = value;
-            page = 1;
-            reload();
-        }
-
-        function nextPage()
-        {
-            page += 1;
-            reload();
-        }
-
-        function prevPage()
-        {
-            if(page != 1)
-                page -= 1;
-            reload();
-        }
-
-        function filterPage(filtBy, filt)
-        {
-            filterBy = filtBy;
-            filter = filt;
-            page = 1;
-            reload();
         }
 
         function Planet(props){
@@ -170,25 +80,6 @@
               </ul>
             </div>
         )}
-
-          /*
-
-        function PlanetSort(props){
-            return (<div className={"row"}>
-                      <div className={"col-lg-12"}>
-                        <h4>Sort:
-                            <a href={"#"} onClick={sortBy.bind(null, "name")}>Name </a>
-                            <a href={"#"} onClick={sortBy.bind(null, "climate")}>Climate </a>
-                            <a href={"#"} onClick={sortBy.bind(null, "population")}>Population </a>
-                            <a href={"#"} onClick={sortBy.bind(null, "gravity")}>Gravity </a>
-                            <a href={"#"} onClick={sortBy.bind(null, "terrain")}>Terrain </a>
-                            <a><i className={"fa fa-chevron-down"} aria-hidden={"true"} onClick={sortDir.bind(null, 1)}></i></a>
-                            <a><i className={"fa fa-chevron-up"} aria-hidden={"true"} onClick={sortDir.bind(null, 0)}></i></a>
-                        </h4>
-                        <hr/>
-                      </div>
-                    </div>
-        )} */
 
         function PlanetSort(props){
             return (<div className={"row"}>
@@ -225,9 +116,6 @@
                       </div>
                     </div>
         )}
-
-
-
 
         function PlanetPagination(props) {
             return (
