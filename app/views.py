@@ -8,8 +8,7 @@ import jsonpickle
 import subprocess
 import os
 import sys
-sys.path.append("..")
-import tests 
+import tests
 
 
 @application.route('/')
