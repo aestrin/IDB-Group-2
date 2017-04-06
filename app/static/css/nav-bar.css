@@ -13,6 +13,21 @@
 
 body {
   padding-top: 150px;
+  background-color: #f7f7f7;
+}
+
+.page-header {
+
+  border-bottom: 1px solid #d9d9d9;;
+}
+
+hr {
+  display: block;
+   height: 1px;
+   border: 0;
+   border-top: 1px solid #d9d9d9;
+   margin: 1em 0;
+   padding: 0;
 }
 
 @font-face {
@@ -42,14 +57,6 @@ body {
     padding-top: 0;
 }
 
-.test {
-    height: auto;
-    width: auto;
-    max-height: 72px;
-    max-width: 250px;
-    line-height: 150px; /* whatever the fixed height of the bar is */
-    vertical-align: middle;
-}
 
 .navbar-nav li.active:after, .navbar-nav li.active:before {
 	bottom: 0%;
@@ -133,6 +140,11 @@ pre {
   padding-top: 10px;
 }
 
+.panel-font li{
+  font-size: 18px;
+  padding-top: 10px;
+}
+
 /*Pannel CSS*/
 .panel-container {
   /*padding-top: 300px;*/
@@ -140,17 +152,12 @@ pre {
   border-style: groove;
   border-radius: 8px;
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .lists {
   list-style-type: none;
-  /*text-align: center;*/
 }
-
-/*.custom-pannel {
-  height: 100%;
-  width: 100%;
-}*/
 
 /*Images CSS*/
 .grid-images {
