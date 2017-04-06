@@ -172,12 +172,16 @@ def api_character(character_id):
 """ Run Tests """
 @application.route('/api/tests')
 def tests():
+    response = dict()
     try:
         result = subprocess.check_output(["python","tests.py"], stderr= subprocess.STDOUT, universal_newlines=True)
+        response['success'] = True
+        response['output'] = result
     except subprocess.CalledProcessError as e:
         print(e.output)
-        result = "Error"
-    return str(result) 
+        response['success'] = False
+        response['output'] = ""
+    return json.dumps(response)
 
 
 def process_query(mylist, model):

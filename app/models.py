@@ -6,6 +6,7 @@
 # pylint: disable = too-few-public-methods
 # pylint: disable = no-member
 # pylint: disable = import-error
+# pylint: disable = redefined-builtin
 
 from app import db
 
@@ -80,7 +81,7 @@ class Film(db.Model):
     def __repr__(self):
         return '<Film %r>' % self.title
 
-    def has_name(search):
+    def has_name(self, search):
         return self.episode_no == search
 
 
@@ -128,7 +129,7 @@ class Character(db.Model):
     def __repr__(self):
         return '<Character %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search
 
 
@@ -147,7 +148,6 @@ class Planet(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Characters (one-to-many)
-            Species (one-to-many)
     """
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -174,7 +174,7 @@ class Planet(db.Model):
     def __repr__(self):
         return '<Planet %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search
 
 
@@ -192,7 +192,6 @@ class Species(db.Model):
         Contains the following relations:
             Films (many-to-many)
             Characters (one-to-many)
-            Planets (one-to-one)
     """
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
@@ -205,7 +204,8 @@ class Species(db.Model):
     img_url = db.Column(db.String(5000), nullable=False)
 
     # Species to Character is One to Many
-    characters = db.relationship('Character', backref='species', lazy='dynamic')
+    characters = db.relationship(
+        'Character', backref='species', lazy='dynamic')
 
     def __init__(self, id, name, classification, language, average_height, eye_colors, img_url):
         self.id = id
@@ -219,5 +219,5 @@ class Species(db.Model):
     def __repr__(self):
         return '<Species %r>' % self.name
 
-    def has_name(search):
+    def has_name(self, search):
         return self.name == search

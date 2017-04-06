@@ -8,7 +8,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/usr/cs373/temp/models.py">/usr/cs373/temp/models.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href="app">index</a><br><a href="file:/Users/pushkar/PycharmProjects/star-wars/app/models.py">/Users/pushkar/PycharmProjects/star-wars/app/models.py</a></font></td></tr></table>
     <p></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
@@ -24,6 +24,7 @@
 <dt><font face="helvetica, arial"><a href="models.html#Character">Character</a>
 </font></dt><dt><font face="helvetica, arial"><a href="models.html#Film">Film</a>
 </font></dt><dt><font face="helvetica, arial"><a href="models.html#Planet">Planet</a>
+</font></dt><dt><font face="helvetica, arial"><a href="models.html#Species">Species</a>
 </font></dt></dl>
 </dd>
 </dl>
@@ -38,6 +39,7 @@
 Contains&nbsp;the&nbsp;following&nbsp;attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;DB&nbsp;id<br>
 &nbsp;&nbsp;&nbsp;&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;gender<br>
 &nbsp;&nbsp;&nbsp;&nbsp;birth&nbsp;year<br>
 &nbsp;&nbsp;&nbsp;&nbsp;height<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mass<br>
@@ -45,10 +47,11 @@ Contains&nbsp;the&nbsp;following&nbsp;attributes:<br>
 &nbsp;<br>
 Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Films&nbsp;(many-to-many)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Planets&nbsp;(one-to-one)<br>&nbsp;</tt></td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;Planets&nbsp;(one-to-one)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Species">Species</a>&nbsp;(one-to-one)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Character-__init__"><strong>__init__</strong></a>(self, name, birth_year, height, mass, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Character-__init__"><strong>__init__</strong></a>(self, id, name, gender, birth_year, height, mass, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -76,10 +79,11 @@ Contains&nbsp;the&nbsp;following&nbsp;attributes:<br>
 &nbsp;<br>
 Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Planets&nbsp;(many-to-many)<br>
-&nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(many-to-many)<br>&nbsp;</tt></td></tr>
+&nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(many-to-many)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<a href="#Species">Species</a>&nbsp;(many-to-many)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Film-__init__"><strong>__init__</strong></a>(self, title, director, producer, episode_no, release_date, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Film-__init__"><strong>__init__</strong></a>(self, id, title, director, producer, episode_no, release_date, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>
@@ -99,6 +103,7 @@ Data descriptors defined here:<br>
 <td colspan=2><tt><a href="#Planet">Planet</a>&nbsp;model<br>
 Contains&nbsp;the&nbsp;following&nbsp;planets:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;DB&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name<br>
 &nbsp;&nbsp;&nbsp;&nbsp;climate<br>
 &nbsp;&nbsp;&nbsp;&nbsp;population<br>
 &nbsp;&nbsp;&nbsp;&nbsp;gravity<br>
@@ -110,7 +115,38 @@ Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(one-to-many)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Planet-__init__"><strong>__init__</strong></a>(self, name, climate, population, gravity, terrain, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Planet-__init__"><strong>__init__</strong></a>(self, id, name, climate, population, gravity, terrain, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+
+<hr>
+Data descriptors defined here:<br>
+<dl><dt><strong>__dict__</strong></dt>
+<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+<dl><dt><strong>__weakref__</strong></dt>
+<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
+</dl>
+</td></tr></table> <p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#ffc8d8">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#000000" face="helvetica, arial"><a name="Species">class <strong>Species</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+    
+<tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
+<td colspan=2><tt><a href="#Species">Species</a>&nbsp;model<br>
+Contains&nbsp;the&nbsp;following&nbsp;planets:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;DB&nbsp;id<br>
+&nbsp;&nbsp;&nbsp;&nbsp;name<br>
+&nbsp;&nbsp;&nbsp;&nbsp;classification<br>
+&nbsp;&nbsp;&nbsp;&nbsp;language<br>
+&nbsp;&nbsp;&nbsp;&nbsp;average_height<br>
+&nbsp;&nbsp;&nbsp;&nbsp;eye_colors<br>
+&nbsp;<br>
+Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Films&nbsp;(many-to-many)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(one-to-many)<br>&nbsp;</tt></td></tr>
+<tr><td>&nbsp;</td>
+<td width="100%">Methods defined here:<br>
+<dl><dt><a name="Species-__init__"><strong>__init__</strong></a>(self, id, name, climate, population, gravity, terrain, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
 
 <hr>
 Data descriptors defined here:<br>

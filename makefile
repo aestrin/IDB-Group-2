@@ -8,9 +8,47 @@ FILES :=                \
     app/__init__.py     \
     app/db_util.py      \
     app/models.py       \
-    app/tests.py        \
+    tests.py            \
     app/views.py
 
+
+ifeq ($(shell uname), Darwin)          # Apple
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else ifeq ($(CI), true)                # Travis CI
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else ifeq ($(shell uname -p), unknown) # Docker
+    PYTHON   := python3.5
+    PIP      := pip3.5
+    PYLINT   := pylint
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+else                                   # UTCS
+    PYTHON   := python3
+    PIP      := pip3
+    PYLINT   := pylint3
+    COVERAGE := coverage-3.5
+    PYDOC    := pydoc3.5
+    AUTOPEP8 := autopep8
+endif
+
+
+.pylintrc:
+	$(PYLINT) --disable=locally-disabled --reports=no --generate-rcfile > $@
+
+
+Tests: app/models.py tests.py .pylintrc
+	-$(PYLINT) app/models.py
 
 server:
 	pip install -r requirements.txt
@@ -34,3 +72,10 @@ check:
         exit 1;                                   \
     fi;                                           \
     echo "success";
+
+
+format:
+	$(AUTOPEP8) -i app/models.py
+
+test: Tests
+	ls -al

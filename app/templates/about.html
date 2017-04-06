@@ -8,7 +8,7 @@
 
      <!-- Custom CSS -->
     <link href="{{ url_for('static', filename='css/round-about.css') }}" rel="stylesheet">
-    <title>Round About - Start Bootstrap Template</title>
+    <title>The SWE Awakens - About</title>
 
 </head>
 
@@ -44,9 +44,9 @@
                 <h4>Backend Master</h4>
                 <p>Junior Computer Science Major who likes Game of Thrones and the Golden State Warriors </p>
                 <div class="row">
-                  <h5>Number of Commits: 29</h5>
-                  <h5>Number of Issues: 6</h5>
-                  <h5>Number of Unit Tests: 3</h5>
+                  <h5>Number of Commits: 91</h5>
+                  <h5>Number of Issues: 25</h5>
+                  <h5>Number of Unit Tests: 0</h5>
                 </div>
             </div>
             <div class="col-lg-4 col-sm-6 text-center">
@@ -55,8 +55,8 @@
                 <h4>Front-End Lead</h4>
                 <p>Studying Computer Science. Love EDM and working on music side projects.</p>
                 <div class="row">
-                  <h5>Number of Commits: 12</h5>
-                  <h5>Number of Issues: 1</h5>
+                  <h5>Number of Commits: 38</h5>
+                  <h5>Number of Issues: 2</h5>
                   <h5>Number of Unit Tests: 0</h5>
                   <br>
                 </div>
@@ -67,8 +67,8 @@
                 <h4>React Lead</h4>
                 <p>Programming God from Houston, TX. I like long walks on the beach.</p>
                 <div class="row">
-                  <h5>Number of Commits: 10</h5>
-                  <h5>Number of Issues: 12</h5>
+                  <h5>Number of Commits: 18</h5>
+                  <h5>Number of Issues: 16</h5>
                   <h5>Number of Unit Tests: 0</h5>
                   <br>
                 </div>
@@ -79,9 +79,9 @@
                 <h4>Fullstack Knight</h4>
                 <p>CS + BHP Junior Major from Austin Texas. I like basketball and playing with my pupper Atticus</p>
           <div class="row">
-                  <h5>Number of Commits: 6</h5>
-                  <h5>Number of Issues: 1</h5>
-                  <h5>Number of Unit Tests: 7</h5>
+                  <h5>Number of Commits: 20</h5>
+                  <h5>Number of Issues: 2</h5>
+                  <h5>Number of Unit Tests: 16</h5>
                   <br>
                 </div>
             </div>
@@ -91,7 +91,7 @@
                 <h4>Role</h4>
                 <p>Senior at UT. In my spare time I like fishing and reading about History.</p>
                 <div class="row">
-                  <h5>Number of Commits: 3</h5>
+                  <h5>Number of Commits: 9</h5>
                   <h5>Number of Issues: 1</h5>
                   <h5>Number of Unit Tests: 0</h5>
                   <br>
@@ -104,9 +104,9 @@
           <div class="col-lg-4">
             <h3>GitHub Stats</h3>
             <br>
-            <h5>Total number of commits: 63</h5>
-            <h5>Total number of issues: 21</h5>
-            <h5>Total number of unit tests: 10</h5>
+            <h5>Total number of commits: 176</h5>
+            <h5>Total number of issues: 46</h5>
+            <h5>Total number of unit tests: 16</h5>
           </div>
           <div class="col-lg-4">
             <h3>Links</h3>
@@ -123,15 +123,72 @@
         </div>
 
 
+        <script>
+            function displayMessage(error, response) {
+                $('#running').hide();
+                if(error == null) {
+                    console.log(response);
+                    var success = response.success;
+                    if(success) {
+{#                        $('#tests-pass-alert').show();#}
+                        $('#tests-pass-div').show();
+                        document.getElementById("tests-pass-div").innerHTML = "<h4>Tests PASSED!</h4> <h5>Output: " + response.output + "</h5>";
+                    } else {
+{#                        $('#tests-fail-alert').show();#}
+                        $('#tests-fail-div').show();
+                        document.getElementById("tests-fail-div").innerHTML = "<h4>Tests FAILED!</h4>";
+                    }
+                }
+            }
+
+            function runTests() {
+{#                $('#tests-pass-alert').hide();#}
+{#                $('#tests-fail-alert').hide();#}
+                $('#tests-pass-div').hide();
+                $('#tests-fail-div').hide();
+                $('#running').show();
+
+                var url = "/api/tests";
+                var req = new XMLHttpRequest();
+                req.open('GET', url, true);
+                req.responseType = 'json';
+                req.onload = function() {
+                  var status = req.status;
+                  if (status == 200) {
+                    displayMessage(null, req.response);
+                  } else {
+                    displayMessage(status);
+                  }
+                };
+                req.send();
+            }
+
+
+        </script>
+
         <div class="row">
           <h1 class="page-header text-center">Unit Tests</h1>
-          <button type="button" class="btn btn-secondary btn-lg btn-block">Run</button>
+          <button type="button" onclick="runTests()" class="btn btn-secondary btn-lg btn-block">Run</button>
         </div>
         <hr>
 
-        <br>
-        <br>
-        <br>
+        <div id="running" style="display:none;">
+            <h4>Running Unit Tests....</h4>
+        </div>
+
+        <div id="tests-pass-div" style="display:none;"></div>
+        <div id="tests-fail-div" style="display:none;"></div>
+
+{#        <div id="tests-pass-alert" class="alert alert-success alert-dismissable" style="display:none;">#}
+{#          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>#}
+{#          <div id="tests-pass-div"></div>#}
+{#        </div>#}
+{##}
+{#        <div id="tests-fail-alert" class="alert alert-danger alert-dismissable" style="display:none;">#}
+{#          <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>#}
+{#          <div id="tests-fail-div"></div>#}
+{#        </div>#}
+
         <br>
 
         <h2> Table of Contents of Techincal Report</h2>
