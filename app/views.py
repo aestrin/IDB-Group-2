@@ -91,7 +91,9 @@ def fix_character(c):
 def api():
     return "Our API starts here!"
 
-# PLANETS API
+
+""" PLANETS API """
+
 
 @application.route('/api/planets')
 def api_planets():
@@ -107,41 +109,59 @@ def api_planet_query():
 def api_planet(planet_id):
     return process_query([get_planet(int(planet_id))], model='planet')
 
-# SPECIES API
+
+""" SPECIES API """
+
 
 @application.route('/api/species')
-def api_species():
+def api_all_species():
     return redirect('/api/species/?page=1')
 
+
 @application.route('/api/species/')
-def api_species_query():
-    
-    return process_query(get_species())
+def api_all_species_query():
+    return process_query(get_all_species(), model='species')
+
+
+@application.route('/api/species/<species_id>')
+def api_species(species_id):
+    return process_query([get_species(int(species_id))], model='species')
+
+
+""" FILMS API """
+
 
 @application.route('/api/films')
 def api_films():
     return redirect('/api/films/?page=1')
 
-@application.route('/api/films/<film_id>')
-def api_film(film_id):
-    return process_query([fix_film(get_film(int(film_id)))])
 
 @application.route('/api/films/')
 def api_film_query():
-    films = get_films()
-    for f in films:
-        fix_film(f)
-            
+    return process_query(get_films(), model='film')
 
-    return process_query(get_films())
+
+@application.route('/api/films/<film_id>')
+def api_film(film_id):
+    return process_query([get_film(int(film_id))], model='film')
+
+
+""" CHARACTERS API """
+
 
 @application.route('/api/characters')
 def api_characters():
     return redirect('/api/characters/?page=1')
 
+
 @application.route('/api/characters/')
 def api_character_query():
-    return process_query(get_characters())
+    return process_query(get_characters(), model='character')
+
+
+@application.route('/api/characters/<character_id>')
+def api_character(character_id):
+    return process_query([get_character(int(character_id))], model='character')
 
 
 def process_query(mylist, model):
