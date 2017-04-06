@@ -178,11 +178,11 @@ def api_character(character_id):
 @application.route('/api/tests')
 def tests():
     try:
-        proc = subprocess.check_output(["python","tests.py"], stderr= subprocess.STDOUT, universal_newlines=True)
+        result = subprocess.check_output(["python","tests.py"], stderr= subprocess.STDOUT, universal_newlines=True)
     except subprocess.CalledProcessError as e:
         print(e.output)
-        proc = 'error. Check console'
-    return str(proc) 
+        result = "Error"
+    return str(result) 
 
 
 def process_query(mylist, model):
