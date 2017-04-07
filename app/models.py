@@ -70,6 +70,9 @@ class Film(db.Model):
         'Species', secondary=film_species_table, backref='films')
 
     def __init__(self, id, title, director, producer, episode_no, release_date, img_url):
+        assert len(title) < 5000
+        assert len(director) < 5000
+        assert len(producer) < 5000
         self.id = id
         self.title = title
         self.director = director
@@ -118,6 +121,8 @@ class Character(db.Model):
     species_id = db.Column(db.Integer, db.ForeignKey('species.id'))
 
     def __init__(self, id, name, gender, birth_year, height, mass, img_url):
+        assert len(name) < 5000
+        assert len(gender) < 5000
         self.id = id
         self.name = name
         self.gender = gender
@@ -163,6 +168,9 @@ class Planet(db.Model):
     characters = db.relationship('Character', backref='planet', lazy='dynamic')
 
     def __init__(self, id, name, climate, population, gravity, terrain, img_url):
+        assert len(name) < 5000
+        assert len(climate) < 5000
+        assert len(terrain) < 5000
         self.id = id
         self.name = name
         self.climate = climate
@@ -208,6 +216,9 @@ class Species(db.Model):
         'Character', backref='species', lazy='dynamic')
 
     def __init__(self, id, name, classification, language, average_height, eye_colors, img_url):
+        assert len(name) < 5000
+        assert len(classification) < 5000
+        assert len(language) < 5000
         self.id = id
         self.name = name
         self.classification = classification
