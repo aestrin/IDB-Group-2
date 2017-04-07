@@ -1,3 +1,747 @@
+commit 51b597e7d2eaf73402ba89dc3d0480e648b034c9
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 20:15:47 2017 -0500
+
+    added test coverage on about page
+
+commit 136e65b3e2757dea955378c3b8924e03d61d5312
+Merge: fc85d42 299f3fc
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 6 18:48:22 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit fc85d42762582c844ac4018885028d129faab79d
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 6 18:48:12 2017 -0500
+
+    updated design section on about page
+
+commit 299f3fc313c8401dcd28ec0765289f1a59231b76
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 18:27:57 2017 -0500
+
+    finished pydoc
+
+commit c528792603d880078aa7516cb17be5f70f5845b6
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 18:09:42 2017 -0500
+
+    finished autopep8
+
+commit f5e472532b8bb8a15d1277fe6d80f7fd9a9a621f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 18:02:47 2017 -0500
+
+    travis fix
+
+commit 9bf8d587bb4e9ab3e84c27d921bf2387dfac8190
+Merge: 4824363 c2380df
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 17:57:19 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 4824363ebddfaf245bd3c39e00f49ca2a75e4251
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 17:57:03 2017 -0500
+
+    added tests to travis
+
+commit c2380df2f69bff71287dc6a06ceb45fc36a311e2
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Apr 6 17:53:01 2017 -0500
+
+    Fix About page title
+
+commit 49ca40d778bb728ff3c1fb0369d46dd407e3e524
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 17:16:05 2017 -0500
+
+    fixed unit test stats
+
+commit fde2b6b9e289ee7f135eaa78e63ff4ea74b9555c
+Merge: 325b267 41bf6a7
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 16:40:37 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 325b267272d14c93c0d824c79150a012a5e56903
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 16:40:32 2017 -0500
+
+    added unit test button to about page, it works
+
+commit 41bf6a741ba168700e3af53bfc74532db7963dfc
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Apr 6 15:47:59 2017 -0500
+
+    Update unit tests in about page
+
+commit 9e287ff77d4d59127085e16dc0ed9f95f22a3f15
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Apr 6 15:47:08 2017 -0500
+
+    Update unit tests in about page
+
+commit fcb1dddc7056e437fb85c99facf764fb1c16fd3e
+Merge: ec6cb8a 5342dd5
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Apr 6 15:43:05 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/idb into dev
+    
+    compatibility
+
+commit ec6cb8adae91cd397f03ea3c54cda9c88b27f5f2
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Thu Apr 6 15:42:46 2017 -0500
+
+    Update about page
+
+commit 5342dd522248573bd07d301c7f552b48cf2b499f
+Merge: 362599a e0d3c06
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 6 14:43:53 2017 -0500
+
+    fixed about page merge
+
+commit 362599a40ba45662aa470eca3eee771214569bad
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 6 14:41:37 2017 -0500
+
+    added run test btn to about page
+
+commit e0d3c063c5eb42c79fa96439beaee58a02f0f3a2
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 13:26:31 2017 -0500
+
+    added coverage
+
+commit 67fe1eb0a97ba3eaa8af193f99f5c20a08ba36ce
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 13:16:23 2017 -0500
+
+    added coverage
+
+commit 1ce1853a54f25db081d34f537ba90dbbce08d94f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 12:16:23 2017 -0500
+
+    removed unused imports
+
+commit 1e87b82a3d490a48fad701f084936f681d58b550
+Merge: c8646d6 f9428a3
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 12:12:00 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit c8646d6bf4112979516dbc2fcaebab01c91092a6
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 12:11:53 2017 -0500
+
+    tests works gg arjun
+
+commit f9428a30cffa42dba8b59ee5a18ede4f60a16e69
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 11:12:29 2017 -0500
+
+    added testjson, and revised tests
+
+commit 7f610b72acb46911ddec388462c2002e00c8c146
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 10:15:45 2017 -0500
+
+    Cleaned up tests
+
+commit 724cc67442e2c4df8ef6ef937c21dff502f2d959
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 09:58:17 2017 -0500
+
+    used subprocess for tests
+
+commit ab2d1d0939077d1137830d94c39b2580b8a3c798
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 09:56:26 2017 -0500
+
+    added tests to api
+
+commit 4dacd110ee4de77300e97279c73beee4752303c8
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 6 08:46:52 2017 -0500
+
+    added report,and tests.py
+
+commit 8285b3a573a965bd7ece7fb84fbf22928b7d5ab4
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 03:19:03 2017 -0500
+
+    changed filter titles
+
+commit d9d0e1ad66e67fa6713fb5e14a8b23ad8bf1d3b5
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 03:02:35 2017 -0500
+
+    fixed film title filters
+
+commit 830ef1cbd16565a86127b32f8ef8143ca4a8b318
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 02:51:58 2017 -0500
+
+    travis fix
+
+commit 294c9585e97926aa11c3223674fefac1a9c3ef5c
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 6 00:11:14 2017 -0500
+
+    misc styling
+
+commit 9903df921428fa452ef500993d22f3ba451ffa76
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 23:38:31 2017 -0500
+
+    fixed species instance page
+
+commit 0074f50a5b1a83019da06bb658883a511d02237b
+Merge: 4cc68d4 351f906
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 23:31:06 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 4cc68d485c686083fd3cd099ea4bb2a7b1ffd5e1
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 23:31:03 2017 -0500
+
+    updated planets and characters instance pages
+
+commit 351f9060408305f7875a45437ca009ca63ef6f95
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Apr 5 23:27:18 2017 -0500
+
+    added species page with all sorting, filtering and paging
+
+commit 8b38986fa4216e6f58afb705af026f146db9faff
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 23:14:56 2017 -0500
+
+    fixed films_instance page
+
+commit 741f9d4868e51aee096c007bd9f0fcef9e60be57
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 22:45:37 2017 -0500
+
+    updated films and characters page to have filtering, pagination and sorting
+
+commit 0d33202f3e296c147de7cfc89064194aa035ee0c
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Apr 5 22:07:15 2017 -0500
+
+    finished api for all models
+
+commit f21c495f2cc3c83de18c300bb1a17ab1b67db0bf
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Apr 5 21:49:16 2017 -0500
+
+    fixed planets api bottleneck
+
+commit 82e7d3f438aa897599a8c5d1eb826412b47916d6
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 20:28:12 2017 -0500
+
+    Cleaned API
+
+commit 6cd8c701a92ad01c6cf108d485bad23f44d3b546
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 19:34:49 2017 -0500
+
+    Fixed filters
+
+commit 6264cb56f7559a0658c6c9b0bdcd979a3673f5c1
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 19:26:56 2017 -0500
+
+    Fixed the UML.
+
+commit f365d900d3e5ceeb7423eb421f904659ebaddbb9
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 19:13:50 2017 -0500
+
+    Seperated modular code for sorting.
+
+commit bac230c6e088712b4dea0bd54d9d0727b45c7e93
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 19:06:32 2017 -0500
+
+    Finished sorting, filtering, pagination for planets.
+
+commit a2d348e9395d8de3b16840bc9df9a35d7821614f
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 17:43:33 2017 -0500
+
+    changed style of pagination btns on planets.html page
+
+commit c076038b738b9cfd8ce82d11f69a41ba0aef1603
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 17:37:33 2017 -0500
+
+    fixed div for footer in planets.html
+
+commit e359e7459f00f5ec91b5d16b1f455c44822f837b
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 17:35:59 2017 -0500
+
+    converted pagination and filter html to react on the planets page
+
+commit 2bc4a4069a6da6df2e2e5acfe5578d6bcaf0e945
+Merge: 1a0a6ac fa4a185
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 16:21:16 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 1a0a6ac6aa90e901273b684aa8fdaeb1435e21db
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 16:21:14 2017 -0500
+
+    minor fix to panel html
+
+commit aa40b932706f3a42a73ee03830bff6393341311e
+Merge: bcdfa0e 4a2e64d
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 16:18:55 2017 -0500
+
+    finished adding styling to the pannels
+
+commit fa4a185ae18efc0fe0260ac23abbe8422ada8592
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 16:13:09 2017 -0500
+
+    planets loads one page at a time.
+
+commit bcdfa0e80f05710f1feed994fe9b14106c89746f
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 5 15:08:44 2017 -0500
+
+    updated logo
+
+commit 4a2e64d3ff35d77293a7f0a0bba6bb0158ca8432
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Wed Apr 5 01:15:45 2017 -0500
+
+    fixed conflicts, added sorting, closes #35.
+
+commit 3a28ca2329e050899a6bbc337525b9cf6064c687
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 23:34:14 2017 -0500
+
+    deploy fix
+
+commit 5822efc753047836ad3459d3fb12deb72fb722b5
+Merge: 7ef8eaf da9054e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 23:25:06 2017 -0500
+
+    merged and fixed conflicts, should work now
+
+commit da9054e8b4750c293beeff6523318c1784f4941b
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Apr 4 23:07:18 2017 -0500
+
+    Added API with sorting, filtering, and pagination, closes #24, closes #25, and closes #26.
+
+commit 7ef8eafb294ed9773856d95d7f92b094bd2f8ef5
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 22:50:39 2017 -0500
+
+    static fix, pls
+
+commit 9c331acdc1a801350b3c19d929ec310a6e36bb62
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 22:27:31 2017 -0500
+
+    gdi
+
+commit df90f086ab85fba9e8f8854f3e20eb2e70b0d844
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 22:25:20 2017 -0500
+
+    hope so
+
+commit d4c4a278b36a5898318f95648239b7dffba3fede
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 22:16:07 2017 -0500
+
+    idk
+
+commit 6385c9df1990468468c0b1c4149bab6a24e7bacf
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 22:07:57 2017 -0500
+
+    changed static mapping
+
+commit 90cb679ffab7bb697ba4db9e7a22a93d21461a05
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:58:52 2017 -0500
+
+    css fix wip
+
+commit 23f7ea1bb67b15cdbc6615e81a71701b35692175
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:36:10 2017 -0500
+
+    wip
+
+commit 158c472e55383e0b6e6636018d78cb2492dcb12d
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:25:45 2017 -0500
+
+    static path fix
+
+commit 61c8b5c385e135f143d2127242297e869076123b
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:17:36 2017 -0500
+
+    css deploy fix wip
+
+commit 2d5b27c950742cb26729d116fb659d6abe8853d7
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:15:18 2017 -0500
+
+    deploy works, css fix wip
+
+commit a7aeb9db3aded3f73c733dec0ed3d2a99d0133c5
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 21:09:13 2017 -0500
+
+    deploy fix
+
+commit ad2370b4e50ab0c471d66925db60fdc1fd761bb0
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 20:52:03 2017 -0500
+
+    ebignore fix
+
+commit 1424e8ea8eba36b0af3be9238f66af8c3348a8c0
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 20:49:11 2017 -0500
+
+    added .ebignore
+
+commit 01f221aab3dd85887a0619e737c9955d9c09167d
+Merge: f9bd760 6930282
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Apr 4 19:26:18 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/idb into dev
+    
+    compatability
+
+commit f9bd7602b64dde3b03d41e4b179a4e2c1270d8da
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Apr 4 19:26:15 2017 -0500
+
+    grid format tweaks
+
+commit 69302823e0768c92bc11c7febe17fe7dad8aabfd
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Apr 4 19:26:10 2017 -0500
+
+    removed random }
+
+commit c214f7acd5340184a7f54a945e6603cc0dff8a3f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 18:59:41 2017 -0500
+
+    deploy test
+
+commit 7c8f929fe5ff30965dab4cddc54cf310a2388915
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Apr 4 18:55:19 2017 -0500
+
+    fixed footer issue on character page and adder hr line at bottom
+
+commit 8094a745e59c2caf4b6fa00bc88b8d384c964ac2
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Apr 4 18:50:32 2017 -0500
+
+    more grid format changes
+
+commit 6848167050530b806d09fa88cc9a42cd22560331
+Merge: dbbbf53 7e58c3f
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Apr 4 18:45:02 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/idb into dev
+    
+    compatability
+
+commit dbbbf53bc9db3c570a0f402fa35f307ed4410d28
+Author: Hongzhou Liu <hongzhou@cs.utexas.edu>
+Date:   Tue Apr 4 18:44:41 2017 -0500
+
+    changed grid formatting
+
+commit 7e58c3fe2a254a9a1be9fd513954aec41351ea94
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Apr 4 18:41:56 2017 -0500
+
+    added bootstrap pagination
+
+commit 4880e2fd2f46cf7eb1500bb0b682f0ded01fad5f
+Author: arjunmbajaj <arjunbajaj@wireless-10-147-21-195.public.utexas.edu>
+Date:   Tue Apr 4 18:33:02 2017 -0500
+
+    added table of contents
+
+commit 4863523a321a2708409168e7108f0cda1d675fd7
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 18:21:28 2017 -0500
+
+    eb test
+
+commit 187722644ee13cbd6bc6b0c941bd2f484f957dc7
+Author: aestrin <aestrin@utexas.edu>
+Date:   Tue Apr 4 18:21:11 2017 -0500
+
+    nav bar and home page front end update
+
+commit f07e5f80cb4aec6255533f05304980d4b22f75f4
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 18:13:43 2017 -0500
+
+    eb test
+
+commit d7b700c0228db821b18175e4fe8716536c9bd677
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 18:10:45 2017 -0500
+
+    deploy test
+
+commit 1253f43c9b0f0056f23a1990627f1a2b08fbb0df
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 18:08:29 2017 -0500
+
+    changed elastic beanstalk config
+
+commit 4744067f901f4c941fc2da44c5c092189680432b
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 17:28:14 2017 -0500
+
+    reverted requirements.txt
+
+commit bd234450ae5bfd966a85c6d6e18d60674d156db0
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 03:11:46 2017 -0500
+
+    refactor
+
+commit 0cb8640c6f4c46d402838f69d210d61b52ab5f77
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 03:09:08 2017 -0500
+
+    added all image urls to db | still have to fix None cases
+
+commit 1aa8694819ab8b9ec307b996a1376c83ff8bacf3
+Merge: 710ac90 4fd31c3
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 02:29:54 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 710ac90769490e296cce5d534d766c4932fa423c
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Tue Apr 4 02:29:48 2017 -0500
+
+    scraped image URLs from Bing API
+
+commit 4fd31c3e476da807dc041ff4e9baeea464794743
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Mon Apr 3 22:29:54 2017 -0500
+
+    added collapsible
+
+commit dd45c8d738882ca3c28a31ae2ba709031c483425
+Author: arjunmbajaj <arjunbajaj@wireless-10-147-21-195.public.utexas.edu>
+Date:   Mon Apr 3 17:01:15 2017 -0500
+
+    species WIP
+
+commit 8418e761a2fad2f85b45a28749d8068dad078c5e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 04:43:19 2017 -0500
+
+    pip freeze and removed prints
+
+commit b8293246be3db22b2e29e41427ce1247202aba0d
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 04:37:17 2017 -0500
+
+    all linking works on the instance pages
+
+commit 2b63b432635b743342618a7e9820c1d9a7eb549e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 04:22:21 2017 -0500
+
+    refactored db_mock.py code
+
+commit 51aec2225da71af7741b051a083a10586c5fb89e
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 04:09:31 2017 -0500
+
+    finished all relationships, DB stuff all DONE
+
+commit 7a8ce297be764581cdd2f8fbc714077f374e8138
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 03:08:43 2017 -0500
+
+    all film linking works on front-end
+
+commit 1f4f5c68374f6dcc24ddf53430900c6b9959cae6
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 02:55:57 2017 -0500
+
+    added films and all many-to-many relationships
+
+commit 9a5eaa4c97a04a4e8f69a1ac74edcd25b2ab2e89
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 01:13:47 2017 -0500
+
+    retreiving from DB works | films and relationships wip
+
+commit 79de65862c04261c5315bcc74644b843ea22dd81
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Mon Apr 3 00:21:34 2017 -0500
+
+    finished adding characters, planets, species to db | films and relationships wip
+
+commit c3a25c7b0f7d021bf72b197293357540cc25b51f
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 23:19:41 2017 -0500
+
+    RESTRUCTURED project files to remove circular imports, DB wip | linking not working atm
+
+commit 761b7857d6756380cbea29d9affd020abfa5a49b
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 19:39:02 2017 -0500
+
+    adding to db wip | project restructuring to fix imports wip
+
+commit 9e1bfbfae55acbd1ab9788c653ba181c33d16b06
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 17:33:03 2017 -0500
+
+    turned off primary key id autoincrement
+
+commit 0e20e187e8430e8c1db9f2d87b25ea6fb2575510
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 17:24:15 2017 -0500
+
+    scraped species source from API
+
+commit a3cc0892bc1f7f221d45d06b89751f4fc3c1e9f1
+Merge: c32d8bf b0c1ea4
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 17:03:27 2017 -0500
+
+    Merge branch 'master' of https://github.com/aestrin/IDB-Group-2
+
+commit c32d8bfbe4cf3363f20cb3e86c7526f4f6fb83cb
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 17:02:03 2017 -0500
+
+    added species db relationships
+
+commit 4e2cc5031647cd6e12ac7ec47e1216b835e6f5b7
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sun Apr 2 16:36:33 2017 -0500
+
+    added gender to characters, species wip
+
+commit b0c1ea4ce7bf9889233e9f9e52422a33ad6bf44c
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Mar 29 18:44:33 2017 -0500
+
+    commented code
+
+commit 96779ae1738a3377c3b074cc7d8f21264da5bb24
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Mar 29 18:43:59 2017 -0500
+
+    made it pretty, fixed starships bc of gaps, padding commit stats
+
+commit 0f5fa2170a3b0161b340a9ee49ac88dfa43c4673
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Mar 29 18:25:41 2017 -0500
+
+    added saving json files
+
+commit 7e7acaf4d265525f1187792e470dc8ac83cee934
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Mar 29 13:27:26 2017 -0500
+
+    added basic scraper
+
+commit d45329f1f5a715f0476d99964c91e8bca23c0ad2
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 20:45:35 2017 -0500
+
+    character template change
+
+commit 92565db67c235eb817dbe406b0f2e6be724794df
+Merge: d478415 2af6f03
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 19:05:57 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 2af6f0366cc9219e509e89fad856b4cee27a3d8e
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Thu Mar 23 19:04:11 2017 -0500
+
+    Travis fix
+
+commit d47841547a9ea4b0d6b28c80284aef61c561a8c5
+Merge: b4cc940 900d657
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 19:02:29 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 900d6575a3e98b0d9d6a0b034e8fdedef7c02095
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Thu Mar 23 19:01:54 2017 -0500
+
+    Renamed files and made git log.
+
+commit b4cc940d6d0419a2c2971d1ac52a8958f995557d
+Merge: c80eb76 ac55323
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 18:54:19 2017 -0500
+
+    Merge branch 'master' of https://github.com/aestrin/IDB-Group-2
+
+commit c80eb76cee5005af077922215910cd8f7391923d
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 18:54:15 2017 -0500
+
+    changed header css
+
+commit ac55323809a04ba19431cd92ea32589f5415e8b9
+Author: arjunmbajaj <arjunbajaj@wireless-10-147-192-159.public.utexas.edu>
+Date:   Thu Mar 23 18:40:47 2017 -0500
+
+    added bios
+
+commit 337b741af156fbe578a4b27f4dc225bb5ae3fe59
+Merge: f00c36f ec527de
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Mar 23 18:26:32 2017 -0500
+
+    Merge branch 'dev'
+
 commit ec527de32993413604dca6d5ce6eb6ff9775d5d5
 Merge: eeeed83 e6d3be4
 Author: Pushkar Lanka <pushkar.lanka@gmail.com>
@@ -29,6 +773,12 @@ Author: Sam Weismuller <sweis@cs.utexas.edu>
 Date:   Thu Mar 23 17:49:38 2017 -0500
 
     Finished about page w/ write up, closes #21 and closes #20.
+
+commit f00c36fda913c12de332b1a6927bc6febf658dd9
+Author: aestrin@utexas.edu <aestrin@utexas.edu>
+Date:   Thu Mar 23 17:24:18 2017 -0500
+
+    Transferring API Description file from Apiary.io
 
 commit 6e7b8532bda5bed90d6e38fd128b871b8c9fdb02
 Author: Pushkar Lanka <pushkar.lanka@gmail.com>
