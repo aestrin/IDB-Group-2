@@ -132,7 +132,8 @@
                     if(success) {
 {#                        $('#tests-pass-alert').show();#}
                         $('#tests-pass-div').show();
-                        document.getElementById("tests-pass-div").innerHTML = "<h4>Tests PASSED!</h4> <h5>Output: " + response.output + "</h5>";
+                        document.getElementById("tests-pass-div").innerHTML = '<h4>Tests PASSED!</h4><br><h5>Output: ' + response.output + '</h5> ' +
+                                '<br><img src="{{ url_for('static', filename='img/unit-tests-coverage.png') }}" alt="">';
                     } else {
 {#                        $('#tests-fail-alert').show();#}
                         $('#tests-fail-div').show();
