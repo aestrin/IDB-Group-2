@@ -69,6 +69,10 @@ def about():
 def report():
     return render_template('report.html')
 
+@application.route('/visual')
+def visual():
+    return render_template('visual.html')
+
 
 # api stuff
 
