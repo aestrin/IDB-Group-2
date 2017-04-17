@@ -2,6 +2,7 @@ from flask import render_template, redirect, request
 from app import application
 from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, get_all_species
 from app.filters import filters, numeric_fields, toNum
+from search import searchterm
 import json
 import jsonpickle
 import subprocess
@@ -100,6 +101,18 @@ def fix_character(c):
 @application.route('/api')
 def api():
     return "Our API starts here!"
+
+@application.route('/api/search')
+def api_search():
+    term = request.args.get('term')
+    page = request.args.get('page')
+    if page is None:
+        page = 1
+    mylist = list(searchterm(term).items())
+    mylist.sort(key= lambda a: a[1][0], reverse=1)
+    mylist.sort(key= lambda a: a[1][2], reverse=1)
+    mylist = paginate(mylist, 10, int(page))
+    return json.dumps(mylist)
 
 
 """ PLANETS API """
@@ -266,7 +279,6 @@ def make_page(data, type, page):
 
 def paginate(data, size, page):
     page_data = []
-    print(data)
     for i in range((page-1)*size, min(page*size, len(data))):
         page_data += [data[i]]
     return page_data

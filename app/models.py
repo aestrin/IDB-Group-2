@@ -53,6 +53,9 @@ class Film(db.Model):
             Species (many-to-many)
     """
 
+    model_url = "http://www.thesweawakens.me/films"
+    model_name = "Film"
+
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     title = db.Column(db.String(120), nullable=False)
@@ -105,6 +108,9 @@ class Character(db.Model):
             Species (one-to-one)
     """
 
+    model_url = "http://www.thesweawakens.me/characters"
+    model_name = "Character"
+
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
@@ -155,6 +161,9 @@ class Planet(db.Model):
             Characters (one-to-many)
     """
 
+    model_url = "http://www.thesweawakens.me/planets"
+    model_name = "Planet"
+
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
     name = db.Column(db.String(120), nullable=False)
@@ -201,6 +210,9 @@ class Species(db.Model):
             Films (many-to-many)
             Characters (one-to-many)
     """
+
+    model_url = "http://www.thesweawakens.me/species"
+    model_name = "Species"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
