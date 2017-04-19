@@ -175,3 +175,14 @@ pre {
   height:auto;
   margin:auto;
 }
+
+.input-group {
+  padding-top: 25px;
+  padding-left: 10px;
+}
+
+input {
+  -webkit-border-top-left-radius: 3px;
+      -moz-border-radius-topleft: 3px;
+          border-top-left-radius: 3px;
+}

@@ -24,7 +24,7 @@
         <!-- /.row -->
 
         <div class="row">
-          <div class="col-lg-10 col-sm-10">
+          <div class="col-lg-12 col-sm-12">
             <div id="grid_location"> </div>
           </div>
         </div>
@@ -74,7 +74,7 @@
 
         function SearchItem(props){
           return (
-            <div className={"panel-container"}>
+            <div className={"panel-container panel-font"}>
               <img className={"img-responsive grid-images"} src={props.img} alt={""} />
               <a href={props.link}><h2 className={"text-center"}>{props.name}</h2></a>
 
@@ -94,15 +94,17 @@
               </ul>
         )}
 
-        
+
 
         ReactDOM.render(<SearchPagination />, document.getElementById("pagination"));
+
         var data_str = '{{ data | tojson}}';
         console.log(data_str);
         var data = JSON.parse(data_str);
         var models = buildModels(data);
 
-        renderTable(models, document.getElementById("grid_location"), 1) ;
+
+        renderTable(models, document.getElementById("grid_location"), 3) ;
 
         embolden(data);
 

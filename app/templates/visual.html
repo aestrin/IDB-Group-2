@@ -35,9 +35,22 @@
 
   <script src="https://d3js.org/d3.v4.min.js"></script>
   <script>
-
+$.getJSON("app/static/json/visual.json", function(json) {
   var n = 2, // The number of series.
       m = 100; // The number of values per series.
+
+  var temp = [];
+
+   console.log(json); // access the response object
+   console.log(json.dudewiththelonghairs); // access the array
+   for (var key in json) {
+      if (json.hasOwnProperty(key)) {
+        //console.log(key + " -> " + json[key]);
+        temp.push(json[key]);
+      }
+    }
+    console.log(temp);
+   //console.log(json.data["dudewiththelonghair"]); // access the first object of the array
 
   // The xz array has m elements, representing the x-values shared by all series.
   // The yz array has n elements, representing the y-values of each of the n series.
@@ -48,10 +61,6 @@
       y01z = d3.stack().keys(d3.range(n))(d3.transpose(yz)),
       yMax = d3.max(yz, function(y) { return d3.max(y); }),
       y1Max = d3.max(y01z, function(y) { return d3.max(y, function(d) { return d[1]; }); });
-
-
-  console.log(y01z[0]);
-  console.log(y01z[1][0])
 
   var svg = d3.select("svg"),
       margin = {top: 40, right: 10, bottom: 20, left: 10},
@@ -103,7 +112,7 @@
         .dispatch("change");
   }, 2000);
 
-  
+
   function bumps(m) {
     var values = [], i, j, w, x, y, z;
 
@@ -131,6 +140,7 @@
     return values;
   }
 
+});
   </script>
 </body>
 </html>

@@ -55,7 +55,7 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand text-center" href="{{ url_for('index') }}"><p>THE SWE AWAKENS</p></a>
+                <a class="navbar-brand" href="{{ url_for('index') }}"><p>THE SWE AWAKENS</p></a>
 
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -80,9 +80,11 @@
                         <a href="{{ url_for('visual') }}">VISUAL</a>
                     </li>
                     <li>
-                        <form class="bd-search" action="/search" method="GET">
-                            <input type="text" class="form-control" name="input" placeholder="Search..." autocomplete="off">
+                        <div class="input-group">
+                          <form class="navbar-form bd-search" action="/search" method="GET">
+                          <input type="text" class="form-control" name="input" placeholder="Search..." autocomplete="off">
                         </form>
+                        </div>
                     </li>
                 </ul>
             </div>
