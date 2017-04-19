@@ -69,14 +69,14 @@ def searchModel (model, term):
 		count = 0
 		context = ""
 		for attr in model.__table__.columns.keys():
-			if "id" not in attr and "url" not in attr and term.lower() in getattr(r, attr).lower(): 
+			if "id" not in attr and "url" not in attr and term.lower() in getattr(r, attr).lower().split(): 
 				count += getattr(r, attr).lower().count(term.lower())
 				# title and name attributes are worth triple
 				if attr == "title" or attr == "name":
 					count += getattr(r, attr).lower().count(term.lower()) * 2
 				context += str(attr)+": " + getattr(r, attr) + "..."
 			# if attribute matches title or name, count it towards its connections
-			if (attr == "title" or attr == "name") and term.lower() in getattr(r, attr).lower():
+			if (attr == "title" or attr == "name") and term.lower() in getattr(r, attr).lower().split():
 				reflist = []
 				if model is Species:
 					reflist += r.characters
@@ -99,7 +99,7 @@ def searchModel (model, term):
 						if addstr not in summary[url][1]:
 							summary[url][1] += addstr
 					else:
-						summary[url] = [getattr(r, attr).lower().count(term.lower()), r.model_name+": "+getattr(r, attr)+"...", 1]
-
-		summary[model.model_url+"/"+str(r.id)] = [count, context, 1]
+						summary[url] = [getattr(r, attr).lower().count(term.lower()), r.model_name+": "+getattr(r, attr)+"...", 1, ref.img_url]
+		if count > 0:
+			summary[model.model_url+"/"+str(r.id)] = [count, context, 1, r.img_url]
 	return summary

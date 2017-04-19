@@ -79,6 +79,11 @@
                     <li>
                         <a href="{{ url_for('visual') }}">VISUAL</a>
                     </li>
+                    <li>
+                        <form class="bd-search" action="/search" method="GET">
+                            <input type="text" class="form-control" name="input" placeholder="Search..." autocomplete="off">
+                        </form>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
