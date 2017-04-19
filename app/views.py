@@ -34,7 +34,7 @@ def character(character_id):
 @application.route('/characters')
 def characters():
     data = jsonpickle.encode(get_characters())
-    return render_template('characters.html', characters=data)
+    return render_template('characters.html')
 
 
 @application.route('/planets/<planet_id>')
@@ -70,6 +70,15 @@ def about():
 def report():
     return render_template('report.html')
 
+@application.route('/search', methods=['GET'])
+def search():
+    term = request.args.get('input')
+    page = request.args.get('page')
+    if page is None:
+        page = 1
+    json = search_term(term, page)
+    return render_template('search.html', data=json, term=term, page=int(page))
+
 @application.route('/visual')
 def visual():
     return render_template('visual.html')
@@ -102,10 +111,8 @@ def fix_character(c):
 def api():
     return "Our API starts here!"
 
-@application.route('/api/search')
-def api_search():
-    term = request.args.get('term')
-    page = request.args.get('page')
+
+def search_term(term, page) :
     if page is None:
         page = 1
     mylist = list(searchterm(term).items())
@@ -113,6 +120,13 @@ def api_search():
     mylist.sort(key= lambda a: a[1][2], reverse=1)
     mylist = paginate(mylist, 10, int(page))
     return json.dumps(mylist)
+
+
+@application.route('/api/search')
+def api_search():
+    term = request.args.get('term')
+    page = request.args.get('page')
+    return search_term(term, page)
 
 
 """ PLANETS API """
