@@ -77,6 +77,7 @@ def search():
     if page is None:
         page = 1
     json = search_term(term, page)
+    print(json)
     return render_template('search.html', data=json, term=term, page=int(page))
 
 @application.route('/visual')
@@ -119,14 +120,14 @@ def search_term(term, page) :
     mylist.sort(key= lambda a: a[1][0], reverse=1)
     mylist.sort(key= lambda a: a[1][2], reverse=1)
     mylist = paginate(mylist, 10, int(page))
-    return json.dumps(mylist)
+    return mylist
 
 
 @application.route('/api/search')
 def api_search():
     term = request.args.get('term')
     page = request.args.get('page')
-    return search_term(term, page)
+    return json.dumps(search_term(term, page))
 
 
 """ PLANETS API """

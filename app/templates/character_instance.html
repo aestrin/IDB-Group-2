@@ -34,6 +34,7 @@
                     <li class="instance-font">Height: {{ character.height }}</li>
                     <li class="instance-font">Weight: {{ character.mass }}</li>
                     <li class="instance-font">Home world: <a href="{{ url_for('planet', planet_id=character.planet.id) }}">{{ character.planet.name }}</a></li>
+                    <li class="instance-font">Species: <a href="{{ url_for('species', species_id=character.species.id) }}">{{ character.species.name }}</a></li>
                     <li class="instance-font"><a data-toggle="collapse" href="#collapse1">Films <i class="fa fa-angle-down" aria-hidden="true"></i></a></li>
                     <div id="collapse1" class="panel-collapse collapse">
                       <ul class="lists">

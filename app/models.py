@@ -54,7 +54,7 @@ class Film(db.Model):
     """
 
     model_url = "http://www.thesweawakens.me/films"
-    model_name = "Film"
+    model_name = "film"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
@@ -84,6 +84,10 @@ class Film(db.Model):
         self.release_date = release_date
         self.img_url = img_url
 
+
+    def get_descriptor(self):
+        return self.title
+
     def __repr__(self):
         return '<Film %r>' % self.title
 
@@ -109,7 +113,7 @@ class Character(db.Model):
     """
 
     model_url = "http://www.thesweawakens.me/characters"
-    model_name = "Character"
+    model_name = "character"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
@@ -137,6 +141,9 @@ class Character(db.Model):
         self.mass = mass
         self.img_url = img_url
 
+    def get_descriptor(self):
+        return self.name
+
     def __repr__(self):
         return '<Character %r>' % self.name
 
@@ -162,7 +169,7 @@ class Planet(db.Model):
     """
 
     model_url = "http://www.thesweawakens.me/planets"
-    model_name = "Planet"
+    model_name = "planet"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
@@ -188,6 +195,9 @@ class Planet(db.Model):
         self.terrain = terrain
         self.img_url = img_url
 
+    def get_descriptor(self):
+        return self.name
+
     def __repr__(self):
         return '<Planet %r>' % self.name
 
@@ -212,7 +222,7 @@ class Species(db.Model):
     """
 
     model_url = "http://www.thesweawakens.me/species"
-    model_name = "Species"
+    model_name = "species"
 
     id = db.Column(db.Integer, primary_key=True, nullable=False)
 
@@ -238,6 +248,9 @@ class Species(db.Model):
         self.average_height = average_height
         self.eye_colors = eye_colors
         self.img_url = img_url
+
+    def get_descriptor(self):
+        return self.name
 
     def __repr__(self):
         return '<Species %r>' % self.name
