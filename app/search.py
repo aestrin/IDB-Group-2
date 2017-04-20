@@ -1,8 +1,8 @@
-from app.models import Film, Character, Planet, Species
+from app.models import Film, Character, Planet, Species, db
 from app.db_util import get_film, get_films, get_planet, get_planets, get_character, get_characters, get_species, \
     get_all_species
 from sqlalchemy.orm.attributes import InstrumentedAttribute
-from app import db
+# from app import db
 import re
 
 
