@@ -236,7 +236,8 @@
           <h4><p>George Lucas&rsquo; Star Wars has captivated generations with its expansive storylines, epic scores, and awe-inspiring characters. The series itself has impressed upon society a significant cultural impact with references to the film that are deeply embedded within Western popular culture. The events depicted in the seven films are expansive &ndash; spanning millennia, with hundreds of different characters, vehicles and species. However, navigating this expansive behemoth of a saga has proven more difficult than one would think and is often bogged down ,in the now non-canon, expanded universe. It is for this reason that our group set out to fix that and provide users an easy to navigate site that allows for one to appreciate the deeply linked nature of all the films and allows one to appreciate the subtleties of continuity one might have missed in these works of art.</p></h4>
           <a name = "IntendedUseCases"></a>
           <h2><p><strong><br /> Intended Use Cases</strong></p></h2>
-          <h4><p><br /> The sites navigation allows users to easily navigate from a particular point of interest such as a favorite obscure character, and allows a user to then view the home planet of said character and see all noted appearances of the character in the films. All the information about these objects are at most 4 clicks away. This eliminates the need to scour the internet for different aspects about each model and streamlines the information into an easily digestible format, avoiding unnecessary information in the process. Moreover to speed up their navigation we&rsquo;ve included ways to filter, and sort the information based on attributes within the website. In later stages of the we plan to implement a search functionality to further ease the navigation when it comes to specific shared attributes or to find a specific entry even faster.</p></h4>
+          <h4><p><br /> The sites navigation allows users to easily navigate from a particular point of interest such as a favorite obscure character, and allows a user to then view the home planet of said character and see all noted appearances of the character in the films. All the information about these objects are at most 4 clicks away. This eliminates the need to scour the internet for different aspects about each model and streamlines the information into an easily digestible format, avoiding unnecessary information in the process. Additionally, it presents it in a very aesthetically pleasing and thematic way. Moreover we&rsquo;ve included ways to filter, and sort the information based on attributes within the website.  This ability to narrow results will speed up navigation of the site for those who know exactly what they are looking for. In later stages of the we plan to implement a search functionality to further ease the navigation when it comes to specific shared attributes or to find a specific entry even faster. The front-end theme of the website plays homage to the series adopting the colors and monikers of the films. This especially prevalent in our landing page where the iconic approaching logo is accompanied with a fade in of all of our puns to the episodes titles. 
+</p></h4>
           <p>&nbsp;</p>
           <table class="table table-bordered" width="624" cellspacing="0" cellpadding="7">
           <tbody>
@@ -328,8 +329,7 @@
           <strong>Films</strong> (many-to-many)<br>
           <strong>Characters </strong>(one-to-many)<br>
           <strong>Planets</strong> (one-to-one)<br><br>
-          The basis of this model is to show the vast species involved in the star wars universe, the interesting tidbits of where these species come up and in what movies are my favorite property of this model.
-
+         The basis of this model is to show the vast species involved in the star wars universe, the interesting tidbits of where these species come up and in what movies are my favorite property of this model. Moreover its interesting to see the depth and backstory the creators had when creating these alien species in the films/books. 
           <br>
           <h3><p>Characters</p></h3>
           <p>&nbsp;</p>
@@ -349,7 +349,7 @@
           <strong>Films</strong> (many-to-many)<br>
           <strong>Planets </strong>(one-to-one)<br>
           <strong>Species </strong> (one-to-one)<br><br>
-          The character model is the main focal point of our project, as this is what the fan really wants to dive deeper into. Star Wars is known to as a space opera not sci-fi, and its because of their deep, rich characters with such unique and different
+          The character model is the main focal point of our project, as this is what the fan really wants to dive deeper into. Star Wars is known to as a space opera not sci-fi, and its because of their deep, rich characters with such unique and different background that makes star wars the smash success it is.
           </p></h4>
 
           <br>
@@ -373,7 +373,7 @@
           <strong>Films</strong> (many-to-many)<br>
           <strong>Characters </strong>(one-to-many)<br>
           <strong>Species </strong> (one-to-many)<br><br>
-          The planet model is mainly to serve as further context for both our Film model and Character model as it is the relation to the characters and films that really gives these planets their significance
+          The planet model is mainly to serve as further context for both our Film model and Character model as it is the relation to the characters and films that really gives these planets their significance. Its interesting how the terrain of each individual planet plays homage to the struggles each film encompasses.
           </p></h4>
 
 
@@ -447,6 +447,13 @@
           <h3><p>Bootstrap</p></h3>
           <h4><p>Developed by Twitter, Bootstrap is a HTML, CSS, and Javascript framework that provides many styles, elements, and templates that allows high-quality HTML to be built in a simple, modular way. Bootstrap provides the necessary CSS classes and templates to create such elements as carousels (such as the one on our homepage) and navigation bars. Additionally the framework allows for reactive design especially in the array of different screen sizes and aspect ratios that exist in our world.</p></h4>
           <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <a name = "D3"></a>
+          <h3><p>D3</p></h3>
+          <h4><p>Developed by Mike Bostock, Jeffrey Heer, Vadim Ogievesteksy and the successor to the Protovis project,  D3 is a robust visualization library built on Javascript that allows for some really amazing visuals. We used D3 for the visualization (as was required), in order to model another teams api, in our case reddiful.me. Used by a myriad of data-driven journalism sites, the tool allows for great control in the final visualization.</p></h4>
+          <p>&nbsp;</p>
+          
+
           <a name = "BackEnd"></a>
           <h2><p><strong>Back End<br /> </strong></h2>
           <p>&nbsp;</p>
@@ -514,6 +521,11 @@
           <a name = "PIP"></a>
           <h3><p>Python PIP</p></h3>
           <h4><p>Python package management system that allows for easy installation of necessary tools, including many others outlined in this section, that are written in python.</p></h4>
+          <p>&nbsp;</p>
+          <a name = "PlanIT"></a>
+          <h3><p>PlanITPoker</p></h3>
+          <h4><p>We used planitpoker.com to conduct our agile estimation for different parts of the project. The tools allows for the simulation of actual Plannign poker conducted in the outside world in which different team members anonymously estimate the time for different parts of the software, instead of speaking them aloud. This allows for the avoidance of any sort of anchoring or influence by other team members.</p></h4>
+
           <p>&nbsp;</p>
           <a name = "Hosting"></a>
           <h2><p><strong>Hosting</strong></p></h2>
@@ -676,8 +688,59 @@ In order to setup the AWS instance appropriately its very important to follow th
           <br>
 
           <li><p>After loading this into a environment variable you’re already to connect with the application. Just plug this into SQLAlchemy as the engine url and you’re all set. Its smooth-ish sailing from here!</p></li>
+        </ol></h4>
+          <p>&nbsp;</p>
+          <a name = "Plan IT Poker"></a>
 
-           </ol></h4>
+           <h2><p>Plan IT Poker</h2></p>
+           <p>&nbsp;</p>
+           <p>&nbsp;</p>
+           <h4>
+              Below are the time estimates compiled for our team. The story is given first while the time estimated to complete it is givens second.
+              <br>
+              About Page :  9.4 hours
+              <br>
+              Implementing API: 5.8 hours
+              <br>
+              Pagination for all pages:  3.4 hours
+              <br>
+              Carousel Page:  22.4 hours
+              <br>
+              Data Scraping and Database Population:  5.3 hours
+              <br>
+              Technical Report:  4.8 hours
+              <br>
+              Unit Tests:  3.6 hours
+              <br>
+              Search Frontend:  3 hours
+              <br>
+              Search Backend:  6.2 hours
+              <br>
+              Visualization using other group’s API:  4.6 hours
+              <br>
+              All other frontend design work:  6.8 hours
+            </h4>
+           <br>
+
+           <h4><p>We used planitpoker.com for our planning estimates. The full results including individual predictions can be found at <a href= http://www.planitpoker.com/board/#/room/f8e017e9a58541e3b0d84c8eb078e0b0><p>http://www.planitpoker.com/board/#/room/f8e017e9a58541e3b0d84c8eb078e0b0</p></a>
+            We broke down our project into 11 distinct stories, with each story corresponding to a separate part of the project that in our opinions were quite distinct from each other. Each story was then voted on by each individual team member. The stories can be broken down as follows:</h4></p>
+          <h4><ol>
+          <li><p>About Page: The about page contains a brief explanation of the purpose of our site, as well as brief bios about each group member and his responsibilities. This page also contains the technical report, the unit tests, and links to all of the tools we employed.</p></li>
+          <li><p>Implementing API: this consists of all of the work needed to implement a scrapable API of the data we assembled, which will be visualized by another group. This API will also be utilized by our own website in order to populate the different pages.</p></li>
+          <li><p>Pagination for all pages: this consists of all of the work needed to implement pagination for results pages. One consideration needed for pagination is ensuring compatibility for filtering results. As mentioned previously, this was supplied by our api through the use of paramaters.</p></li>
+          <li><p>1. Carousel Page: the home screen of our site, the Carousel Page contains graphics that pertain to the contents of the site. This ended up being pretty time consuming given that we intended for a thematic landing page, and we wanted it to look good.</p></li>
+          <li><p>1. Data Scraping and Database Population: this section relates to scraping data using third-party APIs, consolidating and cleansing that data, and finally populating our database with that data.</p></li>
+          <li><p>Technical Report: what you are currently reading(pretty meta); a detailed report of the steps taken and technologies used to create our site from the bottom up.</p></li>
+          <li><p>Unit Tests: tests implemented to ensure the robustness of the underlying code, with great attention towards our models within our database. Also includes code coverage results.</p></li>
+          <li><p>Search Frontend: frontend work for the search function. Takes the results of a user defined search and displays it in an accessible and useful way.</p></li>
+          <li><p>Search Backend: backend work for the search function. Includes the actual implementation of the search, such as filtering data based on user defined parameters</p></li>
+          <li><p>Visualization using other group’s API: a visualization of data scraped using another group’s API, with the purpose of displaying their data in a meaningful way that reveals the underlying relationships within their data</p></li>
+          <li><p>All other frontend work: an umbrella category that includes frontend design work for the website as a whole. </p></li>
+        </ol>
+        <br>
+        <br>
+        <p>We conducted the planning results fully on the website and each individual round was given five minutes for team members to fully estimate the extent of the section of the software. Certain team members took this more seriously than others, which can account with some of the outliers within our estimated times. </p>
+      </h4>
 
 
 
