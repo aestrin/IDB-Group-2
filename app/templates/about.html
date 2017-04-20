@@ -197,6 +197,7 @@
         <p><a href="#Introduction">Introduction</a></p>
         <p style="padding-left: 2em"><a href="#IntendedUseCases">Intended Use Cases</a></p>
         <p><a href="#Design">Design</a></p>
+        <p style="padding-left: 2em"><a href="#Search">Search</a></p>
         <p><a href="#Tools">Tools</a></p>
           <p style="padding-left: 2em"><a href="#FrontEnd">Front End</a></p>
             <p style="padding-left: 4em"><a href="#React">React</a></p>
@@ -218,6 +219,7 @@
             <p style="padding-left: 4em"><a href="#AWS">Amazon Web Services</a></p>
             <p style="padding-left: 4em"><a href="#PIP">Python PIP</a></p>
          <p><a href="#Hosting">Hosting</a></p>
+         <p><a href="#poker">Plan IT Poker</a></p>
 
           <p>&nbsp;</p>
           <p>&nbsp;</p>
@@ -412,11 +414,26 @@
             about a specific member of any of these categories, simply append “/{id-number}” to the catagory’s URL. For instance, to obtain the planet with id 2 send a GET request to
             <a href="http://www.thesweawakens.me/api/planets/2">http://www.thesweawakens.me/api/planets/2</a>. The result is a JSON containing just the properties of that planet.
           </p></h4>
-          <h4><p>
-            Finally, it is possible to sort or filter you list queries. Adding a “sortUp” or “sortDown” parameter allows you to view the list in a particular order. Adding a “filterBy” and “filter”
+          <h4 id="Search"><p>
+            It is possible to sort or filter you list queries. Adding a “sortUp” or “sortDown” parameter allows you to view the list in a particular order. Adding a “filterBy” and “filter”
             parameter allows you to apply a filter. The “filterBy” parameter selects the field of the model to filter on and the “filter” field is the values to filter for. For example
             <a href="http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G">http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G</a> retrieves the second page of the planets list sorted by climate and only including the
             planets with names start from B to G.
+          </p></h4>
+              <h3>Search</h3>
+              <br>
+          <h4>
+          <p>We built the search functionality mostly by ourselves, without using SQLAlchemy's builtin functions. After pulling all the rows from the database, we tokenized our search phrase
+              and searched for each term across all columns of each row. In doing so, we were able to keep track of number of terms matched in a phrase, which would later be used as part of our
+              criteria for sorting the search results. Our primary factor however, was a weight parameter which we determined by checking whether the matched attribute was the name/title of a
+              model, or simply a secondary attribute (anything besides name/title). If the name/title matched, this search result would be given higher weight thereby pushing it to the top of the
+              search results. We distinguished between AND and OR logic by displaying AND matches before OR matches.
+          </p>
+          <p> We chose to make our search case-insensitive, for ease of use. After much deliberation, we also chose to make our search results render in the form of a grid, much like the rest of our
+              website, rather than a list as Google would do. This was done to maintain UI consistency across our website, and to maximize context for each search result. By using a grid, we were able to
+              incorporate our existing images, so a user could quickly identify a search result at just a quick glance.
+          </p>
+          <p> All in all, we found that doing manually implementing search ourselves using mostly Python's builtin functions allowed us to make our own tweaks and rank the results just the way we wanted.
           </p></h4>
           <img src="{{ url_for('static', filename='UML.png') }}" style="display: block;margin: 0 auto;">
           <p>&nbsp;</p>
@@ -687,7 +704,7 @@ In order to setup the AWS instance appropriately its very important to follow th
           <br>
           <br>
 
-          <li><p>After loading this into a environment variable you’re already to connect with the application. Just plug this into SQLAlchemy as the engine url and you’re all set. Its smooth-ish sailing from here!</p></li>
+          <li id="poker"><p>After loading this into a environment variable you’re already to connect with the application. Just plug this into SQLAlchemy as the engine url and you’re all set. Its smooth-ish sailing from here!</p></li>
         </ol></h4>
           <p>&nbsp;</p>
           <a name = "Plan IT Poker"></a>
