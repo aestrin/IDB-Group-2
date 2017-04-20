@@ -51,6 +51,9 @@ Tests: app/models.py tests.py .pylintrc
 	-$(PYLINT) app/models.py
 	cat tests.out
 
+html: models.py
+	pydoc2.7 -w models
+
 server:
 	pip install -r requirements.txt
 	python application.py
