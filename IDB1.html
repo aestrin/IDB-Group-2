@@ -1,6 +1,7 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html><head><title>Python: module models</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta charset="utf-8">
 </head><body bgcolor="#f0f0f8">
 
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="heading">
@@ -8,8 +9,16 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong>models</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href="app">index</a><br><a href="file:/Users/pushkar/PycharmProjects/star-wars/app/models.py">/Users/pushkar/PycharmProjects/star-wars/app/models.py</a></font></td></tr></table>
-    <p></p>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/Users/pushkar/PycharmProjects/star-wars/models.py">/Users/pushkar/PycharmProjects/star-wars/models.py</a></font></td></tr></table>
+    <p><tt>#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;bad-whitespace<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;invalid-name<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;missing-docstring<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;too-many-arguments<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;bad-continuation<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;too-few-public-methods<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;no-member<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;import-error<br>
+#&nbsp;pylint:&nbsp;disable&nbsp;=&nbsp;redefined-builtin</tt></p>
 <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ee77aa">
@@ -18,13 +27,13 @@
     
 <tr><td bgcolor="#ee77aa"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><dl>
-<dt><font face="helvetica, arial"><a href="builtins.html#object">builtins.object</a>
+<dt><font face="helvetica, arial"><a href="db.html#Model">db.Model</a>
 </font></dt><dd>
 <dl>
-<dt><font face="helvetica, arial"><a href="models.html#Character">Character</a>
-</font></dt><dt><font face="helvetica, arial"><a href="models.html#Film">Film</a>
-</font></dt><dt><font face="helvetica, arial"><a href="models.html#Planet">Planet</a>
-</font></dt><dt><font face="helvetica, arial"><a href="models.html#Species">Species</a>
+<dt><font face="helvetica, arial"><a href="IDB1.html#Character">Character</a>
+</font></dt><dt><font face="helvetica, arial"><a href="IDB1.html#Film">Film</a>
+</font></dt><dt><font face="helvetica, arial"><a href="IDB1.html#Planet">Planet</a>
+</font></dt><dt><font face="helvetica, arial"><a href="IDB1.html#Species">Species</a>
 </font></dt></dl>
 </dd>
 </dl>
@@ -32,14 +41,13 @@
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Character">class <strong>Character</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Character">class <strong>Character</strong></a>(<a href="db.html#Model">db.Model</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Character">Character</a>&nbsp;model<br>
 Contains&nbsp;the&nbsp;following&nbsp;attributes:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;DB&nbsp;id<br>
 &nbsp;&nbsp;&nbsp;&nbsp;name<br>
-&nbsp;&nbsp;&nbsp;&nbsp;gender<br>
 &nbsp;&nbsp;&nbsp;&nbsp;birth&nbsp;year<br>
 &nbsp;&nbsp;&nbsp;&nbsp;height<br>
 &nbsp;&nbsp;&nbsp;&nbsp;mass<br>
@@ -51,21 +59,43 @@ Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#Species">Species</a>&nbsp;(one-to-one)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Character-__init__"><strong>__init__</strong></a>(self, id, name, gender, birth_year, height, mass, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Character-__init__"><strong>__init__</strong></a>(self, id, name, gender, birth_year, height, mass, img_url)</dt></dl>
+
+<dl><dt><a name="Character-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Character-get_descriptor"><strong>get_descriptor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Character-has_name"><strong>has_name</strong></a>(self, search)</dt></dl>
 
 <hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
+Data and other attributes defined here:<br>
+<dl><dt><strong>birth_year</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>gender</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>height</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>id</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>img_url</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>mass</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>model_name</strong> = 'character'</dl>
+
+<dl><dt><strong>model_url</strong> = 'http://www.thesweawakens.me/characters'</dl>
+
+<dl><dt><strong>name</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>planet_id</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>species_id</strong> = &lt;db.Column instance&gt;</dl>
+
 </td></tr></table> <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Film">class <strong>Film</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Film">class <strong>Film</strong></a>(<a href="db.html#Model">db.Model</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Film">Film</a>&nbsp;model<br>
@@ -83,21 +113,45 @@ Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;<a href="#Species">Species</a>&nbsp;(many-to-many)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Film-__init__"><strong>__init__</strong></a>(self, id, title, director, producer, episode_no, release_date, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Film-__init__"><strong>__init__</strong></a>(self, id, title, director, producer, episode_no, release_date, img_url)</dt></dl>
+
+<dl><dt><a name="Film-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Film-get_descriptor"><strong>get_descriptor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Film-has_name"><strong>has_name</strong></a>(self, search)</dt></dl>
 
 <hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
+Data and other attributes defined here:<br>
+<dl><dt><strong>characters</strong> = &lt;db.Relationship instance&gt;</dl>
+
+<dl><dt><strong>director</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>episode_no</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>id</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>img_url</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>model_name</strong> = 'film'</dl>
+
+<dl><dt><strong>model_url</strong> = 'http://www.thesweawakens.me/films'</dl>
+
+<dl><dt><strong>planets</strong> = &lt;db.Relationship instance&gt;</dl>
+
+<dl><dt><strong>producer</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>release_date</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>species</strong> = &lt;db.Relationship instance&gt;</dl>
+
+<dl><dt><strong>title</strong> = &lt;db.Column instance&gt;</dl>
+
 </td></tr></table> <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Planet">class <strong>Planet</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Planet">class <strong>Planet</strong></a>(<a href="db.html#Model">db.Model</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Planet">Planet</a>&nbsp;model<br>
@@ -115,21 +169,41 @@ Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(one-to-many)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Planet-__init__"><strong>__init__</strong></a>(self, id, name, climate, population, gravity, terrain, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Planet-__init__"><strong>__init__</strong></a>(self, id, name, climate, population, gravity, terrain, img_url)</dt></dl>
+
+<dl><dt><a name="Planet-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Planet-get_descriptor"><strong>get_descriptor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Planet-has_name"><strong>has_name</strong></a>(self, search)</dt></dl>
 
 <hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
+Data and other attributes defined here:<br>
+<dl><dt><strong>characters</strong> = &lt;db.Relationship instance&gt;</dl>
+
+<dl><dt><strong>climate</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>gravity</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>id</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>img_url</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>model_name</strong> = 'planet'</dl>
+
+<dl><dt><strong>model_url</strong> = 'http://www.thesweawakens.me/planets'</dl>
+
+<dl><dt><strong>name</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>population</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>terrain</strong> = &lt;db.Column instance&gt;</dl>
+
 </td></tr></table> <p>
 <table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
 <tr bgcolor="#ffc8d8">
 <td colspan=3 valign=bottom>&nbsp;<br>
-<font color="#000000" face="helvetica, arial"><a name="Species">class <strong>Species</strong></a>(<a href="builtins.html#object">builtins.object</a>)</font></td></tr>
+<font color="#000000" face="helvetica, arial"><a name="Species">class <strong>Species</strong></a>(<a href="db.html#Model">db.Model</a>)</font></td></tr>
     
 <tr bgcolor="#ffc8d8"><td rowspan=2><tt>&nbsp;&nbsp;&nbsp;</tt></td>
 <td colspan=2><tt><a href="#Species">Species</a>&nbsp;model<br>
@@ -146,15 +220,44 @@ Contains&nbsp;the&nbsp;following&nbsp;relations:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;Characters&nbsp;(one-to-many)<br>&nbsp;</tt></td></tr>
 <tr><td>&nbsp;</td>
 <td width="100%">Methods defined here:<br>
-<dl><dt><a name="Species-__init__"><strong>__init__</strong></a>(self, id, name, climate, population, gravity, terrain, img_url)</dt><dd><tt>Initialize&nbsp;self.&nbsp;&nbsp;See&nbsp;help(type(self))&nbsp;for&nbsp;accurate&nbsp;signature.</tt></dd></dl>
+<dl><dt><a name="Species-__init__"><strong>__init__</strong></a>(self, id, name, classification, language, average_height, eye_colors, img_url)</dt></dl>
+
+<dl><dt><a name="Species-__repr__"><strong>__repr__</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Species-get_descriptor"><strong>get_descriptor</strong></a>(self)</dt></dl>
+
+<dl><dt><a name="Species-has_name"><strong>has_name</strong></a>(self, search)</dt></dl>
 
 <hr>
-Data descriptors defined here:<br>
-<dl><dt><strong>__dict__</strong></dt>
-<dd><tt>dictionary&nbsp;for&nbsp;instance&nbsp;variables&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-<dl><dt><strong>__weakref__</strong></dt>
-<dd><tt>list&nbsp;of&nbsp;weak&nbsp;references&nbsp;to&nbsp;the&nbsp;object&nbsp;(if&nbsp;defined)</tt></dd>
-</dl>
-</td></tr></table></td></tr></table>
+Data and other attributes defined here:<br>
+<dl><dt><strong>average_height</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>characters</strong> = &lt;db.Relationship instance&gt;</dl>
+
+<dl><dt><strong>classification</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>eye_colors</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>id</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>img_url</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>language</strong> = &lt;db.Column instance&gt;</dl>
+
+<dl><dt><strong>model_name</strong> = 'species'</dl>
+
+<dl><dt><strong>model_url</strong> = 'http://www.thesweawakens.me/species'</dl>
+
+<dl><dt><strong>name</strong> = &lt;db.Column instance&gt;</dl>
+
+</td></tr></table></td></tr></table><p>
+<table width="100%" cellspacing=0 cellpadding=2 border=0 summary="section">
+<tr bgcolor="#55aa55">
+<td colspan=3 valign=bottom>&nbsp;<br>
+<font color="#ffffff" face="helvetica, arial"><big><strong>Data</strong></big></font></td></tr>
+    
+<tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
+<td width="100%"><strong>film_character_table</strong> = &lt;db.Table instance&gt;<br>
+<strong>film_planet_table</strong> = &lt;db.Table instance&gt;<br>
+<strong>film_species_table</strong> = &lt;db.Table instance&gt;</td></tr></table>
 </body></html>
