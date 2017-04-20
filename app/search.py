@@ -127,8 +127,8 @@ def searchModel(model, term):
                         else:
                             summary[url] = [getattr(r, attr).lower().count(term.lower()),
                                             r.model_name + ": " + getattr(r, attr) + "...", 1, ref.img_url,
-                                            ref.model_name, ref.get_descriptor()]
+                                            ref.model_name.title(), ref.get_descriptor()]
         if count > 0:
-            summary[model.model_url + "/" + str(r.id)] = [count, context, 1, r.img_url, r.model_name,
+            summary[model.model_url + "/" + str(r.id)] = [count, context, 1, r.img_url, r.model_name.title(),
                                                           r.get_descriptor()]
     return summary
