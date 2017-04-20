@@ -17,4 +17,6 @@ jsondict =  dict([ (k, [v, w]) for k, v, w in t ])
 with open('visual.json', 'w') as outfile:  
     json.dump(jsondict, outfile,indent=4)
 
-
+print("user	commentKarma	linkKarma")
+for item in t :
+    print(str(item[0]) + "\t" + str(item[1]) + "\t" + str(item[2]))
