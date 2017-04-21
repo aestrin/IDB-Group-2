@@ -1,3 +1,199 @@
+commit 5be5c567ab151a9205cd3480c7e7d4cf8cbf5354
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 18:57:16 2017 -0500
+
+    finished pylint and autopep8, added link to presentation
+
+commit fcf391338a40d4121db0c7a02cff548d4ba29174
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 18:37:32 2017 -0500
+
+    updated about page stats
+
+commit 67a480a28f9abc2f53db8dcb2c5ff0d8c467f986
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 18:13:09 2017 -0500
+
+    fixed test coverage image
+
+commit ab3253dedc4ad32b21efe98b6ff22038ea04ed15
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Thu Apr 20 17:58:41 2017 -0500
+
+    fixed coverage
+
+commit c9264cc9e75e33633301f4c0e1d328d113ec7962
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 17:06:08 2017 -0500
+
+    search module import fix
+
+commit f3adbc2d01c348857d0bb21e3d17a7ffb9eda8f5
+Merge: 6329923 807a1f3
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 16:49:05 2017 -0500
+
+    Merge branch 'master' into dev
+
+commit 6329923e1fd104beb0a3e64c36b990e177e43a35
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 16:48:47 2017 -0500
+
+    fix IDB1.html
+
+commit 2532c958b33410ef9a49c3fec0fe1d78b0a30327
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 16:46:43 2017 -0500
+
+    fixed pydoc errors
+
+commit c902a4f5fdca725c36b6c195e210d755b8eb0f15
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 16:15:14 2017 -0500
+
+    finished tech report
+
+commit 5d0a082a46cac181d1320861147f63a7a1ebf67d
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 20 15:12:35 2017 -0500
+
+    new banner images :D jarjar
+
+commit e86adac22eb2153eac625834c3848d47b3ea59d7
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 20 15:05:03 2017 -0500
+
+    new banner images :D darth vader lmao
+
+commit b2725d1ce82bf91aab7a60715e6cdc2c66998164
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 20 15:01:27 2017 -0500
+
+    new banner images :D darth vader
+
+commit 5908b2fa9e25a90313b14b6c84e96c1d3240c5be
+Author: aestrin <aestrin@utexas.edu>
+Date:   Thu Apr 20 14:57:12 2017 -0500
+
+    new banner images :D
+
+commit 2dbeb42f49b567313c3ed44adfc1ec135f0ccd40
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 20 03:08:58 2017 -0500
+
+    added model name to search grid items
+
+commit c3533468882d38d0306e21c62bc59b45c3b892cd
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Apr 19 22:45:13 2017 -0500
+
+    woops typo
+
+commit 6975d87e157e1cd0e867647093b4ad95969e4f4b
+Author: arjunmbajaj <arjunbajaj@Arjuns-MacBook-Pro-3.local>
+Date:   Wed Apr 19 22:44:35 2017 -0500
+
+    updated technical report ~220 words missing, need search section
+
+commit 22900cb1444aab46d9545818a384115f50ee14d2
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 19 19:35:19 2017 -0500
+
+    working on visual changed to differnt chart, last one was too confusing, but scaling is off for 100 users worth of data
+
+commit a4b4c99d73d566fa915e3513daa3bcd151d22a12
+Merge: 9165724 210a71a
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 19 18:43:19 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 91657245878d4c2c6c403ba4b2ef36ffa368a24b
+Author: aestrin <aestrin@utexas.edu>
+Date:   Wed Apr 19 18:43:13 2017 -0500
+
+    still working on visual, finished making search look better
+
+commit 210a71ab4cf16b7909bb0752a8e843b4a29d1770
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Wed Apr 19 15:24:12 2017 -0500
+
+    autopep8 on search.py
+
+commit 58018d0397e7e8d4f658a01dd9413cd7f75aeadd
+Merge: 1b44fbc 55c8ea6
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Apr 18 22:59:06 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/IDB-Group-2 into dev
+
+commit 1b44fbcd60e5abb75e818d3a20ff07c6ea867b99
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Apr 18 22:58:57 2017 -0500
+
+    front end for search feature
+
+commit 55c8ea61a28167bb822b3c9dfd85c77d649c954e
+Merge: b9e2907 82dba8d
+Author: Adam Estrin <aestrin@cs.utexas.edu>
+Date:   Tue Apr 18 21:33:43 2017 -0500
+
+    Merge branch 'dev' of https://github.com/aestrin/idb into dev
+
+commit b9e290719881d1f6a1ce83bc86b17504da97a609
+Author: Adam Estrin <aestrin@cs.utexas.edu>
+Date:   Tue Apr 18 21:33:34 2017 -0500
+
+    working on visual just need to change array to bar chart
+
+commit 82dba8da1b38d36156ff390c9b9ad0465a4654e1
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Tue Apr 18 21:05:32 2017 -0500
+
+    Added some stuff towards search page.
+
+commit 0e612f2e16b5afa03bea97d5ff0e000de44edbdf
+Author: Sam Weismuller <sweis@cs.utexas.edu>
+Date:   Mon Apr 17 00:32:16 2017 -0500
+
+    Added sorting backend, closes #48
+
+commit bdb9e6783a3ee0bfedbbb53940503bdf4d2d2f7e
+Author: aestrin <aestrin@utexas.edu>
+Date:   Sun Apr 16 15:21:21 2017 -0500
+
+    added header file to visual.html and some basic styling
+
+commit e7946aa7d6e5dde27704c15e28f154cff7300aa6
+Author: aestrin <aestrin@utexas.edu>
+Date:   Sun Apr 16 15:04:56 2017 -0500
+
+    added visual tab to nav and imported template d3 visual
+
+commit 807a1f3994c1c8c1ba64342a30dfdec6395028da
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Sat Apr 15 20:22:22 2017 -0500
+
+    added CORS stuff
+
+commit a688861e9d85a4000c07a352e56c11b44eb37ae9
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 21:05:09 2017 -0500
+
+    final, ready to submit
+
+commit 2abbc4290add72035db9f52d58c2cc4eed66f760
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 20:49:19 2017 -0500
+
+    added asserts
+
+commit ea702a64855c57f300f2092c9be1037ab8737336
+Author: Pushkar Lanka <pushkar.lanka@gmail.com>
+Date:   Thu Apr 6 20:33:12 2017 -0500
+
+    updated git log | close #41
+
 commit 51b597e7d2eaf73402ba89dc3d0480e648b034c9
 Author: Pushkar Lanka <pushkar.lanka@gmail.com>
 Date:   Thu Apr 6 20:15:47 2017 -0500
