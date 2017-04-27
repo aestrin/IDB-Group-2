@@ -6,6 +6,9 @@ response = requests.get("http://reddifulapi.me/api/users?page=1").json()[0]
 response+=(requests.get("http://reddifulapi.me/api/users?page=2").json())[0]
 response+=(requests.get("http://reddifulapi.me/api/users?page=3").json())[0]
 response+=(requests.get("http://reddifulapi.me/api/users?page=4").json())[0]
+response+=(requests.get("http://reddifulapi.me/api/users?page=5").json())[0]
+response+=(requests.get("http://reddifulapi.me/api/users?page=6").json())[0]
+response+=(requests.get("http://reddifulapi.me/api/users?page=7").json())[0]
 
 
 t = []
