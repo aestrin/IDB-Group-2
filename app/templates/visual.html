@@ -15,10 +15,14 @@
   <div class="container">
 
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-5">
+          <h3 class="page-header text-center">The SWE Awakens</h3>
           <div class="chart-example" id="chart"><svg></svg></div>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-5">
+          <h3 class="page-header text-center">The SWE Awakens</h3>
           <div class="chart-example" id="chart2"><svg></svg></div>
         </div>
     </div>
@@ -33,7 +37,7 @@
             console.error('Error getting or parsing the data.');
             throw error;
         }
-        var chart = bubbleChart().width(960).height(960);
+        var chart = bubbleChart().width(600).height(600);
         d3.select('#chart').data(data).call(chart);
       });
 
@@ -42,7 +46,7 @@
             console.error('Error getting or parsing the data.');
             throw error;
         }
-        var chart = bubbleChart().width(960).height(960);
+        var chart = bubbleChart().width(600).height(600);
         d3.select('#chart2').data(data).call(chart);
       });
   </script>
