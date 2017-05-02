@@ -23,34 +23,394 @@
   <div class="animation">
 
   <section class="intro">
-    Not too long ago, in a classroom in the GDC, not far away....
+    Not too long ago, in a classroom not far away....
   </section>
 
   <section class="titles">
     <div contenteditable="true" spellcheck="false">
-      <p>
-        Pushkar Clutch 1776
-      </p>
+          <a name = "Introduction"></a>
+          <h2><p><strong>Introduction</strong></p></h2>
+          <h4><p>George Lucas&rsquo; Star Wars has captivated generations with its expansive storylines, epic scores, and awe-inspiring characters. The series itself has impressed upon society a significant cultural impact with references to the film that are deeply embedded within Western popular culture. The events depicted in the seven films are expansive &ndash; spanning millennia, with hundreds of different characters, vehicles and species. However, navigating this expansive behemoth of a saga has proven more difficult than one would think and is often bogged down ,in the now non-canon, expanded universe. It is for this reason that our group set out to fix that and provide users an easy to navigate site that allows for one to appreciate the deeply linked nature of all the films and allows one to appreciate the subtleties of continuity one might have missed in these works of art.</p></h4>
+          <a name = "IntendedUseCases"></a>
+          <h2><p><strong><br /> Intended Use Cases</strong></p></h2>
+          <h4><p><br /> The sites navigation allows users to easily navigate from a particular point of interest such as a favorite obscure character, and allows a user to then view the home planet of said character and see all noted appearances of the character in the films. All the information about these objects are at most 4 clicks away. This eliminates the need to scour the internet for different aspects about each model and streamlines the information into an easily digestible format, avoiding unnecessary information in the process. Additionally, it presents it in a very aesthetically pleasing and thematic way. Moreover we&rsquo;ve included ways to filter, and sort the information based on attributes within the website.  This ability to narrow results will speed up navigation of the site for those who know exactly what they are looking for. In later stages of the we plan to implement a search functionality to further ease the navigation when it comes to specific shared attributes or to find a specific entry even faster. The front-end theme of the website plays homage to the series adopting the colors and monikers of the films. This especially prevalent in our landing page where the iconic approaching logo is accompanied with a fade in of all of our puns to the episodes titles. 
+			</p></h4>
+         
+          <h2><p><strong>Models</strong></p></h2>
+          <h4><p>We have exactly four models within our Star Wars database. Species, Characters, Planets and Films. Within each model is information contained from the many Star Wars API found at swapi.co as well as images pulled from Bing images. </p><h4>
+          <h3><p>Species</p></h3>
+          <h4><p>
+          The first of the models Species is outlined below
+          <br>Species model has these attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Classification:</strong> e.g mammal, amphibian <br>
+          <strong>Language:</strong>e.g Galactic Standard<br>
+          <strong>average_height:</strong>  e.g 180 <br>
+          <strong>eye_colors:</strong> e.gyellow<br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Characters </strong>(one-to-many)<br>
+          <strong>Planets</strong> (one-to-one)<br><br>
+         The basis of this model is to show the vast species involved in the star wars universe, the interesting tidbits of where these species come up and in what movies are my favorite property of this model. Moreover its interesting to see the depth and backstory the creators had when creating these alien species in the films/books. 
+          <br>
+          <h3><p>Characters</p></h3>
+          <h4><p>
+          The second of the models Characters is outlined below,
+          <br>Character model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Birth year:</strong> 48 BBY(Years after or before the events of Rogue One)<br>
+          <strong>Height :</strong>e.g 180cm<br>
+          <strong>Mass :</strong>  e.g 55 kg <br>
+          <strong>image url:</strong><br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Planets </strong>(one-to-one)<br>
+          <strong>Species </strong> (one-to-one)<br><br>
+          The character model is the main focal point of our project, as this is what the fan really wants to dive deeper into. Star Wars is known to as a space opera not sci-fi, and its because of their deep, rich characters with such unique and different background that makes star wars the smash success it is.
+          </p></h4>
 
-      <p>
-        During the battle, Rebel
-        spies managed to steal secret
-        plans to the Empire's
-        ultimate weapon, the DEATH
-        STAR, an armored space
-        station with enough power to
-        destroy an entire planet.
-      </p>
+          <br>
+          <h3><p>Planets</p></h3>
+          <h4><p>
+          The third of our models is outlined below,
+          <br>Planet model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Name :</strong><br>
+          <strong>Climate</strong> e.g arid, moist, temperate<br>
+          <strong>Population :</strong>6,200,000,000<br>
+          <strong>Gravity:</strong>e.g. 1 galatic standard<br>
+          <strong>terrain:</strong>e.g. rocky, hilly, oceans<br>
+          <strong>image url:</strong><br>
 
-      <p>
-        Pursued by the Empire's
-        sinister agents, Princess
-        Leia races home aboard her
-        starship, custodian of the
-        stolen plan that can save
-        her people and restore
-        freedom to the galaxy....
-      </p>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Films</strong> (many-to-many)<br>
+          <strong>Characters </strong>(one-to-many)<br>
+          <strong>Species </strong> (one-to-many)<br><br>
+          The planet model is mainly to serve as further context for both our Film model and Character model as it is the relation to the characters and films that really gives these planets their significance. Its interesting how the terrain of each individual planet plays homage to the struggles each film encompasses.
+          </p></h4>
+
+
+          <br>
+          <h3><p>Films</p></h3>
+          <h4><p>
+          The fourth of our models is outlined below,
+          <br>Film model contains the following attributes:<br>
+          <br>
+          <strong>DB id:</strong><br>
+          <strong>Title :</strong><br>
+          <strong>Director</strong> <br>
+          <strong>Episode number :</strong>6,200,000,000<br>
+          <strong>Release date:</strong><br>
+          <strong>terrain:</strong> e.gyellow<br>
+          <br>
+          With these relations<br>
+          <br>
+          <strong>Planets</strong> (many-to-many)<br>
+          <strong>Characters </strong>(many-to-many)<br>
+          <strong>Species </strong> (many-to-many)<br><br>
+          The Film model is all encompassing, and is the is the highest or top level entity in our models. These are the very basis of the cultural phenomenon and as you can see from the relations has the most connections to the other models. Moreover, the richness of the API used to scrape the data allowed for the other models to be created in this way.
+          </p></h4>
+
+
+
+          <a name = "Design"></a>
+          <h2><p><strong>Design</strong></p></h2>
+          <h4><p>
+            Our API design was outlined in apiary. It uses a simple GET request driven system to allow users to query for information about various planets, characters, and films in the Star Wars universe.
+            The design of the API is very straight forward. To obtain a list of the available planets, characters, or films, simply send a request to http://www.thesweawakens.me/api/planets,
+            <a href="http://www.thesweawakens.me/api/characters">http://www.thesweawakens.me/api/characters</a>, or <a href="http://www.thesweawakens.me/api/films">http://www.thesweawakens.me/api/films</a> respectively. When visited these links the user is automatically redirected to the first page of the list.
+            Each page contains 6 elements, you can view the next page by changing the “page=x” value in the URL. A JSON is returned a list of objects with the properties of that object. To get information
+            about a specific member of any of these categories, simply append “/{id-number}” to the catagory’s URL. For instance, to obtain the planet with id 2 send a GET request to
+            <a href="http://www.thesweawakens.me/api/planets/2">http://www.thesweawakens.me/api/planets/2</a>. The result is a JSON containing just the properties of that planet.
+          </p></h4>
+          <h4 id="Search"><p>
+            It is possible to sort or filter you list queries. Adding a “sortUp” or “sortDown” parameter allows you to view the list in a particular order. Adding a “filterBy” and “filter”
+            parameter allows you to apply a filter. The “filterBy” parameter selects the field of the model to filter on and the “filter” field is the values to filter for. For example
+            <a href="http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G">http://www.thesweawakens.me/api/planets/?page=1&sortUp=climate&filterBy=name&filter=B-G</a> retrieves the second page of the planets list sorted by climate and only including the
+            planets with names start from B to G.
+          </p></h4>
+              <h3>Search</h3>
+              <br>
+          <h4>
+          <p>We built the search functionality mostly by ourselves, without using SQLAlchemy's builtin functions. After pulling all the rows from the database, we tokenized our search phrase
+              and searched for each term across all columns of each row. In doing so, we were able to keep track of number of terms matched in a phrase, which would later be used as part of our
+              criteria for sorting the search results. Our primary factor however, was a weight parameter which we determined by checking whether the matched attribute was the name/title of a
+              model, or simply a secondary attribute (anything besides name/title). If the name/title matched, this search result would be given higher weight thereby pushing it to the top of the
+              search results. We distinguished between AND and OR logic by displaying AND matches before OR matches.
+          </p>
+          <p> We chose to make our search case-insensitive, for ease of use. After much deliberation, we also chose to make our search results render in the form of a grid, much like the rest of our
+              website, rather than a list as Google would do. This was done to maintain UI consistency across our website, and to maximize context for each search result. By using a grid, we were able to
+              incorporate our existing images, so a user could quickly identify a search result at just a quick glance.
+          </p>
+          <p> All in all, we found that doing manually implementing search ourselves using mostly Python's builtin functions allowed us to make our own tweaks and rank the results just the way we wanted.
+          </p></h4>
+          <img src="{{ url_for('static', filename='UML.png') }}" style="display: block;margin: 0 auto;">
+          <a name = "Scraping"></a>
+          <h2><p><strong>Scraping</strong></p></h2>
+          <h4><p>
+          In order to scrape both the data and the images we employed a programmatic way to pull all the appropriate information. After we established our four models we would work with, we started the process of pulling the data. In order to accomplish this feat we employed the use of the python libraries Requests and Json. The former was used in order to make repeated get requests, in our case to the star wars api, and the latter was used to parse the returned json and pretty-print and save a collated comprehensive data files. From here all we needed to do was import the files into our database.
+          </p></h4>
+          <a name = "Tools"></a>
+          <h1><p><strong>Tools</strong></p></h1>
+          <a name = "FrontEnd"></a>
+          <h2><p><strong>Front End</strong></p></h2>
+          <h4><p>The front end is built off of Facebook&rsquo;s React, Bootstrap, and basic HTML CSS and JavaScript.</p></h4>
+          <h3><p>React</p></h3>
+          <a name = "React"></a>
+          <h4><p>React is used to dynamically generate content on the client-side. The react code is written in the jsx format which is cross-compiled into Javascript at runtime. React provides a simple way to create and add elements to the page&rsquo;s DOM (runtime representation of the HTML hierarchy) without having to work with clunky javascript functions. We used React to generate the grid for our model pages. This gives us the control we need to do in-client sorting, filtering, and column-size adjustments. React allows us to create code that is highly modular and reusable and thus the unique code needed for an individual model page is very minimal.</p></h4>
+          <a name = "Bootstrap"></a>
+          <h3><p>Bootstrap</p></h3>
+          <h4><p>Developed by Twitter, Bootstrap is a HTML, CSS, and Javascript framework that provides many styles, elements, and templates that allows high-quality HTML to be built in a simple, modular way. Bootstrap provides the necessary CSS classes and templates to create such elements as carousels (such as the one on our homepage) and navigation bars. Additionally the framework allows for reactive design especially in the array of different screen sizes and aspect ratios that exist in our world.</p></h4>
+          <a name = "D3"></a>
+          <h3><p>D3</p></h3>
+          <h4><p>Developed by Mike Bostock, Jeffrey Heer, Vadim Ogievesteksy and the successor to the Protovis project,  D3 is a robust visualization library built on Javascript that allows for some really amazing visuals. We used D3 for the visualization (as was required), in order to model another teams api, in our case reddiful.me. Used by a myriad of data-driven journalism sites, the tool allows for great control in the final visualization.</p></h4>
+          
+
+          <a name = "BackEnd"></a>
+          <h2><p><strong>Back End<br /> </strong></h2>
+          <h4>The back end of our website is built upon Flask and Python.</h4><br />
+          <a name = "Flask"></a>
+          <h3>Flask</p></h3>
+          <h4><p> We employed Flask, a python microframework, to interact with the database and process HTTP requests in order serve static HTML pages to the end user programmatically. Flask also comes with Jinja2 which allows us to render HTML pages using the variables in our Python code. It also allows us to piece together markup from multiple source files, allowing for effective code reuse.</p><h4>
+          <a name = "Python"></a>
+          <h3><p>Python</p></h3>
+          <h4><p>The greatest programming language known to man, developed by Guido Van Rossum in 1989. We utilized this in order to process our JSON, create our models and unit tests, and serve HTML through Flask. An interpretative language that allows for high-readability and brevity while also containing many of the bells and whistles of other high performance programming languages and has one of the largest developer communities in the world.</p></h4>
+          <a name = "OtherTools"></a>
+          <h1><p><strong>Other Tools</strong></p></h1>
+          <a name = "Apiary"></a>
+          <h3><p>Apiary</p></h3>
+          <h4><p>A platform that allows for developers to easily outline the functionality and intended effects of their respective Application Programming Interfaces. Moreover the platform allows developers to overcome many of the typical and traditional api pitfalls.</p></h4>
+          <a name = "Slack"></a>
+          <h3><p>Slack</p></h3>
+          <h4><p>Our team used slack in order to keep in constant communication. Moreover with our connected github, we were able to get constant updates on our team's commits,issues and progress.</p></h4>
+          <a name = "Travis"></a>
+          <h3><p>Travis CI</p></h3>
+          <h4><p>A continuous integration tool that allows for building and testing software in an automated way. Travis CI is linked to a github repository, and each time a new commit is made, Travis will attempt to build the project and run tests. Additionally, Travis can be integrated with AWS Elastic Beanstalk to allow for Continuous Deployment. By providing encrypted access keys to your EB instance, Travis will automatically deploy to the production environment on a successful build.</p></h4>
+          <a name = "Pydoc"></a>
+          <h3><p>Pydoc</p></h3>
+          <h4><p>A documentation generator for the classes within our implementation and the python language. Run from the command line the tool is very similar to perldoc, which it drew its inspiration. The tool itself is applied to each module showing the documentation page from the doc strings for each module.</p></h4>
+          <a name = "autopep8"></a>
+          <h3><p>Autopep8</p></h3>
+          <h4><p>A tool that automatically formats the Python code to conform to the PEP 8 Style guide. Autopep8 is able to fix many of the common formatting issues that is reported by the pycodeutility.</p></h4>
+          <h3><p>Github</p></h3>
+          <a name = "Github"></a>
+          <h4><p>A remote repository service employing git, allows for multiple contributors, branches and issue tracking. All our work was shared and managed through Github.</p></h4>
+          <a name = "Github"></a>
+          <h3><p>Sublime Text 2</p></h3>
+          <h4><p>A lightweight text editor that allows for basic text editing, syntax highlighting and find and replace. This was the preferred choice of many of our developers especially for the sleek Brogrammer theme.</p></h4>
+          <a name = "Pylint"></a>
+          <h3><p>Pylint</p></h3>
+          <h4><p>A source code, bug, and quality checker for Python.</p></h4>
+          <a name = "Yuml"></a>
+          <h3><p>yUML</p></h3>
+          <h4><p>A simple online tool to create UML diagrams. It allows the easy creation of models and their relations and multiplicities.</p></h4>
+          <a name = "PyCharm"></a>
+          <h3><p>PyCharm</p></h3>
+          <h4><p>Python and HTML IDE developed by JetBrains. Integrate with Git to be able to see local changes at a quick glance. Moreover, PyCharm shares many of the benefits of other full-fledged IDEs as compared to simple text editors.</p></h4>
+          <a name = "SourceTree"></a>
+          <h3><p>SourceTree</p></h3>
+          <h4><p>Command-line git is the quickest way to get things done, but it can make life much easier to have a visual representation of your workflow on different branches, especially when working collaboratively. SourceTree is developed by Atlassian.</p></h4>
+          <a name = "AWS"></a>
+          <h3><p>Amazon Web Services</p></h3>
+          <h4><p>Online hosting service for the deployment of the application (Elastic Beanstalk), including storage for our relational database (RDS) in the next phase.</p></h4>
+          <a name = "PIP"></a>
+          <h3><p>Python PIP</p></h3>
+          <h4><p>Python package management system that allows for easy installation of necessary tools, including many others outlined in this section, that are written in python.</p></h4>
+          <a name = "PlanIT"></a>
+          <h3><p>PlanITPoker</p></h3>
+          <h4><p>We used planitpoker.com to conduct our agile estimation for different parts of the project. The tools allows for the simulation of actual Plannign poker conducted in the outside world in which different team members anonymously estimate the time for different parts of the software, instead of speaking them aloud. This allows for the avoidance of any sort of anchoring or influence by other team members.</p></h4>
+
+          <a name = "Hosting"></a>
+          <h2><p><strong>Hosting</strong></p></h2>
+          <h4><p>We used AWS Elastic Beanstalk to deploy our website. The entire process turned out to be pretty simple, thanks to the vast amount of documentation available out there, including a Flask specific tutorial on the AWS website. There were definitely some gaps in information along the way, and we&rsquo;ll list out useful tips and things to look out for in the following documented process.</p></h4>
+          <h4><p>These 2 links were especially useful:</p>
+          <p><a href="http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html#configure-your-flask-application-for-eb"><span style="color: #1155cc;">http://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-flask.html#configure-your-flask-application-for-eb</span></a></p>
+          <p><a href="https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80#.gp59bzgho"><span style="color: #1155cc;">https://medium.com/@rodkey/deploying-a-flask-application-on-aws-a72daba6bb80#.gp59bzgho</span></a></p>
+          <p>Before talking about the deployment steps, here are some key notes about using virtualenv and file naming conventions.</p></h4>
+          <h3><p>Virtualenv</p></h3>
+          <ol>
+          <h4><li><p>Something that is useful with pretty much any Python project you undertake is to isolate your development environment using a <strong>virtualenv</strong>. This way, you can install packages to your project&rsquo;s specific environment and not have to your machine&rsquo;s global environment. Having isolated dependencies also makes installing dependencies on your deployed VM a lot easier, as shown in a later step.</p></li>
+          <li><p>To create a virtualenv (named venv) and finally deactivate it, type the following on the Command Line:</p>
+          <p><strong>$ virtualenv ~/venv</strong></p>
+          <p><strong>$ source ~/venv/bin/activate</strong></p>
+          <p><strong>$ deactivate (to exit)</strong></p></li>
+          <li><p>While developing the application, make sure to install all your packages via pip inside the virtualenv.</p></li>
+          </ol></h4>
+          <h3><p>Project structure</p></h3>
+          <h4><ol><li><p>Ensure that the flask app is named &lsquo;<strong>application.py</strong>&rsquo;, and that the app object used throughout the lifetime of the app is also named <strong>&lsquo;application&rsquo;</strong>.</p></li></ol>
+          <p>Now let&rsquo;s get to the interesting stuff, the <strong>deployment</strong>!</p></h4>
+          <h3><p>Deploying on AWS Elastic Beanstalk</p></h3>
+          <h4><ol>
+          <li><p>We used the Elastic Beanstalk Command Line Interface (CLI), which can be installed via pip by typing</p>
+          <p><strong>$ pip install awsebcli</strong></p></li>
+          <li><p>Next, we created a new AWS User to essentially be the admin of this deployed app, instead of using a root (personal) account. This way, we could have all our group members login with admin credentials to the AWS console, thereby decoupling it from our personal accounts. To do this on the AWS console:</p>
+          <ul><li><p><strong>Services &gt; Security, Identity and Compliance &gt; IAM &gt; Users &gt; Add User</strong></p></li>
+          <li><p>Type <strong>&lsquo;admin&rsquo;</strong> for <strong>username</strong>, and check both the access types (secret key will be required in a later step).</p></li>
+          <li><p>You will now be asked to create a group, which is not required but recommended. Click <strong>Create Group </strong>and give the group <strong>AdministratorAccess</strong>. Save your changes.</p></li>
+          <li><p>Add the admin user to the group you just created.</p></li>
+          <li><p>Review and Save the user.</p></li></ul></li>
+          <li><p>No further work is required on the AWS Console, as we can now initialize Elastic Beanstalk via the Command Line. Before doing so, we want to export all our Python dependencies to a <strong>requirements.txt</strong> file, which the Beanstalk will look up and install any time the app is deployed. So inside the virtualenv, type</p>
+          <p><strong>$ pip freeze &gt; requirements.txt</strong></p></li>
+
+          <li><p>Initialize Beanstalk by typing</p>
+          <p><strong>$ eb init</strong></p>
+          <p>You should now see a list of location options to choose from, that looks like this:</p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">Select a default region</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">1) us-east-1 : US East (N. Virginia)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">2) us-west-1 : US West (N. California)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">3) us-west-2 : US West (Oregon)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">4) eu-west-1 : EU (Ireland)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">5) eu-central-1 : EU (Frankfurt)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">6) ap-south-1 : Asia Pacific (Mumbai)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">7) ap-southeast-1 : Asia Pacific (Singapore)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">8) ap-southeast-2 : Asia Pacific (Sydney)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">9) ap-northeast-1 : Asia Pacific (Tokyo)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">10) ap-northeast-2 : Asia Pacific (Seoul)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">11) sa-east-1 : South America (Sao Paulo)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">12) cn-north-1 : China (Beijing)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">13) us-east-2 : US East (Ohio)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">14) ca-central-1 : Canada (Central)</span></p>
+          <p><span style="font-family: 'Comic Sans MS', serif;">15) eu-west-2 : EU (London)</span></p>
+          <p>We chose option 2, but just choose whatever location is closest to you.</p></li>
+          <li><p>You should now see the following error message &ldquo;<span style="font-family: 'Comic Sans MS', serif;">You have not yet set up your credentials or your credentials are incorrect. You must provide your credentials.</span>&rdquo; Don&rsquo;t fret, you&rsquo;re on the right track!</p></li>
+          <li><p>Go back to the AWS Console and find the User that you created earlier in Step 2. Copy and paste your <strong>aws-access-id</strong> (20-digit id) and <strong>aws-secret-key </strong>(40-digit key), as prompted by the command line.</p></li>
+          <li><p>Enter the application name on prompt (leave blank for default name).</p></li>
+          <li><p>Type <strong>Y</strong>, when asked &ldquo;<span style="font-family: 'Comic Sans MS', serif;">It appears you are using Python. Is this correct?</span>&rdquo;</p></li>
+          <li><p>Select your Python platform. We chose Python 3.4 but make sure yours is accurate.</p></li>
+          <li><p>This step is optional, but recommended. You can enable <strong>SSH</strong> for your AWS EB instance by creating a new key pair (or using an existing one). If you&rsquo;re not sure, you can always do this on the AWS console at any time.</p></li>
+          <li><p>Almost done! To launch the instance, type</p>
+          <p><strong> $ eb create</strong></p></li>
+          <li><p>Chose a <strong>DNS CNAME</strong> for your application, which is where your website will exist after the first deploy and up until you register a custom domain that maps to this instance. We left it to be the default value, as it was later mapped to a Namecheap provided custom domain, as shown later in this documentation.</p></li>
+          <li><p>Choose the default load balancer.</p></li>
+          <li><p>Elastic Beanstalk should now start loading up the instance, using the configuration that&rsquo;s been specified in the steps above. This can take up to a few minutes, and up to 10 minutes after that for the server to finish booting up. This wait can be annoying, so perhaps just step away from your machine for about 15 minutes.</p></li>
+          <li><p>Open up your browser, and go to <strong>{C-NAME}.elasticbeanstalk.com</strong>. Your website should now be live!</p></li>
+          <li><p>Any time you change your files in the future, you can simply type</p></li>
+          <p><strong>$ eb deploy</strong></p>
+          <li><p>to deploy your changes to your EB instance. It&rsquo;s always a good idea to test your changes locally before deploying.</p></li>
+          <li><p>If you&rsquo;re using Git, note that <strong>EB will only deploy your last commit</strong> and not any uncommitted files. If you&rsquo;re not using Git, why are you not using Git?</p></li>
+          </ol></h4>
+          <h2><p>Using a custom domain with Namecheap</p></h2>
+          <h4><ol>
+          <li><p>Get a free domain from <a href="https://nc.me/"><span style="color: #1155cc;">https://nc.me</span></a> using a student email, or just go to <a href="https://www.namecheap.com/"><span style="color: #1155cc;">https://www.namecheap.com</span></a> (paid)</p></li>
+          <li><p>Confirm your contact information and click the link emailed to you.</p></li>
+          <li><p>Login and select your domain on the Namecheap dashboard.</p></li>
+          <li><p>Go to Manage &gt; Advanced DNS.</p></li>
+          <li><p>Create a new CNAME record with host = &ldquo;www&rdquo; and value = &ldquo;{EB CNAME}.elasticbeanstalk.com.&rdquo;</p></li>
+          <li><p>Create a new URL Redirect record with host = &ldquo;@&rdquo; and value = &ldquo;http://www.{namecheap domain}.me&rdquo;</p></li>
+          <li><p>Note: Don&rsquo;t actually put quotations when typing.</p></li>
+          <li><p>Save your changes, and wait for at least 30 minutes for the Namecheap domain to work. According to their documentation, it can take up to 24 hours for the domain to map to your environment.</p></li>
+          </ol>
+          <p>Thanks to <a href="https://colintoh.com/blog/map-custom-domain-to-elastic-beanstalk-application"><span style="color: #1155cc;">https://colintoh.com/blog/map-custom-domain-to-elastic-beanstalk-application</span></a> for the Namecheap tutorial!</p></h4>
+          <h3><p>Next: Travis-CI integration with Elastic Beanstalk for Continuous Deployment</p></h3>
+          <h4><p>We actually haven&rsquo;t implemented this part yet, but for the next phase we look forward to having Continuous Deployment. Travis allows automatic deployment to an AWS EB instance after a successful build, thereby removing the overhead of having to type <strong>$ eb deploy </strong>every time we want to make changes to our production environment. This can be done by simply providing an encrypted <strong>access_key_id</strong> and <strong>secret_access_key</strong> to the .travis.yml file, which gives Travis permission to deploy to our EB instance.</p></h4>
+          <a name = "Database"></a>
+          <h2><p>Database<h2><p>
+          <br>
+          <h3><p>PostgreSQL:</p><h3>
+          <h4><p>Postgres , like other DBMS, is a relational database management tool that is completely open source. It has strong reliability and data integrity is the choice of many developers. As there was no choice in this decision, we ended up employing this as our relational database. Postgres also has the added benefit of being working very well with Flask and allows for easy setup using models.py and flask SQLAlchemy.</h4><p>
+          <br>
+          <h3><p>Setting up PostgreSQL with AWS</p><h3>
+          <h4><p>
+            In order to have persistent set of storage it is necessary to setup a database, preferable remote, to house the data. The process of setting up can be tricky, and following guides/documentation that is provided especially necessary. We ended up setting up with Amazon Web Services
+           <h4><p>These 2 links were especially useful:</p></h4>
+            <br>
+            <br>
+          <p><a href="https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/"><span style="color: #1155cc;">https://aws.amazon.com/getting-started/tutorials/create-connect-postgresql-db/</span></a></p>
+          <p><a href="http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html"><span style="color: #1155cc;">http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_PostgreSQL.html</span></a></p>
+          <br>
+          <br>
+          <h4>
+Setting up AWS RDS
+In order to setup the AWS instance appropriately its very important to follow the steps shown below, as simple deviations can prove very costly down the road.<br>
+
+          </h4>
+          <br>
+          <h4><ol>
+          <li><p>G1)  Using the same login as before for the hosting one wants to navigate to the AWS console page and click on the RDS link</p></li>
+          <li><p>From here one should locate the similar launch button and begin the process of launching a postgres SQL instance</p></li>
+          <li><p>1) In the next few menus its important to select PostgreSQL(Hint:The one with the elephant picture not the dolphin) & Dev/Test. Additionally whenever a tooltip shows “Free-tier eligible” its will be the option we are going to go with, because who pays for anything anymore. </p></li>
+          <li><p>1) In this stage its important to keep track of these settings we fill out on this next stage as it’s the information necessary to login to our Postgres database in later steps. </p></li>
+          <br>
+          <strong> Master Username, Password,Database Identifier will all be used in the url needed to connect to SQLAlchemy later.</strong>
+          <br>
+          <br>
+          <li><p>When you reach the page “Configure Advanced Settings” leave this as is, for our purposes with Flask these aren’t necessary and the default values provided by Amazon will more than suffice for our purposes. However, if you want to add an extra layer of customization one can name their db otherwise it will have the default postgres as its name.</p></li>
+          <li><p>After double checking the previous steps you can finally click Launch! After waiting a few minutes your DB instance should be up and running!</p></li>
+          <li><p>1) At this point we’re all done with AWS we just need to copy down the endpoint, username, password, port, and db_identifier.</p></li>
+          <li><p>1) These values we saved from amazon will serve the basis of the url needed to connect to AWS. From here we will create the url as follows:</p></li>
+          <br>
+          postgresql://username : password @hostname : port / db_identifier
+          <br>
+          an example aws one is shown below
+          <br>
+          postgresql://awsuser:admin@:mypostgresql.c6c8mwvfdgv0.us-west-2.rds.amazonaws.com:5432/mypgdb
+          <br>
+          <br>
+
+          <li id="poker"><p>After loading this into a environment variable you’re already to connect with the application. Just plug this into SQLAlchemy as the engine url and you’re all set. Its smooth-ish sailing from here!</p></li>
+        </ol></h4>
+          <a name = "Plan IT Poker"></a>
+
+           <h2><p>Plan IT Poker</h2></p>
+
+
+           <h4>
+              Below are the time estimates compiled for our team. The story is given first while the time estimated to complete it is givens second.
+              <br>
+              About Page :  9.4 hours
+              <br>
+              Implementing API: 5.8 hours
+              <br>
+              Pagination for all pages:  3.4 hours
+              <br>
+              Carousel Page:  22.4 hours
+              <br>
+              Data Scraping and Database Population:  5.3 hours
+              <br>
+              Technical Report:  4.8 hours
+              <br>
+              Unit Tests:  3.6 hours
+              <br>
+              Search Frontend:  3 hours
+              <br>
+              Search Backend:  6.2 hours
+              <br>
+              Visualization using other group’s API:  4.6 hours
+              <br>
+              All other frontend design work:  6.8 hours
+            </h4>
+           <br>
+
+           <h4><p>We used planitpoker.com for our planning estimates. The full results including individual predictions can be found at <a href= http://www.planitpoker.com/board/#/room/f8e017e9a58541e3b0d84c8eb078e0b0><p>http://www.planitpoker.com/board/#/room/f8e017e9a58541e3b0d84c8eb078e0b0</p></a>
+            We broke down our project into 11 distinct stories, with each story corresponding to a separate part of the project that in our opinions were quite distinct from each other. Each story was then voted on by each individual team member. The stories can be broken down as follows:</h4></p>
+          <h4><ol>
+          <li><p>About Page: The about page contains a brief explanation of the purpose of our site, as well as brief bios about each group member and his responsibilities. This page also contains the technical report, the unit tests, and links to all of the tools we employed.</p></li>
+          <li><p>Implementing API: this consists of all of the work needed to implement a scrapable API of the data we assembled, which will be visualized by another group. This API will also be utilized by our own website in order to populate the different pages.</p></li>
+          <li><p>Pagination for all pages: this consists of all of the work needed to implement pagination for results pages. One consideration needed for pagination is ensuring compatibility for filtering results. As mentioned previously, this was supplied by our api through the use of paramaters.</p></li>
+          <li><p>Carousel Page: the home screen of our site, the Carousel Page contains graphics that pertain to the contents of the site. This ended up being pretty time consuming given that we intended for a thematic landing page, and we wanted it to look good.</p></li>
+          <li><p>Data Scraping and Database Population: this section relates to scraping data using third-party APIs, consolidating and cleansing that data, and finally populating our database with that data.</p></li>
+          <li><p>Technical Report: what you are currently reading(pretty meta); a detailed report of the steps taken and technologies used to create our site from the bottom up.</p></li>
+          <li><p>Unit Tests: tests implemented to ensure the robustness of the underlying code, with great attention towards our models within our database. Also includes code coverage results.</p></li>
+          <li><p>Search Frontend: frontend work for the search function. Takes the results of a user defined search and displays it in an accessible and useful way.</p></li>
+          <li><p>Search Backend: backend work for the search function. Includes the actual implementation of the search, such as filtering data based on user defined parameters</p></li>
+          <li><p>Visualization using other group’s API: a visualization of data scraped using another group’s API, with the purpose of displaying their data in a meaningful way that reveals the underlying relationships within their data</p></li>
+          <li><p>All other frontend work: an umbrella category that includes frontend design work for the website as a whole. </p></li>
+        </ol>
+        <br>
+        <br>
+        <p>We conducted the planning results fully on the website and each individual round was given five minutes for team members to fully estimate the extent of the section of the software. Certain team members took this more seriously than others, which can account with some of the outliers within our estimated times. </p>
+      </h4>
       </div>
   </section>
 
